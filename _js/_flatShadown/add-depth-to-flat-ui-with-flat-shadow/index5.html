@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html id="demo5" lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>jQuery Flat Shadow Demo 5</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Author for Onextrapixel" />
+		<link rel="shortcut icon" href="../file/favicon.gif"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		
+		<!-- Edit Below -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    	<script type="text/javascript" src="js/jquery.flatshadow.js"></script>
+    	<link rel="stylesheet" type="text/css" href="css/style.css" />
+    	<link href='css/elusive-webfont.css' rel='stylesheet' type='text/css'>
+	</head>
+	<body id="demo5">
+		<div class="container">
+			<!-- Top Navi -->
+			<div class="nav-top clearfix">
+				<div class="nav-social nav-icon">
+					<span>
+						<div class="fb-like" data-href="http://www.onextrapixel.com/2013/08/09/add-depth-to-flat-ui-with-flat-shadow-js/" data-send="false" data-layout="button_count" data-width="55" data-show-faces="false"></div>
+					</span>
+					<span>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.onextrapixel.com/2013/08/09/add-depth-to-flat-ui-with-flat-shadow-js/" data-via="onextrapixel">&nbsp;</a>
+					</span>
+				</div>
+
+				<span class="right"><a class="nav-icon icon-th" href="http://www.onextrapixel.com/category/tutorials/"><span>View all Tutorials</span></a></span>
+				<span class="right"><a class="nav-icon icon-left" href="http://www.onextrapixel.com/2013/08/09/add-depth-to-flat-ui-with-flat-shadow-js/"><span>Back to Tutorial Article</span></a></span>
+			</div>
+
+			<div class="header">
+				<h1>jQuery Flat Shadow Demo 5: Works with Icon Fonts</h1>	
+			</div>
+
+			<div class="menu">
+				<a href="index.html">Demo 1</a>
+				<a href="index2.html">Demo 2</a>
+				<a href="index3.html">Demo 3</a>
+				<a href="index4.html">Demo 4</a>
+				<a class="active" href="index5.html">Demo 5</a>
+			</div>
+		
+		<div class="main">
+	       	<div data-angle="SE" class="flat-icon"> <i class="customicon-home"></i> </div>
+         	<div data-angle="SE" class="flat-icon"> <i class="customicon-camera"></i> </div>
+         	<div data-angle="SE" class="flat-icon"> <i class="customicon-map-marker"></i> </div>
+         	<div data-angle="SE" class="flat-icon"> <i class="customicon-picture"></i> </div>
+	    </div>
+	    <a class="reload" href="#"onClick="document.location.reload(true)"><i class="customicon-refresh"></i> Reload Page</a>
+	</div><!-- Container -->
+		
+	
+	<script type="text/javascript">
+    $(".flat-icon").flatshadow({
+      fade: true,
+      boxShadow: "#d7cfb9"
+    });
+  </script>
+		
+	<!-- Not Required -->
+	<div id="fb-root"></div>
+	
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.async=true; js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=131380470234211";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-8453623-1");
+		pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+	</body>
+</html>

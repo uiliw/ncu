@@ -1,0 +1,93 @@
+/* Custom Stylesheet */
+body, html {
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      background: #f4eedf;
+      text-align: center;
+}
+
+body .header{
+  color: #34495e;
+}
+  
+/* ALL DEMO */
+.flat-icon {
+  font-family: 'oxp-demo';
+  padding:23px 28px;
+  font-size: 45px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 100%;
+  overflow: hidden;
+  text-transform: uppercase;
+  margin-right: 15px;
+}
+
+/* DEMO 3 */
+
+body#demo3 .reload{
+  display: block;
+  width: 125px;
+  margin: 65px auto 15px;
+  border: 4px solid #FFF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background: #FFF;
+  display: inline-block;
+  font-size: 1em;
+  line-height: 100%;
+  padding: 0.7em;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+/* DEMO 4 */
+
+body#demo4, html#demo4 {
+  background: #f9af4e;
+}
+
+body#demo4 .flat-icon{
+  width: 40px;
+  padding:23px 28px;
+  font-size: 50px;
+  letter-spacing: 0;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+
+/* DEMO 5 */
+
+body#demo5 .flat-icon{
+  width: 40px;
+  padding:23px 28px;
+  font-size: 50px;
+  letter-spacing: 0;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+
+body#demo5 .reload{
+  display: block;
+  width: 125px;
+  margin: 65px auto 15px;
+  border: 4px solid #FFF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background: #FFF;
+  display: inline-block;
+  font-size: 1em;
+  line-height: 100%;
+  padding: 0.7em;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+body#demo5 .flat-icon i{
+  vertical-align: top;
+  font-size: 40px;
+}
