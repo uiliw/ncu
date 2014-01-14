@@ -32,7 +32,7 @@
 <link rel="stylesheet" href="_js/_flexslider/flexslider.css">
 <link rel="stylesheet" href="_js/_loading/css/loadingbar.css">
 <link type="text/css" rel="stylesheet" media="all" href="_js/_mmenu/src/css/jquery.mmenu.all.css" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans' rel='stylesheet' type='text/css'>
 <!--[if IE 7]><link rel="stylesheet" href="_fonts/css/font-awesome-ie7.min.css"><![endif]-->
 
 <!-- Java Scripts -->
@@ -51,7 +51,6 @@
 <script src="_js/_ajaxy/scripts/jquery.ajaxy.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script src="_js/_loading/js/jquery.loadingbar.js"></script>
-<script src="_js/_mmenu/src/js/jquery.mmenu.min.all.js"></script>
 <script src="_js/_flatShadown/jquery.flatshadow.js"></script>
 
 <script src="_js/main.js"></script>
@@ -107,44 +106,39 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="panel panel-success">
-					<div class="panel-heading"> CONTEÚDO <a href="#nav-conteudo" class="pull-right white">ÍNDICE <i class="fa fa-bars"></i></a>
-						<nav id="nav-conteudo">
-							<ul id="menu">
-								<li><a class="ajaxy ajaxy-page" href="./_paginas/apresentacao.html">Apresentação</a></li>
-								<li><a class="ajaxy ajaxy-page" href="./_paginas/m1_01.html">M1 - Introdução ao Empreendedorismo</a>
-									<ul>
-										<li><a class="ajaxy ajaxy-page" href="./_paginas/m1_a1_01.html">A empresa</a>
-											<ul>
-												<li><a class="ajaxy ajaxy-page" href="./_paginas/m1_a1_t1_01.html">Definição de uma empresa ou negócio</a>
-													<ul>
-														<li><a class="ajaxy ajaxy-page" href="./_paginas/m1_a1_t1_01.html#an_01">1. Empresas servem para atender necessidades de clientes</a></li>
-														<li><a class="ajaxy ajaxy-page" href="./_paginas/m1_a1_t1_01.html#an_02">2. Empresas atendem públicos-alvo específicos</a></li>
-														<li><a class="ajaxy ajaxy-page" href="./_paginas/m1_a1_t1_01.html#an_03">3. Empresas produzem produtos e/ou serviços e transacionam com seus clientes</a></li>
-														<li><a class="ajaxy ajaxy-page" href="./_paginas/m1_a1_t1_01.html#an_04">4. Uma empresa é uma organização</a></li>
-														<li><a class="ajaxy ajaxy-page" href="./_paginas/m1_a1_t1_01.html#an_05">5. Uma empresa deve ter capacidade de gerar riqueza (lucro)</a></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li><a class="ajaxy ajaxy-page" href="#">M2 - Plano de Negócios</a></li>
-								<li><a class="ajaxy ajaxy-page" href="#">M3 - Planos Organizacionais e Relacionamento com o Mercado</a></li>
-								<li><a class="ajaxy ajaxy-page" href="#">Fechamento da Disciplina</a></li>
-								<li><a class="ajaxy ajaxy-page" href="#">Pesquisa de Satisfação</a></li>
-							</ul>
-						</nav>
+					<div class="panel-heading"> CONTEÚDO
+						
 					</div>
 					<div class="panel-body">
-						<div class="row">
-							<div class="col-xs-10 col-sm-offset-1">
-								<div id="navega">
-									<span id="navega-titulo">APRESENTAÇÃO - PROGRAMA NEGÓCIO CERTO UNIVERSITÁRIO</span>
+						<div class="row relative">
+						<nav id="nav-conteudo">
+							<ul id="menu">
+								<li class="active"><a class="ajaxy ajaxy-page" href="./_paginas/apresentacao.html">Apresentação</a></li>
+								<li><a class="ajaxy ajaxy-page" href="./_paginas/m1.html">M1 - Introdução ao Empreendedorismo</a></li>
+								<li><a class="ajaxy ajaxy-page" href="./_paginas/m1_a1.html">A empresa</a></li>
+								<li><a class="ajaxy ajaxy-page" href="./_paginas/m1_a1_t1.html">Definição de uma empresa ou negócio</a></li>
+								<li><a class="ajaxy ajaxy-page" href="./_paginas/m1_a1_t2.html">Panorama das micro e pequenas empresas e do empreendedorismo no Brasil</a></li>
+								<li><a class="ajaxy ajaxy-page" href="./_paginas/m1_a1_t3.html">Tipos gerais de empresas e desdobramentos para o empreendedorismo</a></li>
+								
+							</ul>
+						</nav>
+							<div id="conteudo_wrap" class="col-xs-10 col-sm-offset-1">
+								<div class="navega">
+									<span class="navega-titulo">APRESENTAÇÃO - PROGRAMA NEGÓCIO CERTO UNIVERSITÁRIO</span>
 									<a id="imprimir" class="pull-right" href="#"><img src="_img/print.svg" alt="" /></a>
-									<a class="ajaxy ajaxy-next pull-right"><img src="_img/arrow-next.svg" alt="" /></a>
-									<a class="ajaxy ajaxy-back pull-right"><img src="_img/arrow-back.svg" alt="" /></a>
+									<a class="pull-right white nav-conteudo"><img src="_img/indice.svg" alt="" /></a>
+									<a class="pull-right nav-next"><img src="_img/arrow-next.svg" alt="" /></a>
+									<a class="pull-right nav-prev"><img src="_img/arrow-back.svg" alt="" /></a>
 								</div>
 								<div id="conteudo"> </div>
+								
+								<div class="navega">
+									<span class="navega-titulo">APRESENTAÇÃO - PROGRAMA NEGÓCIO CERTO UNIVERSITÁRIO</span>
+									<a id="imprimir" class="pull-right" href="#"><img src="_img/print.svg" alt="" /></a>
+									<a class="pull-right white nav-conteudo"><img src="_img/indice.svg" alt="" /></a>
+									<a class="pull-right nav-next"><img src="_img/arrow-next.svg" alt="" /></a>
+									<a class="pull-right nav-prev"><img src="_img/arrow-back.svg" alt="" /></a>
+								</div>
 							</div>
 						</div>
 					</div>

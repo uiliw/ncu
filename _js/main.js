@@ -45,27 +45,10 @@ $(function() {
 			//INICIALIZA LOADING
 			app.initLoading();
 			
-			//INICIALIZA MENU LATERAL
-			app.initMenu();
-			
 			//INICIALIZA ICONES
 			app.initIcons();
 		},
 		
-		
-		
-		//INICIALIZA MENU LATERAL
-		//http://mmenu.frebsite.nl/options.php
-		initMenu: function(){
-			$("#nav-conteudo").mmenu({
-			onClick:{
-					preventDefault:true,	
-					close: true,
-				},
-			}, {
-				
-			});
-		},
 			
 	
 		
@@ -385,13 +368,47 @@ $(function() {
 jQuery(document).ready(function(){
 	app.init();
 	$('#conteudo').load('_paginas/apresentacao.html');
-	
+	$('#nav-conteudo').hide();
+	$('.nav-conteudo').click(function(){
+		if ($('#conteudo_wrap').hasClass('menu_aberto')){
+			
+		$('#conteudo_wrap').removeClass();
+		$('#conteudo_wrap').addClass('col-xs-10 col-sm-offset-1');
+		$('#nav-conteudo').hide();
 		
+		}else{
+		$('#conteudo_wrap').removeClass();
+		$('#conteudo_wrap').addClass('col-xs-7 col-sm-offset-4 menu_aberto');
+		$('#nav-conteudo').show();
+		}
+	})
 	var $body = $(document.body),
 		$menu = $('#menu'),
 		$content = $('#conteudo')
 		
-	
+	$("a.nav-next").click(function(){
+       var cur = $('#menu li.active');
+	   next = cur.next('li');
+	   if (next.length === 0) {  // wrap if necessary
+		   next = $('#menu li:first');
+	   } 
+	   cur.removeClass('active');  // move the current class
+	   next.addClass('active');
+       next.children('a').click();
+    });
+
+	$("a.nav-prev").click(function(){
+	   var cur = $('#menu li.active');
+       next = cur.prev('li');
+	   if (next.length === 0) {
+		   next = $('#menu li:last');
+	   }      
+	   cur.removeClass('active');
+	   next.addClass('active'); 
+	   next.children('a').click();
+	});
+		
+		
 	$.Ajaxy.configure({
 		
 		'method': 'get',
@@ -407,7 +424,7 @@ jQuery(document).ready(function(){
 					if ( !title && this.state||false ) title = 'Inserir Titulo '+this.state;
 					if ( title ) document.title = title;
 					$body.removeClass('loading');
-					$('#navega-titulo').text(title);
+					$('.navega-titulo').text(title);
 					$('#current').text('Our current state is: ['+state+']');
 					return true;
 				},
@@ -437,56 +454,6 @@ jQuery(document).ready(function(){
 					$content.html(data.content).fadeIn(400,function(){
 						Action.documentReady($content);
 					});
-					app.init();
-					return true;
-				}
-			},
-			
-			'next': {
-				classname: 'ajaxy-next',
-				matches: /^\/_paginas\/?/,
-				request: function(){
-					var Ajaxy = $.Ajaxy;
-					$content.stop(true,true).fadeOut(400);
-					return true;
-				},
-				response: function(){
-					var Ajaxy = $.Ajaxy;
-					
-					var $active = $menu.find('.active');
-					var url = $active.next('li a').attr('href');						
-					var Action = this;
-					$content.html(url.content).fadeIn(400,function(){
-						Action.documentReady($content);
-					})
-					
-					$menu.children(':has(a[href*="'+State.raw.state+'"])').addClass('active').siblings('.active').removeClass('active');
-					
-					app.init();
-					return true;
-				}
-			},
-			
-			'back': {
-				classname: 'ajaxy-back',
-				matches: /^\/_paginas\/?/,
-				request: function(){
-					var Ajaxy = $.Ajaxy;
-					$content.stop(true,true).fadeOut(400);
-					return false;
-				},
-				response: function(){
-					var Ajaxy = $.Ajaxy;
-					var $active = $menu.find('.active');
-					var url = $active.prev('li a').attr('href');
-										
-					var Action = this;
-					$content.html(url.content).fadeIn(400,function(){
-						Action.documentReady($content);
-					})
-					
-					$menu.children(':has(a[href*="'+State.raw.state+'"])').addClass('active').siblings('.active').removeClass('active');
-					
 					app.init();
 					return true;
 				}

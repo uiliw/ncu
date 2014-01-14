@@ -57,12 +57,25 @@ margin-left: 8.333333333333332%;
 .tab-content > .tab-pane,
 .pill-content > .pill-pane {
   display: none;
+  /* background-color: #51a27a; */
+  padding: 10px 0;
+  /* color:#fff
+; */
 }
-
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+color: #fff;
+cursor: default;
+background-color: #51a27a;
+border: 1px solid #51a27a;
+border-bottom-color: transparent;
+}
 .tab-content > .active,
 .pill-content > .active {
   display: block;
 }
+
+
+
 
 .tabs-below > .nav-tabs {
   border-top: 1px solid #ddd;
@@ -153,6 +166,9 @@ margin-left: 8.333333333333332%;
   *border-left-color: #ffffff;
 }
 
+
+
+
 .popover{
 	word-break: break-word;
 }
@@ -180,6 +196,11 @@ ul.seta li{
 ;
 	padding-left: 25px;
 	margin-bottom: 7px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+color: #fff;
+background-color: #003259;
 }
 /*------------------------------------*\
     TIPOGRAFIA
@@ -279,6 +300,7 @@ header:after{
     background: #0073b9;
     padding: 5px 0;
     border-bottom: 2px solid #004b73;
+    margin: 0;
 }
 .top-menu li{
     border-right: 1px solid #a6c9e7;
@@ -462,9 +484,39 @@ _border-color: #f2dede #000000 #000000 #000000;
 }
 .drop-down{
 }
-#navega{width:100%;float:left;border-top:1px solid #969696;border-bottom: 1px solid #969696;line-height:40px;color: #969696;margin-bottom: 20px;}
-#navega a{margin-left:5px}
-#conteudo{margin-bottom:60px;float: left;}
+.navega{width:100%;float:left;border-top:1px solid #969696;border-bottom: 1px solid #969696;line-height:40px;color: #969696;margin-bottom: 20px;}
+.navega a{margin-left:5px;cursor: pointer;}
+#conteudo{margin-bottom:60px;}
+
+
+
+#nav-conteudo{
+    width: 30%;
+    background-color: #51a27a;
+    position: absolute;
+    height: 100%;
+    padding: 20px;
+    overflow: auto;
+}
+#nav-conteudo ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#nav-conteudo li.active{
+    border-bottom: #fff solid 1px;
+}
+#nav-conteudo li{
+    border-bottom: #2A6648 solid 1px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+#nav-conteudo a{
+    color: #6CDD96;
+}
+#nav-conteudo .active>a{
+    color:#fff;
+}
 /*------------------------------------*\
     EFEITOS
 \*------------------------------------*/
@@ -477,7 +529,7 @@ _border-color: #f2dede #000000 #000000 #000000;
   -webkit-border-radius: 50%;
   text-align: center;
   color: #fff!important;
-  float: left;
+  display: inline-block;
 }
 
 .icone{
@@ -485,6 +537,7 @@ _border-color: #f2dede #000000 #000000 #000000;
   height: 30px;
   line-height: 30px;
   font-size:15px
+;
 }
 .icone2x{
   width: 40px;
