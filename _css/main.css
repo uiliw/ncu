@@ -1,7 +1,32 @@
 /*------------------------------------*\
     RESET
 \*------------------------------------*/
-
+.login{
+	float:right;
+	margin-top:37px
+}
+.login input{
+	background-color: #428BD0;
+	border:none;
+	border-radius:0;
+	color:#a6c9e7;
+	height: 25px;
+}
+input[placeholder], [placeholder], *[placeholder] {
+	color:#a6c9e7!important;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #a6c9e7!important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #a6c9e7!important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #a6c9e7!important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #a6c9e7!important;
+}
 @media (min-width: 768px){
 .container {
 max-width: 750px;
@@ -26,7 +51,13 @@ margin-right: auto;
 margin-left: auto;
 position: relative;
 }
-
+.form-btn{
+    height: 25px;
+	
+    line-height: 12px;
+    border: 0;
+    border-bottom: 4px solid #004b73;
+}
 .btn{
 	border-radius:0;
 }
@@ -182,6 +213,7 @@ border-bottom-color: transparent;
 }
 .img-responsive{
 	margin-bottom:20px;
+	width: 100%;
 }
 
 ul.seta{
@@ -202,6 +234,17 @@ ul.seta li{
 color: #fff;
 background-color: #003259;
 }
+
+.panel-footer {
+padding: 10px 0;
+background-color: transparent;
+border-top: 1px solid #51a27a;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+margin: 0 20px;
+}
+
+
 /*------------------------------------*\
     TIPOGRAFIA
 \*------------------------------------*/
@@ -251,6 +294,7 @@ header{
 	height: 110px;
 	border-bottom:12px solid #004b73;
 	position:relative;
+	z-index: 1;
 }
 header:after{
 	background-color:#00699a;
@@ -374,11 +418,77 @@ margin: 0px 13px 0;
 /*------------------------------------*\
     FOOTER
 \*------------------------------------*/
-
+footer{
+	background-color:#003259;
+	padding:20px 0
+}
+.logo-sebrae{
+	float:left;
+}
+.footer-link{
+	color:#97c2e0;
+	float:right;
+}
+.footer-link a{
+	color:#97c2e0;
+}
+.rodape{
+	position:fixed;
+	bottom:0;
+	width:100%;
+}
 /*------------------------------------*\
     CONTEUDO
 \*------------------------------------*/
 
+.heading-success{
+background-color:#51a27a;
+color: #fff;
+padding: 5px 40px 5px;
+font-size: 18px; 
+margin-bottom: 20px;
+position: relative;
+border: 1px solid #51a27a;
+}
+.heading-success:before {
+width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 35px 35px 0 0;
+border-color: #51be7a transparent transparent transparent;
+_border-color: #51be7a #000000 #000000 #000000;
+line-height: 0px;
+_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+content: "";
+top: 0;
+left: 0;
+position: absolute;
+}
+.heading-link{
+	color:#fff;
+	margin-right: -30px;}
+.lista{
+    list-style: none;
+	
+    padding: 0;
+}
+.lista li{
+    border-bottom: 1px solid #51be7a;
+	
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.img-full{
+    position: fixed;
+	
+    top: 90px;
+    width: 100%;
+    z-index: 0;
+}
+.conteudo_home{
+	background-color:#fffff0;
+	padding:20px 0
+}
 .area-drop{ border:4px dashed #ccc; margin-bottom:20px;}
 .ui-sortable{min-height:40px}
 .panel-move{margin:3px -30px 0 0}
@@ -422,6 +532,9 @@ _border-color: #003259 #000000 #000000 #000000;
 }
 .panel-success {
 border-color: #51a27a;
+}
+.panel-success .panel-body h3{
+color: #51a27a;
 }
 .panel-success .panel-heading{
 background-color:#51a27a;
@@ -486,7 +599,7 @@ _border-color: #f2dede #000000 #000000 #000000;
 }
 .navega{width:100%;float:left;border-top:1px solid #969696;border-bottom: 1px solid #969696;line-height:40px;color: #969696;margin-bottom: 20px;}
 .navega a{margin-left:5px;cursor: pointer;}
-#conteudo{margin-bottom:60px;}
+#conteudo{margin-bottom:60px;word-break: break-word;}
 
 
 

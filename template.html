@@ -31,7 +31,6 @@
 <link rel="stylesheet" href="_js/_fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 <link rel="stylesheet" href="_js/_flexslider/flexslider.css">
 <link rel="stylesheet" href="_js/_loading/css/loadingbar.css">
-<link type="text/css" rel="stylesheet" media="all" href="_js/_mmenu/src/css/jquery.mmenu.all.css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans' rel='stylesheet' type='text/css'>
 <!--[if IE 7]><link rel="stylesheet" href="_fonts/css/font-awesome-ie7.min.css"><![endif]-->
 
@@ -51,7 +50,6 @@
 <script src="_js/_ajaxy/scripts/jquery.ajaxy.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script src="_js/_loading/js/jquery.loadingbar.js"></script>
-<script src="_js/_mmenu/src/js/jquery.mmenu.min.all.js"></script>
 <script src="_js/_flatShadown/jquery.flatshadow.js"></script>
 
 <script src="_js/main.js"></script>
@@ -176,6 +174,12 @@
 	</div>
 	
 	<!----------------------DESTAQUE---------------------------->
+
+<!-- SNIPPET
+
+<p class="destaque text-success">_____texto_____</p>
+
+-->
 	
 	<div class="page-header">
 		<h1>Destaques</h1>
@@ -195,6 +199,23 @@
 	<p class="text-danger ">Morbi gravida lacus sed lorem. Mauris vestibulum. Cras vehicula porta eros. Curabitur ut justo vel pede elementum semper. Integer pretium pulvinar augue. Aenean ut nisl non lectus porta feugiat. Mauris iaculis pede a risus. Suspendisse mollis.</p>
 	
 	<!----------------------TOOLTIP---------------------------->
+
+<!--
+popovers_01 deve ser único na página
+-->
+
+<!-- SNIPPET
+
+<abbr 
+data-toggle="popover"
+data-placement="top"
+data-original-title=""
+data-content="____________conteudo_do_tooltip____________
+<button type='button' class='close' onclick='$(&quot;.popovers_01&quot;).popover(&quot;toggle&quot;);'>&times;</button>"
+class="popovers_01">_____palavra_do_tooltip_____</abbr>
+
+-->
+
 	
 	<div class=" page-header">
 		<h1>Tooltip</h1>
@@ -217,7 +238,26 @@
 	| <abbr data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="click" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="rutrum faucibus<button type='button' class='close' onclick='$(&quot;.popovers_02&quot;).popover(&quot;toggle&quot;);'>&times;</button>" class="popovers_02" title="">direita</abbr> | <abbr data-container="body" data-html="true" data-toggle="popover" data-placement="bottom" data-trigger="click" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="rutrum faucibus<button type='button' class='close' onclick='$(&quot;.popovers_03&quot;).popover(&quot;toggle&quot;);'>&times;</button>" class="popovers_03" title="">em baixo</abbr> | <abbr data-container="body" data-html="true" data-toggle="popover" data-placement="left" data-trigger="click" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="rutrum faucibus<button type='button' class='close' onclick='$(&quot;.popovers_04&quot;).popover(&quot;toggle&quot;);'>&times;</button>" class="popovers_04" title="">esquerda</abbr></p>
 	
 	<!----------------------DROPDOWN---------------------------->
-	
+
+<!--
+Os id, data-parent e href devem ser iguais e únicos na página.
+O icone pode ser:
+
+fa-plus (sinal de mais)
+fa-paperclip (clipe)
+fa-quote-right (aspas ")
+-->
+
+<!-- SNIPPET
+
+<div class="drop-down" id="dropxx"><a class="drop-right" data-toggle="collapse" data-parent="#dropxx" href="#coldxx"><div class="icone2x"><i class="fa fa-plus"></i></div></a>
+<div id="coldxx" class="panel-collapse collapse"><p class="text-muted">_____texto_____</p></div>
+</div>
+<div class="clearfix"></div>
+
+-->
+
+
 	<div class=" page-header">
 		<h1>Dropdown <small></small></h1>
 		<h4>O recurso é usado para criar uma janela extra de informação, acionada através de um clique em um termo, botão ou ícone específico do conteúdo. A janela extra pode conter texto, imagem ou link externo.</h4>
@@ -245,6 +285,33 @@
 	<div class="clearfix"></div>
 	
 	<!----------------------GALERIA---------------------------->
+	
+<!-- SNIPPET
+
+<div class="flexslider">
+  <ul class="slides">
+  
+    <li>
+        <img src="http://placehold.it/600x400" />
+        <p class="flex-caption">___legenda___</p>
+    </li>	
+	
+	<li>
+		<div class="margin-15">
+			<img style="width:initial" class="pull-left margin-right20" src="http://placehold.it/300x200" />
+			<p>When I want a load of Lorem Ipsum, I just type lorips and the following text pops into place in front of the flashing text cursor, in any app:Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam ornare dictum ligula. Maecenas elementum suscipit nisl. Cras imperdiet leo ac felis dictum luctus. Pellentesque odio nisi, accumsan nec, scelerisque sed, consectetuer nec, justo. Sed tortor sapien, suscipit id, pulvinar vel, elementum id, lorem. Nullam consectetuer risus sit amet nibh. Vestibulum consectetuer, quam vitae euismod volutpat, magna magna consectetuer dui, et accumsan magna dui non nibh. </p>
+		</div>
+    </li>
+	
+    <li>
+    	<iframe style="width:100%" width="560" height="515" src="//www.youtube.com/embed/PvOkuZiDQDk" frameborder="0" allowfullscreen></iframe>
+    </li>
+	
+  </ul>
+</div>
+
+-->
+
 	
 	<div class=" page-header">
 		<h1>Galeria <small></small></h1>
@@ -278,6 +345,8 @@
 </div>
 	<!----------------------MODAL---------------------------->
 	
+	
+
 	<div class=" page-header">
 		<h1>Modal <small></small></h1>
 		<h4>Funciona como uma janela de pop-up e pode conter texto, imagem ou vídeo. O recurso é ativado através de um botão ou ícone. A janela se sobrepõe ao conteúdo e apresenta um botão para fechar.</h4>
@@ -337,6 +406,91 @@
 	
 	<!----------------------TABS---------------------------->
 	
+<!--
+href da tab deve se coincidir com o id do conteudo.
+ids devem ser unicos na página
+-->
+
+<!-- SNIPPET - TOPO
+
+<div class="tabbable">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#tab1" data-toggle="tab">_____titulo1______</a></li>
+		<li><a href="#tab2" data-toggle="tab">_____titulo2______</a></li>
+		<li><a href="#tab3" data-toggle="tab">_____titulo3______</a></li>
+		<li><a href="#tab4" data-toggle="tab">_____titulo4______</a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="tab1">____conteudo1____</div>
+		<div class="tab-pane fade" id="tab2">____conteudo2____</div>
+		<div class="tab-pane fade" id="tab3">____conteudo3____</div>
+		<div class="tab-pane fade" id="tab4">____conteudo4____</div>
+	</div>
+</div>
+
+-->
+
+<!-- SNIPPET - EM BAIXO
+
+<div class="tabbable tabs-below">
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="tab1">____conteudo1____</div>
+		<div class="tab-pane fade" id="tab2">____conteudo2____</div>
+		<div class="tab-pane fade" id="tab3">____conteudo3____</div>
+		<div class="tab-pane fade" id="tab4">____conteudo4____</div>
+	</div>
+	
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#tab1" data-toggle="tab">_____titulo1______</a></li>
+		<li><a href="#tab2" data-toggle="tab">_____titulo2______</a></li>
+		<li><a href="#tab3" data-toggle="tab">_____titulo3______</a></li>
+		<li><a href="#tab4" data-toggle="tab">_____titulo4______</a></li>
+	</ul>
+</div>
+
+-->
+
+<!-- SNIPPET - ESQUEDA
+
+<div class="tabbable tabs-left">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#tab1" data-toggle="tab">_____titulo1______</a></li>
+		<li><a href="#tab2" data-toggle="tab">_____titulo2______</a></li>
+		<li><a href="#tab3" data-toggle="tab">_____titulo3______</a></li>
+		<li><a href="#tab4" data-toggle="tab">_____titulo4______</a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="tab1">____conteudo1____</div>
+		<div class="tab-pane fade" id="tab2">____conteudo2____</div>
+		<div class="tab-pane fade" id="tab3">____conteudo3____</div>
+		<div class="tab-pane fade" id="tab4">____conteudo4____</div>
+	</div>
+</div>
+
+-->
+
+<!-- SNIPPET - DIREITA
+
+<div class="tabbable tabs-right">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#tab1" data-toggle="tab">_____titulo1______</a></li>
+		<li><a href="#tab2" data-toggle="tab">_____titulo2______</a></li>
+		<li><a href="#tab3" data-toggle="tab">_____titulo3______</a></li>
+		<li><a href="#tab4" data-toggle="tab">_____titulo4______</a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="tab1">____conteudo1____</div>
+		<div class="tab-pane fade" id="tab2">____conteudo2____</div>
+		<div class="tab-pane fade" id="tab3">____conteudo3____</div>
+		<div class="tab-pane fade" id="tab4">____conteudo4____</div>
+	</div>
+</div>
+
+-->
+
+
+
+
 	<div class=" page-header">
 		<h1>Tabs <small></small></h1>
 		<h4>Assim como o recurso dropdown, este é usado para apresentar uma sequência de itens. Aqui, eles são dispostos lado a lado e a navegação entre eles se dá por abas, que podem ser dispostas na vertical ou na horizontal.</h4>
@@ -415,7 +569,49 @@
       <!-- /TAB - DIREITA -->
 	
 	<!----------------------ACORDEOM---------------------------->
-	
+
+<!--
+id do accordion deve coincidir com todos os data-parent
+href do titulo deve ser o mesmo id do texto
+ids devem ser unicos na página
+-->
+
+<!-- SNIPPET
+
+<div class="panel-group accordion" id="accXX">
+	<div class="panel panel-success"> <a data-toggle="collapse" data-parent="#accXX" href="#col01">
+		<div class="panel-heading">_____titulo1_____</div>
+		</a>
+		<div id="col01" class="panel-collapse collapse in">
+			<div class="panel-body">_____texto1______</div>
+		</div>
+	</div>
+	<div class="panel panel-success"> <a data-toggle="collapse" data-parent="#accXX" href="#col02">
+		<div class="panel-heading">_____titulo2_____</div>
+		</a>
+		<div id="col02" class="panel-collapse collapse">
+			<div class="panel-body">_____texto2______</div>
+		</div>
+	</div>
+	<div class="panel panel-success"> <a data-toggle="collapse" data-parent="#accXX" href="#col03">
+		<div class="panel-heading">_____titulo3_____</div>
+		</a>
+		<div id="col03" class="panel-collapse collapse">
+			<div class="panel-body">_____texto3______</div>
+		</div>
+	</div>
+	<div class="panel panel-success"> <a data-toggle="collapse" data-parent="#accXX" href="#col04">
+		<div class="panel-heading">_____titulo4_____</div>
+		</a>
+		<div id="col04" class="panel-collapse collapse">
+			<div class="panel-body">_____texto4______</div>
+		</div>
+	</div>
+</div>
+
+-->
+
+
 	<div class=" page-header">
 		<h1>Acordeom <small></small></h1>
 		<h4>O recurso é usado para apresentar uma lista fechada de itens e explicar cada um deles, abrindo-os. Funciona como uma sanfona, empurrando o item seguinte para baixo quando se abre a explicação e recolhendo-o quando a mesma é fechada.</h4>
@@ -452,7 +648,26 @@
 	</div>
 	
 	<!----------------------EFEITOS---------------------------->
-	
+
+<!-- SNIPPET - FADE
+
+<p class="fade">____TEXTO_____</p>
+
+-->
+
+<!-- SNIPPET - SLIDE
+
+<ul class="efx_slide">
+	<li class="slide s_1"><a href="#">____TEXTO_____</a></li>
+	<li class="slide s_2"><a href="#">____TEXTO_____</a></li>
+	<li class="slide s_3"><a href="#">____TEXTO_____</a></li>
+	<li class="slide s_4"><a href="#">____TEXTO_____</a></li>
+	<li class="slide s_5"><a href="#">____TEXTO_____</a></li>
+	<li class="slide s_6"><a href="#">____TEXTO_____</a></li>
+</ul>
+
+-->
+
 	<div class=" page-header">
 		<h1>Efeitos</h1>
 		<h4>São recursos que aplicam uma animação no conteúdo, podem usados em texto, imagens, ícones ou botões.</h4>
@@ -470,7 +685,28 @@
 	</ul>
 	
 	<!----------------------TABELAS---------------------------->
-	
+
+<!-- SNIPET
+
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>__titulo__</th>
+				<th>__titulo__</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>__texto__</td>
+				<td>__texto__</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+-->
+
 	<div class=" page-header">
 		<h1>Tabela</h1>
 	</div>

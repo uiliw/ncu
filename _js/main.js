@@ -410,8 +410,9 @@ jQuery(document).ready(function(){
 		
 		
 	$.Ajaxy.configure({
-		
+		'debug': false,
 		'method': 'get',
+		'scrollto_content': true,
 		'Controllers': {
 			'_generic': {
 				request: function(){
