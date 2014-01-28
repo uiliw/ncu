@@ -26,6 +26,8 @@
 <link rel="stylesheet" href="_js/_jReject/css/jquery.reject.css">
 <link rel="stylesheet" href="_fonts/css/font-awesome.min.css">
 <link rel="stylesheet" href="_js/_jReject/css/jquery.reject.css">
+<link rel="stylesheet" href="_js/_bootstrap/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet">
+<link rel="stylesheet" href="_js/_bootstrap/bootstrap-select/bootstrap-select.min.css">
 <link rel="stylesheet" href="_js/_fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 <link rel="stylesheet" href="_js/_fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
 <link rel="stylesheet" href="_js/_fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
@@ -39,6 +41,10 @@
 <script src="_js/_browser/modernizr-2.6.2.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="_js/jquery.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script>
+$.widget.bridge('uitooltip', $.ui.tooltip);
+</script>
 <script src="_js/_bootstrap/bootstrap.min.js"></script>
 <script src="_js/_jReject/js/jquery.reject.js"></script>
 <script src="_js/_flexslider/jquery.flexslider.js"></script>
@@ -46,9 +52,12 @@
 <script type="text/javascript" src="_js/_fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
 <script type="text/javascript" src="_js/_fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 <script type="text/javascript" src="_js/_fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script type="text/javascript" src="_js/_bootstrap/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="_js/_bootstrap/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/_bootstrap/bootstrap-select/bootstrap-select.min.js"></script>
 <script type="text/javascript" src="_js/_transit/jquery.transit.js"></script>
+<script src="_js/_inputmask/dist/min/jquery.inputmask.js"></script>
 <script src="_js/_ajaxy/scripts/jquery.ajaxy.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script src="_js/_loading/js/jquery.loadingbar.js"></script>
 <script src="_js/_flatShadown/jquery.flatshadow.js"></script>
 
@@ -78,12 +87,12 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="/ncu">CONTEÚDO</a></li>
+					<li><a href="/ncu_2">CONTEÚDO</a></li>
 					<li><a href="turma.html">TURMA</a></li>
 					<li><a href="avisos.html">AVISOS</a></li>
 					<li><a href="notas.html">NOTAS</a></li>
 					<li class="active"><a href="forum.html">FÓRUM</a></li>
-					<li><a href="area_de_publicação.html">ÁREA DE PUBLICAÇÃO</a></li>
+					<li><a href="area_de_publicacao.html">ÁREA DE PUBLICAÇÃO</a></li>
 					<li><a href="trabalho_em_equipe.html">TRABALHO EM EQUIPE</a></li>
 					<li><a href="chat.html">CHAT</a></li>
 				</ul>
@@ -101,63 +110,95 @@
 		</ul>
 		<div class="clearfix"></div>
 		<div class="heading-success">FÓRUM<a href="#" class="pull-right heading-link">Cadastrar tema <img src="_img/arrow-right.svg" alt=""/></a></div>
-		<div class="row">
-		<div class="col-sm-8 grid">
-			<div class="panel panel-success tile">
-				<div class="panel-heading">&nbsp;<i class="fa fa-arrows-alt pull-right panel-move"></i></div>
-				<div class="panel-body">
-					<h3>Pessoal!</h3>
-					<p>Dia 04 temos prova. Estudem!!!!<br><br>
-					Abs,<br>
-					Prof.</p>
-				</div>
-				<div class="panel-footer">
-				<small class="text-muted">Publicado em 09/07/2011</small>
-				</div>
-			</div>
-			<div class="panel panel-success tile">
-				<div class="panel-heading">&nbsp;<i class="fa fa-arrows-alt pull-right panel-move"></i></div>
-				<div class="panel-body">
-					<h3>Olá, Pessoal!</h3>
-					<p>Lembrem que dia 31/03  é o último dia para a publicação do plano.<br><br>
-					Abs<br>
-					Professor.</p>
-				</div>
-				<div class="panel-footer">
-				<small class="text-muted">Publicado em 09/07/2011</small>
-				</div>
-			</div>
-			<div class="panel panel-success tile">
-				<div class="panel-heading">&nbsp;<i class="fa fa-arrows-alt pull-right panel-move"></i></div>
-				<div class="panel-body">
-					<h3>Olá prezados(as) alunos(as)!!! </h3>
-
-					<p>Sejam bem-vindos(as) ao <strong>Negócio Certo Universitário!</strong><br><br>
+		<table class="table forum table-hover">
+			<tbody>
+				<tr>
+					<td><a href="#"><i class="fa fa-folder"></i></a></td>
+					<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
+						
+						<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
+					</td>
 					
-					Sou o monitor e meu objetivo é sanar suas dúvidas a respeito da utilização das ferramentas do ambiente do curso. Para isso, utilize a ferramenta Tira-dúvidas ou envie e-mail para: monitoriaunc@iea.org.br<br>
+				</tr>
+				<tr>
+					<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
+					<td><h3><a href="#">Vivamus a venenatis ante.</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
+						
+						<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="#"><i class="fa fa-folder"></i></a></td>
+					<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
+						
+						<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
+					</td>
 					
-					Estarei sempre à disposição.<br>
+				</tr>
+				<tr>
+					<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
+					<td><h3><a href="#">Vivamus a venenatis ante.</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
+						
+						<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="#"><i class="fa fa-folder"></i></a></td>
+					<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
+						
+						<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
+					</td>
 					
-					Grande abraço e sucesso desde já!<br><br>
+				</tr>
+				<tr>
+					<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
+					<td><h3><a href="#">Vivamus a venenatis ante.</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
+						
+						<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="#"><i class="fa fa-folder"></i></a></td>
+					<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
+						
+						<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
+					</td>
 					
-					Rodrigo,<br>
-					Monitor.</p>
-				</div>
-				<div class="panel-footer">
-				<small class="text-muted">Publicado em 09/07/2011</small>
-				</div>
-			</div>
-			
-		</div>
-		<div class="col-sm-4 grid2">
-			<div class="panel panel-primary tile">
-				<div class="panel-heading">INFORMAÇÕES<i class="fa fa-arrows-alt pull-right panel-move"></i></div>
-				<div class="panel-body">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla dignissim velit id luctus. Vestibulum vel dolor consequat, rhoncus metus a, molestie ante. Vivamus vel fermentum mi. Mauris erat massa, sodales volutpat mattis a, faucibus a urna.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+				</tr>
+				<tr>
+					<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
+					<td><h3><a href="#">Vivamus a venenatis ante.</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
+						
+						<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="#"><i class="fa fa-folder"></i></a></td>
+					<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
+						
+						<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
+					</td>
+					
+				</tr>
+				<tr>
+					<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
+					<td><h3><a href="#">Vivamus a venenatis ante.</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
+						
+						<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 	
 	</div>
 	<!-- /.container --> 

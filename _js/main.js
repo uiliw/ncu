@@ -47,6 +47,18 @@ $(function() {
 			
 			//INICIALIZA ICONES
 			app.initIcons();
+			
+			//INICIALIZA MASCARA
+			app.initMask();
+			
+			//INICIALIZA DATEPICKER
+			app.initDatepicker();
+			
+			//INICIALIZA SELECT
+			app.initSelect();
+			
+			//INICIALIZA OS PASSOS DO MOD2
+			app.initPassos();
 		},
 		
 			
@@ -56,6 +68,63 @@ $(function() {
 		//https://github.com/peachananr/loading-bar
 		initLoading: function(){
 			$(".ajaxy").loadingbar();
+		},
+		
+		
+		//INICIALIZA DATAPICKER
+		//http://eternicode.github.io/bootstrap-datepicker/
+		initDatepicker: function(){
+			$('input.datapicker').datepicker({
+				language: "pt-BR",
+				format: "dd/mm/yyyy",
+			});
+		},
+		
+		
+		//INICIALIZA OS PASSOS DO MOD2 - m2_a2_t2.html
+		initPassos: function(){
+			
+			$('#alternativa').click(function(e){
+				e.preventDefault();
+				if($('#passo-sim').is(':checked')){
+					$('.passos a[href="#tab5"]').tab('show')
+				}else{
+					$('.passos a[href="#tab2"]').tab('show')
+				}
+			})
+			$('#passo-voltar').click(function(e){
+				e.preventDefault();
+				if($('#passo-sim').is(':checked')){
+					$('.passos a[href="#tab7"]').tab('show')
+				}else{
+					$('.passos a[href="#tab4"]').tab('show')
+				}
+			})
+			$('#passo-resultado').click(function(e){
+				e.preventDefault();
+				
+				
+				//função para o calculo do resultado
+				
+				
+				$('.passos a[href="#tab9"]').tab('show')
+			})
+			
+			$('.btn-bar').click(function(e){
+				e.preventDefault();
+				var $total = $('.passos').find('.tab-pane').length;
+				var $current = $(this).parent().index()+1
+				var $percent = ($current/$total) * 100;
+				$('.passos').find('.progress-bar').css({width:$percent+'%'});
+				console.log('current: '+$current+'<br>percent: '+$percent)
+			})
+		},
+		
+		
+		//INICIALIZA SELECT
+		//http://silviomoreto.github.io/bootstrap-select/
+		initSelect: function(){
+			$('.selectpicker').selectpicker();
 		},
 	
 		
@@ -151,7 +220,8 @@ $(function() {
 			$('.flexslider').flexslider({
 			  animation: "slide",
 			  controlsContainer: ".flex-container",
-			  smoothHeight: true,  
+			  //smoothHeight: true,  
+			  initDelay: 1000,
 			  slideshow: false,
 			  start: function(slider) {
 				$('.total-slides').text(slider.count);
@@ -275,11 +345,16 @@ $(function() {
 		//http://getbootstrap.com/javascript/#tooltips
 		//http://getbootstrap.com/javascript/#popovers
 		initTooltip: function() {
-			$('[data-toggle=tooltip]').tooltip({html:true,});
-			$("[data-toggle=popover]").popover({html:true,trigger:'click'});
+			$('[data-toggle=tooltip]').tooltip({html:true,container: 'body'});
+			$("[data-toggle=popover]").popover({html:true,trigger:'click',container: 'body'});
 		},
 		
-		
+		//INICIALIZA MASCARA NOS INPUT
+		//https://github.com/RobinHerbots/jquery.inputmask
+		initMask: function() {
+			$(":input").inputmask();
+		},
+	
 		//INICIALIZA TABS
 		//http://getbootstrap.com/javascript/#tabs
 		initTabEvent: function() {
@@ -330,8 +405,67 @@ $(function() {
 		//https://github.com/rstacruz/jquery.transit		
 		initEfeitos: function(){
 		
+		
+		$.fn.offScreen = function(distance){
+		
+	    var $t				= $(this),
+	    	$w				= $(window),
+	    	viewTop			= $w.scrollTop(),
+	    	viewBottom		= viewTop + $w.height(),
+	    	_top			= $t.offset().top - distance,
+	    	_bottom		= $t.offset().top + $t.height() + distance;
+   
+		   return {
+			 top: _bottom <= viewTop,
+			 bottom: _top >= viewBottom
+		   }
+			
+		};
+			
+		
+		
+		var win = $(window);
+		
+		var allMods = $(".fade");
+		
+		allMods.each(function(i, el) {
+		  var el = $(el);
+		  if (!el.offScreen(-150).bottom) {
+			el.addClass("already-visible"); 
+		  } 
+		});
+		
+		win.on("scroll resize",function(event) 
+		{
+		  
+		  allMods.each(function(i, el) {
+			var el = $(el);
+			if (!el.offScreen(-150).top && !el.offScreen(-150).bottom) 
+			{
+			  el.removeClass("already-visible off-screen-top off-screen-bottom"); 
+			  el.addClass("come-in");
+			} 
+			else
+			{
+			
+				if(el.offScreen(-150).top)
+				{
+					el.addClass("off-screen-top"); 
+				}
+				else
+				{
+					el.addClass("off-screen-bottom"); 
+				}
+			}
+		  });//allMods.each()
+		  
+		});//win.scroll()
+		
+		win.trigger("scroll");
+
+				  
+
 			//Fade
-			$(".fade").transition({ opacity: 1, delay: 2000 });
 			$('.rodar_fade').click(function(e){
 				$(".fade").transition({ opacity: 0, delay: 0 , complete: function(){$(".fade").transition({ opacity: 1, delay: 1000 });} });
 				e.preventDefault();
@@ -353,8 +487,9 @@ $(function() {
 		},
 		
 		//INICIALIZA ICONES COM EFEITO DE SOMBRA
+		//https://github.com/peachananr/flat-shadow
 		initIcons: function(){
-			$(".icone, .icone2x, .icone3x, .icone4x, .icone5x").flatshadow({
+			$(".icone,.icone0x, .icone2x, .icone3x, .icone4x, .icone5x").flatshadow({
 			  color: "#3ab473",
 			  angle: "SE"
 			});	
@@ -368,17 +503,18 @@ $(function() {
 jQuery(document).ready(function(){
 	app.init();
 	$('#conteudo').load('_paginas/apresentacao.html');
+	
 	$('#nav-conteudo').hide();
 	$('.nav-conteudo').click(function(){
 		if ($('#conteudo_wrap').hasClass('menu_aberto')){
 			
 		$('#conteudo_wrap').removeClass();
-		$('#conteudo_wrap').addClass('col-xs-10 col-sm-offset-1');
+		$('#conteudo_wrap').addClass('col-xs-8 col-sm-offset-3');
 		$('#nav-conteudo').hide();
 		
 		}else{
 		$('#conteudo_wrap').removeClass();
-		$('#conteudo_wrap').addClass('col-xs-7 col-sm-offset-4 menu_aberto');
+		$('#conteudo_wrap').addClass('col-xs-8 col-sm-offset-3 menu_aberto');
 		$('#nav-conteudo').show();
 		}
 	})
@@ -426,7 +562,6 @@ jQuery(document).ready(function(){
 					if ( title ) document.title = title;
 					$body.removeClass('loading');
 					$('.navega-titulo').text(title);
-					$('#current').text('Our current state is: ['+state+']');
 					return true;
 				},
 				error: function(){
@@ -434,7 +569,6 @@ jQuery(document).ready(function(){
 					var error = data.error||data.responseText||'Unknown Error.';
 					var error_message = data.content||error;
 					$body.removeClass('loading');
-					$('#current').text('Our current state is: ['+state+']');
 					return true;
 				}
 			},

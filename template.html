@@ -26,12 +26,14 @@
 <link rel="stylesheet" href="_js/_jReject/css/jquery.reject.css">
 <link rel="stylesheet" href="_fonts/css/font-awesome.min.css">
 <link rel="stylesheet" href="_js/_jReject/css/jquery.reject.css">
+<link rel="stylesheet" href="_js/_bootstrap/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet">
+<link rel="stylesheet" href="_js/_bootstrap/bootstrap-select/bootstrap-select.min.css">
 <link rel="stylesheet" href="_js/_fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 <link rel="stylesheet" href="_js/_fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
 <link rel="stylesheet" href="_js/_fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 <link rel="stylesheet" href="_js/_flexslider/flexslider.css">
 <link rel="stylesheet" href="_js/_loading/css/loadingbar.css">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans' rel='stylesheet' type='text/css'>
 <!--[if IE 7]><link rel="stylesheet" href="_fonts/css/font-awesome-ie7.min.css"><![endif]-->
 
 <!-- Java Scripts -->
@@ -39,6 +41,10 @@
 <script src="_js/_browser/modernizr-2.6.2.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="_js/jquery.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script>
+$.widget.bridge('uitooltip', $.ui.tooltip);
+</script>
 <script src="_js/_bootstrap/bootstrap.min.js"></script>
 <script src="_js/_jReject/js/jquery.reject.js"></script>
 <script src="_js/_flexslider/jquery.flexslider.js"></script>
@@ -46,9 +52,12 @@
 <script type="text/javascript" src="_js/_fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
 <script type="text/javascript" src="_js/_fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 <script type="text/javascript" src="_js/_fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script type="text/javascript" src="_js/_bootstrap/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="_js/_bootstrap/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/_bootstrap/bootstrap-select/bootstrap-select.min.js"></script>
 <script type="text/javascript" src="_js/_transit/jquery.transit.js"></script>
+<script src="_js/_inputmask/dist/min/jquery.inputmask.js"></script>
 <script src="_js/_ajaxy/scripts/jquery.ajaxy.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script src="_js/_loading/js/jquery.loadingbar.js"></script>
 <script src="_js/_flatShadown/jquery.flatshadow.js"></script>
 
@@ -251,7 +260,7 @@ fa-quote-right (aspas ")
 <!-- SNIPPET
 
 <div class="drop-down" id="dropxx"><a class="drop-right" data-toggle="collapse" data-parent="#dropxx" href="#coldxx"><div class="icone2x"><i class="fa fa-plus"></i></div></a>
-<div id="coldxx" class="panel-collapse collapse"><p class="text-muted">_____texto_____</p></div>
+<div id="coldxx" class="panel-collapse collapse"><div class="drop-inner"><p class="text-muted">_____texto_____</p></div></div>
 </div>
 <div class="clearfix"></div>
 
@@ -264,24 +273,24 @@ fa-quote-right (aspas ")
 	</div>
 	<p>When I want a load of Lorem Ipsum, I just type lorips and the following <a data-toggle="collapse" data-parent="#drop01" href="#cold01">text pops into place</a> in front of the flashing text cursor, in any app:Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam ornare dictum ligula. Maecenas elementum suscipit nisl. Cras imperdiet leo ac felis dictum luctus. Pellentesque odio nisi, accumsan nec, scelerisque sed, consectetuer nec, justo. Sed tortor sapien, suscipit id, pulvinar vel, elementum id, lorem. Nullam consectetuer risus sit amet nibh. Vestibulum consectetuer, quam vitae euismod volutpat, magna magna consectetuer dui, et accumsan magna dui non nibh. </p>
 	<div class="drop-down" id="drop01">
-		<div id="cold01" class="panel-collapse collapse"> <img class="img-responsive pull-right margin-left20 margin-bottom20" src="http://placehold.it/300x200" />Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+		<div id="cold01" class="panel-collapse collapse"><div class="drop-inner"><img class="img-responsive pull-right margin-left20 margin-bottom20" src="http://placehold.it/300x200" />Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div></div>
 	</div>
 	<div class="clearfix"></div>
 	<div class="drop-down" id="drop02"> <a class="drop-left" data-toggle="collapse" data-parent="#drop02" href="#cold02"><img src="_img/saiba-mais.svg" /></a>
-		<div id="cold02" class="panel-collapse collapse"> <img class="img-responsive pull-left margin-right20 margin-bottom20" src="http://placehold.it/300x200" />Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+		<div id="cold02" class="panel-collapse collapse"><div class="drop-inner"><img class="img-responsive pull-left margin-right20 margin-bottom20" src="http://placehold.it/300x200" />Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div></div>
 	</div>
 	<div class="clearfix"></div>
 	<p>Morbi adipiscing consequat erat. Vivamus quis massa eget orci fermentum laoreet. Morbi posuere purus. Duis feugiat lacus vel nisi. Aliquam ipsum felis, pretium sed, vehicula vel, dictum eget, nibh. Morbi turpis nulla, luctus viverra, pretium in, suscipit vitae, purus.</p>
 	<div class="drop-down" id="drop03"> <a class="drop-right" data-toggle="collapse" data-parent="#drop03" href="#cold03"><img src="_img/saiba-mais.svg" /></a>
-		<div id="cold03" class="panel-collapse collapse">
+		<div id="cold03" class="panel-collapse collapse"><div class="drop-inner">
 		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Ni richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-ta richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-tahil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.  it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-ta richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it s
-		</div>
+		</div></div>
 	</div>
 	<div class="clearfix"></div>
 	<p>Morbi adipiscing consequat erat. Vivamus quis massa eget orci fermentum laoreet. Morbi posuere purus. Duis feugiat lacus vel nisi. Aliquam ipsum felis, pretium sed, vehicula vel, dictum eget, nibh. Morbi turpis nulla, luctus viverra, pretium in, suscipit vitae, purus.ci fermentum laoreet. Morbi posuere purus. Duis feugiat lacus vel nisi. Aliquam ipsum felis, pretium sed, vehicula vel, dictum eget, nibh. Morbi turpis nulla, luctus viverra, pretium in, suscipit vitae, purus.ci fermentum laoreet. Morbi posuere purus. Duis feugiat lacus vel nisi. Aliquam ipsum felis, pretium sed, vehicula vel, dictum eget, nibh. Morbi turpis nulla, luctus viverra, pretium in, suscipit vitae, purus.ci fermentum laoreet. Morbi posuere purus. Duis feugiat lacus vel nisi. Aliquam ipsum felis, pretium sed, vehicula vel, dictum eget, nibh. Morbi turpis nulla, luctus viverra, pretium in, suscipit vitae, purus.ci fermentum laoreet. Morbi posuere purus. Duis feugiat lacus vel nisi. Aliquam ipsum felis, pretium sed, vehicula vel, dictum eget, nibh. Morbi turpis nulla, luctus viverra, pretium in, suscipit vitae, purus.</p>
 	<div class="drop-down" id="drop04"> <a class="btn btn-success margin-bottom20" data-toggle="collapse" data-parent="#drop04" href="#cold04">Dropdown</a>
-		<div id="cold04" class="panel-collapse collapse"> <img class="img-responsive pull-left margin-right20 margin-bottom20" src="http://placehold.it/300x200" />Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Ni richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-ta richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-tahil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.  it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-ta richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-tahil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.  it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-ta richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-tahil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
-	</div>
+		<div id="cold04" class="panel-collapse collapse"><div class="drop-inner"><img class="img-responsive pull-left margin-right20 margin-bottom20" src="http://placehold.it/300x200" />Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Ni richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-ta richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-tahil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.  it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-ta richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-tahil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.  it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-ta richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-tahil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+	</div></div>
 	<div class="clearfix"></div>
 	
 	<!----------------------GALERIA---------------------------->
@@ -688,7 +697,7 @@ ids devem ser unicos na página
 
 <!-- SNIPET
 
-<div class="table-responsive">
+
 	<table class="table table-bordered">
 		<thead>
 			<tr>
@@ -703,14 +712,14 @@ ids devem ser unicos na página
 			</tr>
 		</tbody>
 	</table>
-</div>
+
 
 -->
 
 	<div class=" page-header">
 		<h1>Tabela</h1>
 	</div>
-	<div class="table-responsive">
+	
 		<table class="table table-striped table-bordered table-hover">
 			<thead>
 				<tr>
@@ -759,7 +768,7 @@ ids devem ser unicos na página
 				</tr>
 			</tbody>
 		</table>
-	</div>
+	
 	
 	<!----------------------FORMULÁRIOS---------------------------->
 	
