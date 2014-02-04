@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Icones para Fav e Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="_ico/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="_ico/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="_ico/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="_ico/apple-touch-icon-57x57-precomposed.png">
+<link rel="shortcut icon" href="_ico/favicon.png">
+
+<!-- Estilos -->
+<link rel="stylesheet" href="_css/bootstrap.min.css">
+<link rel="stylesheet" href="_css/main.css">
+<link rel="stylesheet" href="_css/utility.css">
+<link rel="stylesheet" href="_js/_jReject/css/jquery.reject.css">
+<link rel="stylesheet" href="_fonts/css/font-awesome.min.css">
+<link rel="stylesheet" href="_js/_jReject/css/jquery.reject.css">
+<link rel="stylesheet" href="_js/_bootstrap/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet">
+<link rel="stylesheet" href="_js/_bootstrap/bootstrap-select/bootstrap-select.min.css">
+<link rel="stylesheet" href="_js/_fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<link rel="stylesheet" href="_js/_fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<link rel="stylesheet" href="_js/_fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+<link rel="stylesheet" href="_js/_flexslider/flexslider.css">
+<link rel="stylesheet" href="_js/_loading/css/loadingbar.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans' rel='stylesheet' type='text/css'>
+<!--[if IE 7]><link rel="stylesheet" href="_fonts/css/font-awesome-ie7.min.css"><![endif]-->
+
+<!-- Java Scripts -->
+<!--[if lt IE 9]><script src="_js/_browser/html5shiv.js"></script><script src="_js/_browser/respond.min.js"></script><![endif]-->
+<script src="_js/_browser/modernizr-2.6.2.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="_js/jquery.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script>
+$.widget.bridge('uitooltip', $.ui.tooltip);
+</script>
+<script type="text/javascript" src="_js/_bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="_js/_jReject/js/jquery.reject.js"></script>
+<script type="text/javascript" src="_js/_flexslider/jquery.flexslider.js"></script>
+<script type="text/javascript" src="_js/_fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="_js/_fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="_js/_fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<script type="text/javascript" src="_js/_fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script type="text/javascript" src="_js/_bootstrap/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="_js/_bootstrap/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/_bootstrap/bootstrap-select/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="_js/_transit/jquery.transit.js"></script>
+<script type="text/javascript" src="_js/_inputmask/dist/min/jquery.inputmask.js"></script>
+<script type="text/javascript" src="_js/_ajaxy/scripts/jquery.ajaxy.min.js"></script>
+<script type="text/javascript" src="_js/_loading/js/jquery.loadingbar.js"></script>
+<script type="text/javascript" src="_js/_flatShadown/jquery.flatshadow.js"></script>
+<script type="text/javascript" src="_js/_jqueryList/jquery.list.min.js"></script>
+
+<script src="_js/main.js"></script>
+
+<script type="text/javascript">
+			
+			$(function(){
+				
+				prepareList();
+			});
+			
+			function prepareList() {
+				
+				var $buttons = $('#botoes'),
+					$countries = $('#links');
+								
+				// Generate the list of buttons for the scrollto links.
+				$('dt',$countries).each(function(i){
+					
+					// Create the new button element for this header.
+					$buttons.append('<button data-header="'+i+'">'+$(this).text()+'</button>');
+				});
+				
+				// Add the < > buttons and then add inactive class to the first two buttons (< and the first header).
+				$buttons.prepend('<button data-header="0">&lt;</button>')
+						.append('<button data-header="1">&gt</button>')
+						.find('button:lt(2)')
+							.addClass('inactive');
+												
+				// Initialise the list.
+				$('#links').list().on('headingChange',function(ele,index,$header,max){
+					
+					// Remove the inactive class, and add to the newly selected header.	
+					$('button',$buttons)
+						.removeClass('inactive')
+						.eq(index+1)
+							.addClass('inactive');
+					
+					// Set the new next and previous index to the < and > buttons.
+					$('button:first',$buttons).attr('data-header',index-1);
+					$('button:last',$buttons).attr('data-header',index+1);
+					
+					// Grey out the first and last elments if we can't proceed in that direction any further.
+					if( index == 0 )	$buttons.find('button:first').addClass('inactive');					
+					if( max == true )	$buttons.find('button:gt('+(index+1)+')').addClass('inactive');
+				});
+				
+				// Add an event handler 
+				$buttons.on('click', 'button', function(){
+					
+					// Scroll to the 
+					$('#links').list( 'scrollTo', $(this).attr('data-header'), 'fast', 'swing' );
+				});
+			}
+			
+		</script>
+		
+</head>
+<body>
+	<header>
+		<div class="container"> <a href="home.html" class="logo"><img src="_img/logo-ncu.svg" alt="Negócio Certo Universitário"/></a>
+			<div class="login">
+				<div class="heading-login">AMBIENTE DE ESTUDOS</div>
+				<form class="form-inline" role="form">
+				  <div class="form-group" style="width:130px">
+					<label class="sr-only" for="form_login">Login</label>
+					<input type="text" class="form-control" id="form_login" placeholder="LOGIN">
+				  </div>
+				  <div class="form-group" style="width:130px">
+					<label class="sr-only" for="form_senha">Senha</label>
+					<input type="password" class="form-control" id="form_senha" placeholder="SENHA">
+				  </div>
+				  
+				  <button type="submit" class="btn btn-primary form-btn">ENTRAR</button>
+				</form>
+			</div>
+		</div>
+	</header>
+	<nav class="navbar navbar-default" role="navigation"> 
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="portal.html">HOME</a></li>
+					<li><a href="como_funciona.html">COMO FUNCIONA</a></li>
+					<li><a href="cadastros.html">CADASTROS</a></li>
+					<li><a href="contato.html">CONTATO</a></li>
+					<li class="active"><a href="links.html">LINKS</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse --> 
+		</div>
+	</nav>
+	<div class="container margin-top40">
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+				
+				<p><i class="fa fa-info-circle fa-3x pull-left verde"></i>Abaixo você encontra uma lista de links que podem ser muito úteis.<br>
+				Acesse os links de seu interesse e visite essa página sempre que necessário.</p>
+				<!-- Nav tabs -->
+<div class="tabbable">
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#tab1" data-toggle="tab">CATEGORIAS</a></li>
+	<li><a href="#tab2" data-toggle="tab">ORDEM ALFABÉTICA</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+	<div class="tab-pane active" id="tab1">
+	<div class="row">
+		<div class="col-sm-6">
+		<h4>CONSELHOS E SINDICATOS</h4>
+	<ul class="list-unstyled">
+		<li><a href="#" target="_blank">Conselho Regional de Engenheiros, Arquitetos e Agrônomos CREA-SC</a></li>
+		<li><a href="#" target="_blank">Conselho Regional dos Representantes</a></li>
+		<li><a href="#" target="_blank">Comerciais do Estado de SC - CORE-SC</a></li>
+		<li><a href="#" target="_blank">Sindicato das Empresas de Contabilidade da Grande Florianópolis - SESCON FLORIPA</a></li>
+	</ul>
+<h4>ÓRGÃOS GOVERNAMENTAIS</h4>
+	<ul class="list-unstyled">
+		<li><a href="#" target="_blank">Fazenda do Estado de SC</a></li>
+		<li><a href="#" target="_blank">Governo do Estado de SC</a></li>
+		<li><a href="#" target="_blank">Governo Federal</a></li>
+		<li><a href="#" target="_blank">Junta Comercial do Estado de SC -JUCESC</a></li>
+		<li><a href="#" target="_blank">Ministério do Desenvolvimento, Indústria e Comércio Exterior</a></li>
+		<li><a href="#" target="_blank">Ministério da Ciência e Tecnologia</a></li>
+		<li><a href="#" target="_blank">Ministério do Trabalho e Emprego</a></li>
+		<li><a href="#" target="_blank">Ministério da Educação</a></li>
+		<li><a href="#" target="_blank">Ministério da Agricultura, Pecuária e Abastecimento</a></li>
+		<li><a href="#" target="_blank">Ministério das Relações Exteriores</a></li>
+		<li><a href="#" target="_blank">Ministério da Justiça do Brasil</a></li>
+		<li><a href="#" target="_blank">Ministério da Fazenda</a></li>
+		<li><a href="#" target="_blank">Ministério dos Transportes</a></li>
+		<li><a href="#" target="_blank">Ministério da Saúde</a></li>
+		<li><a href="#" target="_blank">Ministério da Cultura</a></li>
+		<li><a href="#" target="_blank">Ministério do Esporte</a></li>
+		<li><a href="#" target="_blank">Ministério Público de SC</a></li>
+		<li><a href="#" target="_blank">Planalto do Governo</a></li>
+		<li><a href="#" target="_blank">Presidência da República</a></li>
+		<li><a href="#" target="_blank">Previdência Social</a></li>
+		<li><a href="#" target="_blank">Receita Federal</a></li>
+		<li><a href="#" target="_blank">República Federativa do BR</a></li>
+		<li><a href="#" target="_blank">Senado Federal</a></li>
+		<li><a href="#" target="_blank">Supremo Tribunal Federal</a></li>
+		<li><a href="#" target="_blank">Assembléia Legislativa de SC</a></li>
+		<li><a href="#" target="_blank">Centro de Informática do Estado de SC</a></li>
+		<li><a href="#" target="_blank">Companhia de Desenvolvimento do Estado deSC</a></li>
+	</ul>
+		</div>
+		<div class="col-sm-6">
+
+	<h4>ÓRGÃOS DE PESQUISA</h4>
+	<ul class="list-unstyled">
+		<li><a href="#" target="_blank">Empresa Brasileira de Pesquisa Agropecuária</a></li>
+		<li><a href="#" target="_blank">Empresa de Pesquisa Agropecuária e Extensão Rural de SC</a></li>
+		<li><a href="#" target="_blank">Federação das Indústrias do Estado de Santa Catarina - FIESC</a></li>
+		<li><a href="#" target="_blank">IBGE (Instituto Brasileiro de Geografia e Estatística)</a></li>
+	</ul>
+
+	<h4>UNIVERSIDADES</h4>
+	<ul class="list-unstyled">
+		<li><a href="#" target="_blank">Universidade do Estado de SC</a></li>
+		<li><a href="#" target="_blank">Universidade Federal de SC</a></li>
+	</ul>
+
+	<h4>BUSCA POR SETORES</h4>
+	<ul class="list-unstyled">
+		<li><a href="#" target="_blank">Produtos e serviços para compradores profissionais - Guiiasoesp</a></li>
+	</ul>
+
+	<h4>EMPRESAS, PRODUTOS E SERVIÇOS</h4>
+	<ul class="list-unstyled">
+		<li><a href="#" target="_blank">Bela Santa Catarina</a></li>
+	</ul>
+
+	<h4>ENDEREÇOS COMERCIAIS DE TODO O PAÍS</h4>
+	<ul class="list-unstyled">
+		<li><a href="#" target="_blank">Hotéis e Pousadas em SC</a></li>
+		<li><a href="#" target="_blank">Guia de Produtos, Serviços e Fornecedores</a></li>
+		<li><a href="#" target="_blank">Lista de empresas produtos e serviços</a></li>
+		<li><a href="#" target="_blank">Listel</a></li>
+		<li><a href="#" target="_blank">Representante Brasil</a></li>
+		<li><a href="#" target="_blank">União Brasileira dos Promotores de Feiras</a></li>
+	</ul>
+
+	<h4>SITES DE BUSCA</h4>
+	<ul class="list-unstyled">
+		<li><a href="#" target="_blank">Alltheweb</a></li>
+		<li><a href="#" target="_blank">Alta vista</a></li>
+		<li><a href="#" target="_blank">Cadê</a></li>
+		<li><a href="#" target="_blank">Google</a></li>
+		<li><a href="#" target="_blank">Guia Santa Catarina</a></li>
+		<li><a href="#" target="_blank">Terra</a></li>
+		<li><a href="#" target="_blank">Uol</a></li>
+		<li><a href="#" target="_blank">Yahoo</a></li>
+	</ul>
+
+	<h4>MÁQUINAS E EQUIPAMENTOS</h4>
+	<ul class="list-unstyled">
+		<li><a href="#" target="_blank">Abimaq</a></li>
+		<li><a href="#" target="_blank">Usui</a></li>
+	</ul>
+
+
+		</div>
+	</div>
+</div>
+	<div class="tab-pane" id="tab2">
+	
+	
+		<div class="links_list">
+		<div id="botoes"></div>	
+		<dl id="links">	
+			<dt>A</dt>
+			<dd>Assembléia Legislativa de SC</dd>
+			<dd>Alltheweb</dd>
+			<dd>Alta vista</dd>
+			<dd>Abimaq</dd>
+			
+			<dt>B</dt>
+			<dd></dd>
+			
+			<dt>B</dt>
+			<dd></dd>
+			
+			<dt>B</dt>
+			<dd></dd>
+			
+			<dt>B</dt>
+			<dd></dd>
+			
+			<dt>B</dt>
+			<dd></dd>
+			
+			<dt>B</dt>
+			<dd></dd>
+			
+			<dt>B</dt>
+			<dd></dd>
+			
+			<dt>B</dt>
+			<dd></dd>
+			
+			<dt>B</dt>
+			<dd></dd>
+		</dl>
+		</div>
+		
+
+
+
+Bela Santa Catarina
+Conselho Regional de Engenheiros, Arquitetos e Agrônomos CREA-SC
+Conselho Regional dos Representantes Comerciais do Estado de SC - CORE-SC
+Centro de Informática do Estado de SC
+Companhia de Desenvolvimento do Estado de SC
+Cadê
+Empresa Brasileira de Pesquisa Agropecuária
+Empresa de Pesquisa Agropecuária e Extensão Rural de SC
+Federação das Indústrias do Estado de Santa Catarina - FIESC
+Governo do Estado de SC
+Governo Federal
+Guia de Produtos, Serviços e Fornecedores
+Google
+Guia Santa Catarina
+Hotéis e Pousadas em SC
+IBGE (Instituto Brasileiro de Geografia e Estatística)
+Junta Comercial do Estado de SC -JUCESC
+Lista de empresas produtos e serviços
+Listel
+Ministério do Desenvolvimento, Indústria e Comércio Exterior
+Ministério da Ciência e Tecnologia
+Ministério do Trabalho e Emprego
+Ministério da Educação
+Ministério da Agricultura, Pecuária e Abastecimento
+Ministério das Relações Exteriores
+Ministério da Justiça do Brasil
+Ministério da Fazenda
+Ministério dos Transportes
+Ministério da Saúde
+Ministério da Cultura
+Ministério do Esporte
+Ministério Público de SC
+Planalto do Governo
+Presidência da República
+Previdência Social
+Produtos e serviços para compradores profissionais - Guiiasoesp
+Receita Federal
+República Federativa do BR
+Representante Brasil
+Sindicato das Empresas de Contabilidade da Grande Florianópolis - SESCON FLORIPA
+Senado Federal
+Supremo Tribunal Federal
+Terra
+Universidade do Estado de SC
+Universidade Federal de SC
+União Brasileira dos Promotores de Feiras
+Uol
+Usui
+Yahoo
+			
+			</div>
+</div>
+</div>
+			</div>
+		</div>
+	</div>
+	
+	<footer>
+		<div class="container">
+		<a href="home.html" class="logo-sebrae"><img src="_img/logo-sebrae.svg" alt="Sebrae"/></a>
+		</div>
+	</footer>
+</body>
+</html>

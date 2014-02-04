@@ -59,6 +59,9 @@ $(function() {
 			
 			//INICIALIZA OS PASSOS DO MOD2
 			app.initPassos();
+			
+			//INICIALIZA O ACORDIOM
+			app.initAcordeom();
 		},
 		
 			
@@ -347,6 +350,33 @@ $(function() {
 		initTooltip: function() {
 			$('[data-toggle=tooltip]').tooltip({html:true,container: 'body'});
 			$("[data-toggle=popover]").popover({html:true,trigger:'click',container: 'body'});
+			//fecha popover ao clicar fora dela
+			$('body').on('click', function (e) {
+				$('[data-toggle=popover]').each(function () {
+					// hide any open popovers when the anywhere else in the body is clicked
+					if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+						$(this).popover('hide');}
+				});
+			});
+	
+	
+		},
+		
+		initAcordeom: function() {
+			$('.accordion').collapse({
+				toggle: false
+
+			}).on('show.bs.collapse', function(e) {
+
+				$(e.target).parent().find(".fa-plus").first().removeClass("fa-plus").addClass("fa-minus");
+
+
+			}).on('hide.bs.collapse', function(e) {
+
+
+				$(e.target).parent().find(".fa-minus").first().removeClass("fa-minus").addClass("fa-plus");
+
+			});
 		},
 		
 		//INICIALIZA MASCARA NOS INPUT
@@ -504,6 +534,7 @@ jQuery(document).ready(function(){
 	app.init();
 	$('#conteudo').load('_paginas/apresentacao.html');
 	
+	   
 	$('#nav-conteudo').hide();
 	$('.nav-conteudo').click(function(){
 		if ($('#conteudo_wrap').hasClass('menu_aberto')){
@@ -531,6 +562,7 @@ jQuery(document).ready(function(){
 	   cur.removeClass('active');  // move the current class
 	   next.addClass('active');
        next.children('a').click();
+	   $('.popover').remove();
     });
 
 	$("a.nav-prev").click(function(){
@@ -542,6 +574,7 @@ jQuery(document).ready(function(){
 	   cur.removeClass('active');
 	   next.addClass('active'); 
 	   next.children('a').click();
+	   $('.popover').remove();
 	});
 		
 		

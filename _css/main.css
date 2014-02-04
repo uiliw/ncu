@@ -3,7 +3,7 @@
 \*------------------------------------*/
 .login{
 	float:right;
-	margin-top:37px
+	margin-top: 20px;
 }
 .login input{
 	background-color: #428BD0;
@@ -67,6 +67,9 @@ position: relative;
 }
 .btn-success{
 	color:#fff!important;
+}
+.btn-primary{border: 0;
+border-bottom: 4px solid #004b73;
 }
 .flex-caption{
 	position:absolute
@@ -283,6 +286,12 @@ color: #468847;
 label{
 	font-weight:normal;
 }
+.fa-11x {
+font-size: 11em;
+
+margin-right: 15px!important;
+}
+.verde{color:#51a27a}
 /*------------------------------------*\
     TIPOGRAFIA
 \*------------------------------------*/
@@ -315,6 +324,8 @@ label{
 }
 
 a{
+	color: #51a27a;}
+a:hover{
 	color: #51a27a;}
 p{margin-bottom:20px;text-align: justify;}
 h1{
@@ -406,8 +417,8 @@ header:after{
     border: none;
 	border-radius:0
 ;
-    min-height: 40px;
-    margin-bottom: 0;
+    min-height: 5px;
+    margin-bottom: 20px;
 }
 .navbar-default .navbar-nav li{
 	border-right:1px solid #51be7a;
@@ -416,9 +427,10 @@ header:after{
 .navbar-default .navbar-nav{
 	background-color: #51a27a;
 border: none;
-border-bottom: #51be7a solid 2px!important;
+
+	border-bottom: #51be7a solid 2px!important;
 	width: 100%;
-	margin: 0 0 -15px;
+	margin: -12px 0 -15px;
 }
 .navbar-default .collapse{
 	padding:0
@@ -432,15 +444,12 @@ border-bottom: #51be7a solid 2px!important;
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
 color: #fff;
 background-color: transparent;
-border-bottom:1px solid #51be7a;
 }
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
 color: #fff;
-border-bottom:1px solid #51be7a;
-background-color: transparent;
 }
 .navbar-default .navbar-nav>li>a {
-color: #fff;
+color: #9be4a6;
 padding: 2px 0 0;
 margin: 0px 13px 0;
     text-transform: uppercase;
@@ -476,8 +485,6 @@ footer{
 	color:#97c2e0;
 }
 .rodape{
-	position:fixed;
-	bottom:0;
 	width:100%;
 }
 /*------------------------------------*\
@@ -536,7 +543,7 @@ margin-bottom: 40px;
     right: 0;
 }
 .heading-success{
-background-color:#51a27a;
+background-color: #51a27a;
 color: #fff;
 padding: 5px 40px 5px;
 font-size: 18px; 
@@ -574,6 +581,29 @@ border-style: solid;
 border-width: 35px 35px 0 0;
 border-color: #003259 transparent transparent transparent;
 _border-color: #003259 #000000 #000000 #000000;
+line-height: 0px;
+_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+content: "";
+top: 0;
+left: 0;
+position: absolute;
+}
+.heading-login{
+color: #fff;
+padding: 3px 40px 3px 33px;
+font-size: 14px; 
+margin-bottom: 5px;
+position: relative;
+border: 1px solid #004168;
+background-color: #004168;
+}
+.heading-login:before {
+width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 26px 26px 0 0;
+border-color: #00699a transparent transparent transparent;
+_border-color: #00699a #000000 #000000 #000000;
 line-height: 0px;
 _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 content: "";
@@ -795,6 +825,71 @@ _border-color: #f2dede #000000 #000000 #000000;
 }
 #nav-conteudo .active>a{
     color:#fff;
+}
+.links_list{
+    position: relative;
+	
+}
+
+#links{
+	border: 1px solid #51a27a;
+	height: 500px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+	font-family: sans-serif;
+	font-size: 1em;
+}
+#links dt{
+	margin: 0;
+	background: #51a27a;
+	font-weight: bold;
+	text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.2 ), 1px 1px 0px rgba( 255, 255, 255, 0.3 );
+	color: white;
+	padding: 8px 5px;
+	border-bottom: #51be7a solid 2px!important;
+}
+#links dd{
+	padding: 5px;
+	margin: 0;
+	border-bottom: 1px solid #F2F6FB;
+	font-size: 0.8em;
+	color: #2A5673;
+}
+button{
+	border: 1px solid #64A1C8;
+	background: #2683BD url(http://www.teamdf.com/jquery-plugins/resources/images/overlay-sprite.png) repeat-x 0 -62px;
+	font-weight: bold;
+	text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.2 ), 1px 1px 0px rgba( 255, 255, 255, 0.3 );
+	color: rgba( 255, 255, 255, 0.95 );
+	padding: 3px 8px;
+	margin: -3px 0px;
+	float: right;
+	border-radius: 5px;
+	font-size: 0.85em;
+	cursor: pointer;
+}
+button:hover{
+	color: white;
+	background-color: #1D6FA2;
+}
+#botoes {
+	margin: 0 0 5px 0;
+	position: absolute;
+	width: 37px;
+	z-index: 2;
+	right: 0;
+	top: 20px;
+}
+#botoes button{
+	float: none;
+	margin: 0 5px 0 0;
+	border-color: #2683BD;
+}
+#botoes button.inactive{
+	background-color: #999;
+	border-color: #999;
 }
 /*------------------------------------*\
     EFEITOS
