@@ -11,7 +11,6 @@
 <title></title>
 <meta name="description" content="">
 
-
 <!-- Icones para Fav e Touch -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="_ico/apple-touch-icon-144x144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="_ico/apple-touch-icon-114x114-precomposed.png">
@@ -61,148 +60,172 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 <script type="text/javascript" src="_js/_loading/js/jquery.loadingbar.js"></script>
 <script type="text/javascript" src="_js/_flatShadown/jquery.flatshadow.js"></script>
 <script type="text/javascript" src="_js/_jqueryList/jquery.list.min.js"></script>
-
 <script src="_js/main.js"></script>
 </head>
 <body>
-	<header>
-		<div class="container"> <a href="portal.html" class="logo"><img src="_img/logo-ncu.svg" alt="Negócio Certo Universitário"/></a>
-			<div class="perfil"> <img src="_img/demo-perfil.jpg" alt="Nome do aluno"/> </div>
-			<p class="dados"><span id="nome">Nome do aluno</span><br/>
-				<span id="curso">UNESC - 2013</span></p>
-			<ul class="list-inline top-menu">
-				<li><a href="meus_dados.html">Meus Dados</a></li>
-				<li><a href="biblioteca.html">Biblioteca</a></li>
-				<li><a href="ajuda.html">Ajuda</a></li>
-				<li><a href="portal.html">Sair</a></li>
+<header>
+	<div class="container"> <a href="portal.html" class="logo"><img src="_img/logo-ncu.svg" alt="Negócio Certo Universitário"/></a>
+		<div class="perfil"> <img src="_img/demo-perfil.jpg" alt="Nome do aluno"/> </div>
+		<p class="dados"><span id="nome">Nome do aluno</span><br/>
+			<span id="curso">UNESC - 2013</span></p>
+		<ul class="list-inline top-menu">
+			<li><a href="meus_dados.html">Meus Dados</a></li>
+			<li><a href="biblioteca.html">Biblioteca</a></li>
+			<li><a href="ajuda.html">Ajuda</a></li>
+			<li><a href="portal.html">Sair</a></li>
+		</ul>
+	</div>
+</header>
+<nav class="navbar navbar-default" role="navigation"> 
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+		</div>
+		
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="/ncu_2">CONTEÚDO</a></li>
+				<li><a href="turma.html">TURMA</a></li>
+				<li><a href="avisos.html">AVISOS</a></li>
+				<li><a href="notas.html">NOTAS</a></li>
+				<li class="active"><a href="forum.html">FÓRUM</a></li>
+				<li><a href="area_de_publicacao.html">ÁREA DE PUBLICAÇÃO</a></li>
+				<li><a href="trabalho_em_equipe.html">TRABALHO EM EQUIPE</a></li>
+				<li><a href="chat.html">CHAT</a></li>
 			</ul>
 		</div>
-	</header>
-	<nav class="navbar navbar-default" role="navigation"> 
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-			</div>
-			
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li><a href="/ncu_2">CONTEÚDO</a></li>
-					<li><a href="turma.html">TURMA</a></li>
-					<li><a href="avisos.html">AVISOS</a></li>
-					<li><a href="notas.html">NOTAS</a></li>
-					<li class="active"><a href="forum.html">FÓRUM</a></li>
-					<li><a href="area_de_publicacao.html">ÁREA DE PUBLICAÇÃO</a></li>
-					<li><a href="trabalho_em_equipe.html">TRABALHO EM EQUIPE</a></li>
-					<li><a href="chat.html">CHAT</a></li>
-				</ul>
-			</div>
-			<!-- /.navbar-collapse --> 
-		</div>
-	</nav>
-	<div class="container">
-		<ul class="breadcrumb">
-			<li>Onde estou: <a href="#">Meu espaço</a></li>
-			<li><a href="#">nome da seção</a></li>
-			<li><a href="#">nome da seção ainda maior</a></li>
-			<li><a href="#">nome gigante de seção</a></li>
-			<li>estou aqui</li>
-		</ul>
-		<div class="clearfix"></div>
-		<div class="heading-success">FÓRUM<a href="#" class="pull-right heading-link">Cadastrar tema <img src="_img/arrow-right.svg" alt=""/></a></div>
-		<table class="table forum table-hover">
-			<tbody>
-				<tr>
-					<td><a href="#"><i class="fa fa-folder"></i></a></td>
-					<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
-						
-						<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
-						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
-					</td>
-					
-				</tr>
-				<tr>
-					<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
-					<td><h3><a href="#">Vivamus a venenatis ante.</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
-						
-						<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
-						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
-					</td>
-				</tr>
-				<tr>
-					<td><a href="#"><i class="fa fa-folder"></i></a></td>
-					<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
-						
-						<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
-						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
-					</td>
-					
-				</tr>
-				<tr>
-					<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
-					<td><h3><a href="#">Vivamus a venenatis ante.</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
-						
-						<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
-						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
-					</td>
-				</tr>
-				<tr>
-					<td><a href="#"><i class="fa fa-folder"></i></a></td>
-					<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
-						
-						<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
-						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
-					</td>
-					
-				</tr>
-				<tr>
-					<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
-					<td><h3><a href="#">Vivamus a venenatis ante.</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
-						
-						<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
-						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
-					</td>
-				</tr>
-				<tr>
-					<td><a href="#"><i class="fa fa-folder"></i></a></td>
-					<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
-						
-						<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
-						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
-					</td>
-					
-				</tr>
-				<tr>
-					<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
-					<td><h3><a href="#">Vivamus a venenatis ante.</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
-						
-						<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
-						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
-					</td>
-				</tr>
-				<tr>
-					<td><a href="#"><i class="fa fa-folder"></i></a></td>
-					<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
-						
-						<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
-						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
-					</td>
-					
-				</tr>
-				<tr>
-					<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
-					<td><h3><a href="#">Vivamus a venenatis ante.</a><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#"><div class="icone"><i class="fa fa-trash-o"></i></div></a> <a data-toggle="tooltip" title="Exportar Excel" href="#"><div class="icone"><i class="fa fa-clipboard"></i></div></a></div></h3>
-						
-						<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
-						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	
+		<!-- /.navbar-collapse --> 
 	</div>
-	<!-- /.container --> 
-	
+</nav>
+<div class="container">
+	<ul class="breadcrumb">
+		<li>Onde estou: <a href="#">Meu espaço</a></li>
+		<li><a href="#">nome da seção</a></li>
+		<li><a href="#">nome da seção ainda maior</a></li>
+		<li><a href="#">nome gigante de seção</a></li>
+		<li>estou aqui</li>
+	</ul>
+	<div class="clearfix"></div>
+	<div class="heading-success">FÓRUM<a href="#" class="pull-right heading-link">Cadastrar tema <span class="icone0x"><i class="fa fa-plus"></i></span></a></div>
+	<table class="table forum table-hover">
+		<tbody>
+			<tr>
+				<td><a href="#"><i class="fa fa-folder"></i></a></td>
+				<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a></h3>
+					<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p></td>
+				<td class="tools-forum"><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#">
+						<div class="icone2x"><i class="fa fa-trash-o"></i></div>
+						</a> <a data-toggle="tooltip" title="Exportar Excel" href="#">
+						<div class="icone2x"><i class="fa fa-clipboard"></i></div>
+						</a></div></td>
+			</tr>
+			<tr>
+				<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
+				<td><h3><a href="#">Vivamus a venenatis ante.</a></h3>
+					<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p></td>
+				<td class="tools-forum"><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#">
+						<div class="icone2x"><i class="fa fa-trash-o"></i></div>
+						</a> <a data-toggle="tooltip" title="Exportar Excel" href="#">
+						<div class="icone2x"><i class="fa fa-clipboard"></i></div>
+						</a></div></td>
+			</tr>
+			<tr>
+				<td><a href="#"><i class="fa fa-folder"></i></a></td>
+				<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a></h3>
+					<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p></td>
+				<td class="tools-forum"><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#">
+						<div class="icone2x"><i class="fa fa-trash-o"></i></div>
+						</a> <a data-toggle="tooltip" title="Exportar Excel" href="#">
+						<div class="icone2x"><i class="fa fa-clipboard"></i></div>
+						</a></div></td>
+			</tr>
+			<tr>
+				<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
+				<td><h3><a href="#">Vivamus a venenatis ante.</a></h3>
+					<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p></td>
+				<td class="tools-forum"><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#">
+						<div class="icone2x"><i class="fa fa-trash-o"></i></div>
+						</a> <a data-toggle="tooltip" title="Exportar Excel" href="#">
+						<div class="icone2x"><i class="fa fa-clipboard"></i></div>
+						</a></div></td>
+			</tr>
+			<tr>
+				<td><a href="#"><i class="fa fa-folder"></i></a></td>
+				<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a></h3>
+					<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p></td>
+				<td class="tools-forum"><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#">
+						<div class="icone2x"><i class="fa fa-trash-o"></i></div>
+						</a> <a data-toggle="tooltip" title="Exportar Excel" href="#">
+						<div class="icone2x"><i class="fa fa-clipboard"></i></div>
+						</a></div></td>
+			</tr>
+			<tr>
+				<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
+				<td><h3><a href="#">Vivamus a venenatis ante.</a>
+					</h3>
+					<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p></td>
+				<td class="tools-forum"><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#">
+						<div class="icone2x"><i class="fa fa-trash-o"></i></div>
+						</a> <a data-toggle="tooltip" title="Exportar Excel" href="#">
+						<div class="icone2x"><i class="fa fa-clipboard"></i></div>
+						</a></div></td>
+			</tr>
+			<tr>
+				<td><a href="#"><i class="fa fa-folder"></i></a></td>
+				<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a></h3>
+					<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p></td>
+				<td class="tools-forum"><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#">
+						<div class="icone2x"><i class="fa fa-trash-o"></i></div>
+						</a> <a data-toggle="tooltip" title="Exportar Excel" href="#">
+						<div class="icone2x"><i class="fa fa-clipboard"></i></div>
+						</a></div></td>
+			</tr>
+			<tr>
+				<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
+				<td><h3><a href="#">Vivamus a venenatis ante.</a></h3>
+					<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p></td>
+				<td class="tools-forum"><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#">
+						<div class="icone2x"><i class="fa fa-trash-o"></i></div>
+						</a> <a data-toggle="tooltip" title="Exportar Excel" href="#">
+						<div class="icone2x"><i class="fa fa-clipboard"></i></div>
+						</a></div></td>
+			</tr>
+			<tr>
+				<td><a href="#"><i class="fa fa-folder"></i></a></td>
+				<td><h3><a href="#">DÚVIDAS RELACIONADAS AO PLANO DE NEGÓCIO</a></h3>
+					<p>Publique aqui todas as suas dúvidas relacionadas com a elaboração do plano de negócio.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p></td>
+				<td class="tools-forum"><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#">
+						<div class="icone2x"><i class="fa fa-trash-o"></i></div>
+						</a> <a data-toggle="tooltip" title="Exportar Excel" href="#">
+						<div class="icone2x"><i class="fa fa-clipboard"></i></div>
+						</a></div></td>
+			</tr>
+			<tr>
+				<td><a href="#"><i class="fa fa-folder-open"></i></a></td>
+				<td><h3><a href="#">Vivamus a venenatis ante.</a></h3>
+					<p>Quisque placerat erat non nunc pulvinar, eu feugiat ligula scelerisque. Cras semper neque tortor. Nullam dignissim sed velit a malesuada. Nullam sollicitudin dictum felis ut porta. Donec lacus turpis, placerat nec ullamcorper quis, lacinia id metus. Donec non ullamcorper augue, ut laoreet urna. Aenean sollicitudin ut felis vel faucibus. Maecenas pharetra et nisi quis fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum vel sem a feugiat. Nunc mattis molestie mauris sed aliquet. Curabitur ultrices nisi ligula, eu semper nisl facilisis non.<br>
+						<small class="text-muted">Publicado em 09/07/2011 - 1 comentário(s)</small></p></td>
+				<td class="tools-forum"><div class="tools"><a data-toggle="tooltip" title="Excluir" href="#">
+						<div class="icone2x"><i class="fa fa-trash-o"></i></div>
+						</a> <a data-toggle="tooltip" title="Exportar Excel" href="#">
+						<div class="icone2x"><i class="fa fa-clipboard"></i></div>
+						</a></div></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- /.container -->
+
 </body>
 </html>

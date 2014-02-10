@@ -569,11 +569,22 @@ margin-bottom: 40px;
 	position: relative;
 	padding-right: 80px;
 }
+.forum .tools-forum{
+	position: relative;
+	width: 110px;
+}
+.forum .tools-chat{
+	position: relative;
+	width: 62px;
+}
 .forum .tools{
-	
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50%;
+    margin-top: -22px;
+}
+.forum .tools a{
+    float: left;
+    margin: 0 3px;
 }
 .heading-success{
 background-color: #51a27a;
@@ -1021,6 +1032,7 @@ background-color: #f9f9f9;
   height: 15px;
   line-height: 15px;
   font-size:10px;
+  margin-bottom: -2px;
 }
 .icone2x{
   width: 40px;
