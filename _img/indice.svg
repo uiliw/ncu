@@ -16,27 +16,27 @@
 <metadata>
 	<sfw  xmlns="&ns_sfw;">
 		<slices></slices>
-		<sliceSourceBounds  width="30" height="30" x="7071.5" y="7071.5" bottomLeftOrigin="true"></sliceSourceBounds>
+		<sliceSourceBounds  width="30" height="30" x="234.5" y="235.5" bottomLeftOrigin="true"></sliceSourceBounds>
 		<optimizationSettings>
-			<targetSettings  targetSettingsID="0" fileFormat="PNG24Format">
-				<PNG24Format  transparency="true" filtered="false" interlaced="false" matteColor="#FFFFFF" noMatteColor="false">
+			<targetSettings  fileFormat="PNG24Format" targetSettingsID="0">
+				<PNG24Format  transparency="true" filtered="false" matteColor="#FFFFFF" noMatteColor="false" interlaced="false">
 					</PNG24Format>
 			</targetSettings>
 		</optimizationSettings>
 	</sfw>
 </metadata>
 <g id="icone_print_4_">
-	<circle fill="#7F8C8D" cx="15" cy="15" r="15"/>
-	<path fill="#657575" d="M7.006,20.631l10.867,9.092C25.821,27.685,30,21.415,30,15l-6.994-5.631h-16V20.631z"/>
+	<circle fill="#39B573" cx="15" cy="15" r="15"/>
+	<path fill="#25A664" d="M7.006,20.631l10.867,9.092C25.82,27.686,30,21.415,30,15l-6.994-5.631h-16V20.631z"/>
 	<g>
 		<g>
-			<rect x="7.006" y="9.369" fill="#EDF0F1" width="16" height="2.442"/>
+			<rect x="7.006" y="9.369" fill="#FFFFFF" width="16" height="2.442"/>
 		</g>
 		<g>
-			<rect x="7.006" y="13.779" fill="#EDF0F1" width="16" height="2.441"/>
+			<rect x="7.006" y="13.779" fill="#FFFFFF" width="16" height="2.441"/>
 		</g>
 		<g>
-			<rect x="7.006" y="18.189" fill="#EDF0F1" width="16" height="2.441"/>
+			<rect x="7.006" y="18.189" fill="#FFFFFF" width="16" height="2.44"/>
 		</g>
 	</g>
 </g>

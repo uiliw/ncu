@@ -120,6 +120,7 @@ $(function() {
 				var $percent = ($current/$total) * 100;
 				$('.passos').find('.progress-bar').css({width:$percent+'%'});
 				console.log('current: '+$current+'<br>percent: '+$percent)
+				$('.passos').ScrollTo();
 			})
 		},
 		
@@ -531,27 +532,48 @@ $(function() {
 
 
 jQuery(document).ready(function(){
+	
+			
+	$("#menu ul").hide();
+
+	// Toggle
+	$("#menu .menu-abre").click(function(e) {
+		$(this).siblings("ul").slideToggle();
+		$(this).toggleClass('fa-plus-square-o fa-minus-square-o');
+		e.preventDefault();
+	});
+	$("#menu .abrir-tudo").click(function(e) {
+		$("#menu .menu-abre").siblings("ul").slideDown();
+		if ($("#menu .menu-abre").hasClass('fa-plus-square-o')){
+			$("#menu .menu-abre").removeClass('fa-plus-square-o').addClass('fa-minus-square-o');
+		};
+		e.preventDefault();
+	});
+	$("#menu .fechar-tudo").click(function(e) {
+		$("#menu .menu-abre").siblings("ul").slideUp();
+		if ($("#menu .menu-abre").hasClass('fa-minus-square-o')){
+			$("#menu .menu-abre").removeClass('fa-minus-square-o').addClass('fa-plus-square-o');
+		};
+		e.preventDefault();
+	});
 	app.init();
 	$('#conteudo').load('_paginas/apresentacao.html');
 	
 	   
-	$('#nav-conteudo').hide();
+	$('#nav-conteudo').css({x:-240});
 	$('.nav-conteudo').click(function(){
 		if ($('#conteudo_wrap').hasClass('menu_aberto')){
 			
 		$('#conteudo_wrap').removeClass();
 		$('#conteudo_wrap').addClass('col-xs-8 col-sm-offset-3');
-		$('#nav-conteudo').hide();
+		$('#nav-conteudo').transition({x:-240});
 		
 		}else{
 		$('#conteudo_wrap').removeClass();
 		$('#conteudo_wrap').addClass('col-xs-8 col-sm-offset-3 menu_aberto');
-		$('#nav-conteudo').show();
+		$('#nav-conteudo').transition({x:0});
 		}
 	})
-	var $body = $(document.body),
-		$menu = $('#menu'),
-		$content = $('#conteudo')
 		
 	$("a.nav-next").click(function(){
        var cur = $('#menu li.active');
@@ -576,6 +598,11 @@ jQuery(document).ready(function(){
 	   next.children('a').click();
 	   $('.popover').remove();
 	});
+	
+	
+	var $body = $(document.body),
+		$menu = $('#menu'),
+		$content = $('#conteudo')
 		
 		
 	$.Ajaxy.configure({
@@ -617,7 +644,7 @@ jQuery(document).ready(function(){
 				},
 				response: function(){
 					var Ajaxy = $.Ajaxy; var data = this.State.Response.data; var state = this.state; var State = this.State;
-					$menu.children(':has(a[href*="'+State.raw.state+'"])').addClass('active').siblings('.active').removeClass('active');
+					$menu.find(':has(a[href*="'+State.raw.state+'"])').addClass('active').siblings('.active').removeClass('active');
 					var Action = this;
 					$content.html(data.content).fadeIn(400,function(){
 						Action.documentReady($content);
