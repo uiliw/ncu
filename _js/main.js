@@ -85,6 +85,12 @@ $(function() {
 					}
 				},
 
+				setApresetacao: function(_apresentacao) {
+
+					lmsapi.ajax('setApresetacao/' + _apresentacao);
+
+				},
+
 				setModulo: function(_modulo) {
 
 					lmsapi.ajax('setModulo/' + _modulo);
@@ -579,6 +585,12 @@ jQuery(document).ready(function(){
 	$('a.ajaxy').click(function(){
 		var aulas = $(this);
 		var tipo = aulas.data('tipo');
+		
+		//LMS - SETA MODULO
+		if (tipo == 'apresentacao'){
+			app.getAPI().setApresentacao(aulas.data('apresentacao'));
+			console.log(aulas.data('apresentacao'))
+		};
 		
 		//LMS - SETA MODULO
 		if (tipo == 'modulo'){
