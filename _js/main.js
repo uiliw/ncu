@@ -65,7 +65,49 @@ $(function() {
 		},
 		
 			
-	
+		//CHAMADAS AJAX PARA O LMS
+		//**ALTERAR A VARIAVEL DA URL DO SISTEMA
+		//COMO COMBINADO, SOMENTE OS SETS, JA QUE OS GETS NAO SABEMOS O QUE VAI RETORNAR
+		getAPI: function() {
+
+			var urlSistema = "http://DOMINIO/lms/";
+
+			var lmsapi = {
+
+				ajax: function(chamada, callback) {
+
+					try {
+
+						$.get(aulas.getUrlSistema( chamada ), callback);
+
+					} catch (e) {
+
+					}
+				},
+
+				setModulo: function(_modulo) {
+
+					lmsapi.ajax('setModulo/' + _modulo);
+
+				},
+
+				setTopico: function(_modulo, _topico) {
+
+					lmsapi.ajax('setTopico/' + _modulo + '/' + _topico);
+
+				},
+
+				setAula: function(_modulo, _topico, _aula) {
+
+					lmsapi.ajax('setAula/' + _modulo + '/' + _topico + '/' + _aula);
+
+				}
+				
+			};
+
+			return lmsapi;
+
+		},
 		
 		//INICIALIZA LOADING
 		//https://github.com/peachananr/loading-bar
@@ -533,6 +575,30 @@ $(function() {
 
 jQuery(document).ready(function(){
 	
+	//LMS - SETA MODULO/TOPICOS/AULAS
+	$('a.ajaxy').click(function(){
+		var aulas = $(this);
+		var tipo = aulas.data('tipo');
+		
+		//LMS - SETA MODULO
+		if (tipo == 'modulo'){
+			app.getAPI().setModulo(aulas.data('modulo'));
+			console.log(aulas.data('modulo'))
+		};
+		
+		//LMS - SETA TOPICO
+		if (tipo == 'aula'){
+			app.getAPI().setTopico(aulas.data('modulo'), aulas.data('aula'));	
+			console.log(aulas.data('modulo')+' / '+aulas.data('aula'))	
+		};
+		
+		//LMS - SETA AULA
+		if (tipo == 'topico'){
+			app.getAPI().setAula(aulas.data('modulo'), aulas.data('aula'), aulas.data('topico'));
+			console.log(aulas.data('modulo')+' / '+aulas.data('aula')+' / '+aulas.data('topico'))		
+		};
+		
+	});
 			
 	$("#menu ul").hide();
 
@@ -600,6 +666,7 @@ jQuery(document).ready(function(){
 	   next.children('a').click();
 	   $('.popover').remove();
 	});
+	
 	
 	
 	var $body = $(document.body),
