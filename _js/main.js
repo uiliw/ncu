@@ -85,11 +85,6 @@ $(function() {
 					}
 				},
 
-				setApresetacao: function(_apresentacao) {
-
-					lmsapi.ajax('setApresetacao/' + _apresentacao);
-
-				},
 
 				setModulo: function(_modulo) {
 
@@ -582,15 +577,10 @@ $(function() {
 jQuery(document).ready(function(){
 	
 	//LMS - SETA MODULO/TOPICOS/AULAS
-	$('a.ajaxy').click(function(){
+	$('a.aulas').click(function(){
 		var aulas = $(this);
 		var tipo = aulas.data('tipo');
 		
-		//LMS - SETA MODULO
-		if (tipo == 'apresentacao'){
-			app.getAPI().setApresentacao(aulas.data('apresentacao'));
-			console.log(aulas.data('apresentacao'))
-		};
 		
 		//LMS - SETA MODULO
 		if (tipo == 'modulo'){
