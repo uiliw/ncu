@@ -575,7 +575,8 @@ jQuery(document).ready(function(){
 		}
 	})
 		
-	$("a.nav-next").click(function(){
+	$("a.nav-next").click(function(e){
+		e.preventDefault();
        var cur = $('#menu li.active');
 	   next = cur.next('li');
 	   if (next.length === 0) {  // wrap if necessary
@@ -587,7 +588,8 @@ jQuery(document).ready(function(){
 	   $('.popover').remove();
     });
 
-	$("a.nav-prev").click(function(){
+	$("a.nav-prev").click(function(e){
+		e.preventDefault();
 	   var cur = $('#menu li.active');
        next = cur.prev('li');
 	   if (next.length === 0) {
