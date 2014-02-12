@@ -567,6 +567,30 @@ $(function() {
 			  color: "#3ab473",
 			  angle: "SE"
 			});	
+		},
+		
+		//VOLTAR
+		initVoltar: function(){
+			var cur = $('#menu li.active');		
+			next = $('#menu li').eq($('#menu li').index(cur) + 1);
+			
+			if (next.size() === 0) { 
+				next = $('#menu li:first');
+			} 		
+			cur.removeClass('active');
+			next.addClass('active');
+			next.find('a').eq(0).click();	
+		},
+		
+		initAvancar: function(){
+			var cur = $('#menu li.active');
+			prev = $('#menu li').eq($('#menu li').index(cur) - 1); 
+			if (prev.size() === 0) {
+				prev = $('#menu li:last');
+			}      
+			cur.removeClass('active');
+			prev.addClass('active'); 
+			prev.find('a').eq(0).click();	
 		}
 	}
 });
@@ -575,6 +599,33 @@ $(function() {
 
 
 jQuery(document).ready(function(){
+	
+	app.init();
+	$('#conteudo').load('_paginas/apresentacao.html');
+	
+	
+	//NAVEGAÇAO DO LMS
+	$("body").keydown(function(e) {
+	  if(e.keyCode == 37) { // left
+		e.preventDefault();
+	    app.initVoltar();
+	  }
+	  else if(e.keyCode == 39) { // right
+		e.preventDefault();
+      	app.initAvancar();
+	  }
+	});
+	
+	$("a.nav-next").click(function(e){
+		e.preventDefault();
+      	app.initAvancar();
+        
+    });
+
+	$("a.nav-prev").click(function(e){
+		e.preventDefault();
+	    app.initVoltar();
+	});
 	
 	//LMS - SETA MODULO/TOPICOS/AULAS
 	$('a.aulas').click(function(){
@@ -601,7 +652,8 @@ jQuery(document).ready(function(){
 		};
 		
 	});
-			
+	
+	//ACORDEOM DO MENU SCORM
 	$("#menu ul").hide();
 
 	// Toggle
@@ -610,24 +662,24 @@ jQuery(document).ready(function(){
 		$(this).toggleClass('fa-plus-square-o fa-minus-square-o');
 		e.preventDefault();
 	});
-	$("#menu .abrir-tudo").click(function(e) {
+	$(".abrir-tudo").click(function(e) {
 		$("#menu .menu-abre").siblings("ul").slideDown();
 		if ($("#menu .menu-abre").hasClass('fa-plus-square-o')){
 			$("#menu .menu-abre").removeClass('fa-plus-square-o').addClass('fa-minus-square-o');
 		};
 		e.preventDefault();
 	});
-	$("#menu .fechar-tudo").click(function(e) {
+	$(".fechar-tudo").click(function(e) {
 		$("#menu .menu-abre").siblings("ul").slideUp();
 		if ($("#menu .menu-abre").hasClass('fa-minus-square-o')){
 			$("#menu .menu-abre").removeClass('fa-minus-square-o').addClass('fa-plus-square-o');
 		};
 		e.preventDefault();
 	});
-	app.init();
-	$('#conteudo').load('_paginas/apresentacao.html');
+	
 	
 	   
+	//EXPANDE/CONTRAI MENU SCORM
 	$('#nav-conteudo').css({x:-240});
 	$('.nav-conteudo').click(function(){
 		if ($('#conteudo_wrap').hasClass('menu_aberto')){
@@ -643,40 +695,7 @@ jQuery(document).ready(function(){
 		}
 	})
 		
-	
-	
-	$("a.nav-next").click(function(e){
-		e.preventDefault();
-		var cur = $('#menu li.active');
-		next = $('#menu li').eq($('#menu li').index(cur) + 1);
-		if (next.size() === 0) { 
-		   next = $('#menu li:first');
-		} 
-		cur.removeClass('active');
-		next.addClass('active');
-		next.find('a').eq(0).click();
-		$('.popover').remove();
-	});
-
-	$("a.nav-prev").click(function(e){
-		e.preventDefault();
-		var cur = $('#menu li.active');
-		
-		prev = $('#menu li').eq($('#menu li').index(cur) - 1); 
-		
-		if (prev.size() === 0) {
-		   prev = $('#menu li:last');
-		}      
-		cur.removeClass('active');
-		prev.addClass('active'); 
-		prev.find('a').eq(0).click();
-		$('.popover').remove();
-	});
-	
-	
-	
-	
-	
+	//INICIALIZA CHAMADA AJAX DAS AULAS
 	var $body = $(document.body),
 		$menu = $('#menu'),
 		$content = $('#conteudo')
@@ -716,20 +735,24 @@ jQuery(document).ready(function(){
 				request: function(){
 					var Ajaxy = $.Ajaxy;
 					$menu.find('.active').removeClass('active');
+				
+				
 					$content.stop(true,true).fadeOut(400);
 					return true;
 				},
 				response: function(){
 					var Ajaxy = $.Ajaxy; var data = this.State.Response.data; var state = this.state; var State = this.State;
-					$menu.find(':has(a[href*="'+State.raw.state+'"])').addClass('active').siblings('.active').removeClass('active');
 					var Action = this;
 					$content.html(data.content).fadeIn(400,function(){
 						Action.documentReady($content);
 					});
 					app.init();
+					$menu.find('a[href*="'+State.raw.state+'"]').parent('li').addClass('active').siblings('.active').removeClass('active');
 					return true;
 				}
 			}
 		}
 	});
+	
+	
 });

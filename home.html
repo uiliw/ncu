@@ -63,6 +63,13 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 <script type="text/javascript" src="_js/_jqueryList/jquery.list.min.js"></script>
 
 <script src="_js/main.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#abre_pesquisa").click();
+		});
+	</script>
 </head>
 <body>
 	<header>
@@ -151,5 +158,20 @@ O Tópico mais avançado cursado: M1 - Introdução ao Empreendedorismo</p>
 	
 	</div>
 	<!-- /.container --> 
+	<a id="abre_pesquisa" class="popup hidden" href="#pesquisa">PESQUISA DE SATISFAÇÃO</a>
+	<div class="hide">
+		<div class="panel panel-success no-margin" id="pesquisa">
+			<div class="panel-heading">PESQUISA DE SATISFAÇÃO</div>
+			<div class="panel-body">
+				<p class="text-center">Foi fácil efetuar a matrícula no Portal do Programa NCU?<br class="clearfix"><br>
+				<button id="satisfacao-nao" class="btn btn-danger">NÃO</button> <button id="satisfacao-SIM" class="btn btn-success">SIM</button></p>
+				
+				<hr>
+				<p class="text-center">Qual sua expectativa inicial com o Programa NCU?</p>
+				<textarea class="form-control" rows="4"></textarea>
+				<button id="enviar" class="btn btn-success pull-right margin-top15">ENVIAR</button>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
