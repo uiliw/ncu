@@ -570,7 +570,7 @@ $(function() {
 		},
 		
 		//VOLTAR
-		initVoltar: function(){
+		initAvancar: function(){
 			var cur = $('#menu li.active');		
 			next = $('#menu li').eq($('#menu li').index(cur) + 1);
 			
@@ -582,7 +582,7 @@ $(function() {
 			next.find('a').eq(0).click();	
 		},
 		
-		initAvancar: function(){
+		initVoltar: function(){
 			var cur = $('#menu li.active');
 			prev = $('#menu li').eq($('#menu li').index(cur) - 1); 
 			if (prev.size() === 0) {
