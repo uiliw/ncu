@@ -402,6 +402,18 @@ $(function() {
 						$(this).popover('hide');}
 				});
 			});
+			
+			$("#botoes li a").click(function(e) {
+			
+			   letra = $(this).attr('href');
+			   $("#botoes li").removeClass('active');
+			   $(this).parent().addClass('active')
+			   e.preventDefault();
+			   $('.lista_links').animate({
+				   scrollTop: $(letra).parent().scrollTop() + $(letra).offset().top - $(letra).parent().offset().top
+				 }, 300);
+			
+			});
 	
 	
 		},
@@ -580,6 +592,7 @@ $(function() {
 			cur.removeClass('active');
 			next.addClass('active');
 			next.find('a').eq(0).click();	
+			$('.popover').remove();
 		},
 		
 		initVoltar: function(){
@@ -591,6 +604,7 @@ $(function() {
 			cur.removeClass('active');
 			prev.addClass('active'); 
 			prev.find('a').eq(0).click();	
+			$('.popover').remove();
 		}
 	}
 });

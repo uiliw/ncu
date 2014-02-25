@@ -11,7 +11,6 @@
 <title></title>
 <meta name="description" content="">
 
-
 <!-- Icones para Fav e Touch -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="_ico/apple-touch-icon-144x144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="_ico/apple-touch-icon-114x114-precomposed.png">
@@ -25,6 +24,7 @@
 <link rel="stylesheet" href="_css/utility.css">
 <link rel="stylesheet" href="_js/_jReject/css/jquery.reject.css">
 <link rel="stylesheet" href="_fonts/css/font-awesome.min.css">
+<link rel="stylesheet" href="_fonts/foundation/foundation-icons.css">
 <link rel="stylesheet" href="_js/_jReject/css/jquery.reject.css">
 <link rel="stylesheet" href="_js/_bootstrap/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet">
 <link rel="stylesheet" href="_js/_bootstrap/bootstrap-select/bootstrap-select.min.css">
@@ -60,7 +60,6 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 <script type="text/javascript" src="_js/_ajaxy/scripts/jquery.ajaxy.min.js"></script>
 <script type="text/javascript" src="_js/_loading/js/jquery.loadingbar.js"></script>
 <script type="text/javascript" src="_js/_flatShadown/jquery.flatshadow.js"></script>
-<script type="text/javascript" src="_js/_jqueryList/jquery.list.min.js"></script>
 
 <script src="_js/main.js"></script>
 </head>
@@ -70,16 +69,15 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 			<div class="login">
 				<div class="heading-login">AMBIENTE DE ESTUDOS</div>
 				<form class="form-inline" role="form">
-				  <div class="form-group" style="width:130px">
-					<label class="sr-only" for="form_login">Login</label>
-					<input type="text" class="form-control" id="form_login" placeholder="LOGIN">
-				  </div>
-				  <div class="form-group" style="width:130px">
-					<label class="sr-only" for="form_senha">Senha</label>
-					<input type="password" class="form-control" id="form_senha" placeholder="SENHA">
-				  </div>
-				  
-				  <button type="submit" class="btn btn-primary form-btn">ENTRAR</button>
+					<div class="form-group" style="width:130px">
+						<label class="sr-only" for="form_login">Login</label>
+						<input type="text" class="form-control" id="form_login" placeholder="LOGIN">
+					</div>
+					<div class="form-group" style="width:130px">
+						<label class="sr-only" for="form_senha">Senha</label>
+						<input type="password" class="form-control" id="form_senha" placeholder="SENHA">
+					</div>
+					<button type="submit" class="btn btn-primary form-btn">ENTRAR</button>
 				</form>
 			</div>
 		</div>
@@ -108,6 +106,7 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
 				<div class="heading-success">COMO FUNCIONA</div>
+				<div class="margin-side35">
 				<p>O Programa Negócio Certo Universitário – NCU, é uma solução de ensino oferecida pelo SEBRAE/SC à universitários de instituições de ensino catarinenses. O principal objetivo do programa é fomentar a cultura empreendedora no âmbito acadêmico, proporcionando aos universitários conhecimentos relativos ao empreendedorismo, incluindo a gestão e o planejamento empresarial, contribuindo para o desenvolvimento de novos negócios.</p>
 				<p>O Programa NCU é constituído de 3 módulos de conteúdo que trazem informações sobre:</p>
 				<ul class="seta">
@@ -115,27 +114,27 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 					<li>Elaboração de um Plano de Negócio;</li>
 					<li>Como fazer a gestão da empresa;</li>
 					<li>Como efetivar o relacionamento com o mercado.</li>
-				</ul>		
-				<div class="clearfix"></div>		
+				</ul>
+				</div>
+				<div class="clearfix"></div>
 				<div class="heading-success">PARA PROFESSORES</div>
-				<p>Se você é professor universitário e quer utilizar o Programa NCU em sala de aula, oferecendo conteúdo e ferramentas digitais ao seus alunos, realize seu cadastro, você receberá mais informações diretamente do SEBRAE/SC.</p>
+				<div class="margin-side35"><p>Se você é professor universitário e quer utilizar o Programa NCU em sala de aula, oferecendo conteúdo e ferramentas digitais ao seus alunos, realize seu cadastro, você receberá mais informações diretamente do SEBRAE/SC.</p>
+				</div>
 				<div class="heading-success">PARA ALUNOS</div>
+				<div class="margin-side35">
 				<p>Para você aluno que está visitando o Portal NCU pela primeira vez, faça seu cadastro no campo exclusivo para alunos, informando o Código da Turma que você recebeu do seu professor em sala de aula, crie suas informações de login e senha para acessar o Ambiente de Estudos e pronto, você já pode iniciar o Programa NCU.</p>
-				
-				<div class="midia" style="margin-top:100px">
-					<i class="fa fa-user fa-11x pull-left verde"></i><p>Caso você não seja universitário ou se a sua instituição de ensino não estiver vinculada
-o Programa NCU, você poderá se cadastrar gratuitamente no Portal de Atendimento do SEBRAE/SC e conhecer outras soluções de ensino disponíveis.</p>
-<p><strong>Acesse em:</strong><br>
-<a href="https://atendimento.sebrae-sc.com.br/" target="_blank">https://atendimento.sebrae-sc.com.br/</a></p>
+				</div>
+				<div class="midia" style="margin-top:100px"> <i class="fi-torso-business fa-11x pull-left verde" style="line-height:0"></i>
+					<p>Caso você não seja universitário ou se a sua instituição de ensino não estiver vinculada
+						o Programa NCU, você poderá se cadastrar gratuitamente no Portal de Atendimento do SEBRAE/SC e conhecer outras soluções de ensino disponíveis.</p>
+					<p><strong>Acesse em:</strong><br>
+						<a href="https://atendimento.sebrae-sc.com.br/" target="_blank">https://atendimento.sebrae-sc.com.br/</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<footer>
-		<div class="container">
-		<a href="home.html" class="logo-sebrae"><img src="_img/logo-sebrae.svg" alt="Sebrae"/></a>
-		</div>
-	</footer>
+<footer>
+	<div class="container"> <a href="home.html" class="logo-sebrae"><img src="_img/logo-sebrae.svg" alt="Sebrae"/></a> </div>
+</footer>
 </body>
 </html>

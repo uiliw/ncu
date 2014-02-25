@@ -11,7 +11,6 @@
 <title></title>
 <meta name="description" content="">
 
-
 <!-- Icones para Fav e Touch -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="_ico/apple-touch-icon-144x144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="_ico/apple-touch-icon-114x114-precomposed.png">
@@ -25,6 +24,7 @@
 <link rel="stylesheet" href="_css/utility.css">
 <link rel="stylesheet" href="_js/_jReject/css/jquery.reject.css">
 <link rel="stylesheet" href="_fonts/css/font-awesome.min.css">
+<link rel="stylesheet" href="_fonts/foundation/foundation-icons.css">
 <link rel="stylesheet" href="_js/_jReject/css/jquery.reject.css">
 <link rel="stylesheet" href="_js/_bootstrap/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet">
 <link rel="stylesheet" href="_js/_bootstrap/bootstrap-select/bootstrap-select.min.css">
@@ -60,60 +60,7 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 <script type="text/javascript" src="_js/_ajaxy/scripts/jquery.ajaxy.min.js"></script>
 <script type="text/javascript" src="_js/_loading/js/jquery.loadingbar.js"></script>
 <script type="text/javascript" src="_js/_flatShadown/jquery.flatshadow.js"></script>
-<script type="text/javascript" src="_js/_jqueryList/jquery.list.min.js"></script>
 <script src="_js/main.js"></script>
-<script type="text/javascript">
-			
-			$(function(){
-				
-				prepareList();
-			});
-			
-			function prepareList() {
-				
-				var $buttons = $('#botoes'),
-					$countries = $('#links');
-								
-				// Generate the list of buttons for the scrollto links.
-				$('dt',$countries).each(function(i){
-					
-					// Create the new button element for this header.
-					$buttons.append('<button data-header="'+i+'">'+$(this).text()+'</button>');
-				});
-				
-				// Add the < > buttons and then add inactive class to the first two buttons (< and the first header).
-				/*$buttons.prepend('<button data-header="0">&lt;</button>')
-						.append('<button data-header="1">&gt</button>')
-						.find('button:lt(2)')
-							.addClass('inactive');
-					*/							
-				// Initialise the list.
-				$('#links').list().on('headingChange',function(ele,index,$header,max){
-					
-					// Remove the inactive class, and add to the newly selected header.	
-					$('button',$buttons)
-						.removeClass('inactive')
-						.eq(index+1)
-							.addClass('inactive');
-					
-					// Set the new next and previous index to the < and > buttons.
-					$('button:first',$buttons).attr('data-header',index-1);
-					$('button:last',$buttons).attr('data-header',index+1);
-					
-					// Grey out the first and last elments if we can't proceed in that direction any further.
-					if( index == 0 )	$buttons.find('button:first').addClass('inactive');					
-					if( max == true )	$buttons.find('button:gt('+(index+1)+')').addClass('inactive');
-				});
-				
-				// Add an event handler 
-				$buttons.on('click', 'button', function(){
-					
-					// Scroll to the 
-					$('#links').list( 'scrollTo', $(this).attr('data-header'), 'fast', 'swing' );
-				});
-			}
-			
-		</script>
 </head>
 <body>
 <header>
@@ -157,26 +104,25 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 <div class="container margin-top40">
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1">
-			<p><i class="fa fa-info-circle fa-3x pull-left verde"></i>Abaixo você encontra uma lista de links que podem ser muito úteis.<br>
+			<p><i class="fi-info fa-5x pull-left verde" style="line-height:0; margin-top:-15px; margin-right:10px"></i>Abaixo você encontra uma lista de links que podem ser muito úteis.<br>
 				Acesse os links de seu interesse e visite essa página sempre que necessário.</p>
 			<!-- Nav tabs -->
-			<div class="tabbable">
+			<div class="tabbable link">
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#tab1" data-toggle="tab">CATEGORIAS</a></li>
 					<li><a href="#tab2" data-toggle="tab">ORDEM ALFABÉTICA</a></li>
 				</ul>
 				
 				<!-- Tab panes -->
-				<div class="tab-content no-border">
-					<div class="tab-pane active" id="tab1">
+				<div class="tab-content">
+					<div class="tab-pane active padding25" id="tab1">
 						<div class="row">
 							<div class="col-sm-6">
 								<h4>CONSELHOS E SINDICATOS</h4>
 								<ul class="list-unstyled">
-									<li><a href="#" target="_blank">Conselho Regional de Engenheiros, Arquitetos e Agrônomos CREA-SC</a></li>
-									<li><a href="#" target="_blank">Conselho Regional dos Representantes</a></li>
-									<li><a href="#" target="_blank">Comerciais do Estado de SC - CORE-SC</a></li>
-									<li><a href="#" target="_blank">Sindicato das Empresas de Contabilidade da Grande Florianópolis - SESCON FLORIPA</a></li>
+									<li><a href="http://www.crea-sc.org.br" target="_blank">Conselho Regional de Engenheiros, Arquitetos e Agrônomos CREA-SC</a></li>
+									<li><a href="http://www.coresc.org.br" target="_blank">Conselho Regional dos Representantes Comerciais do Estado de SC - CORE-SC</a></li>
+									<li><a href="http://www.sesconfloripa.org.br" target="_blank">Sindicato das Empresas de Contabilidade da Grande Florianópolis - SESCON FLORIPA</a></li>
 								</ul>
 								<h4>ÓRGÃOS GOVERNAMENTAIS</h4>
 								<ul class="list-unstyled">
@@ -258,81 +204,139 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 							</div>
 						</div>
 					</div>
-					<div class="tab-pane" id="tab2">
-						<div class="links_list">
-							<div id="botoes"></div>
-							<dl id="links">
-								<dt>A</dt>
-								<dd><a href="#" target="_blank">Assembléia Legislativa de SC</a></dd>
-								<dd><a href="#" target="_blank">Alltheweb</a></dd>
-								<dd><a href="#" target="_blank">Alta vista</a></dd>
-								<dd><a href="#" target="_blank">Abimaq</a></dd>
-								<dt>B</dt>
-								<dd><a href="#" target="_blank">Bela Santa Catarina</a></dd>
-								<dt>C</dt>
-								<dd><a href="#" target="_blank">Conselho Regional de Engenheiros, Arquitetos e Agrônomos CREA-SC</a></dd>
-								<dd><a href="#" target="_blank">Conselho Regional dos Representantes Comerciais do Estado de SC - CORE-SC</a></dd>
-								<dd><a href="#" target="_blank">Centro de Informática do Estado de SC</a></dd>
-								<dd><a href="#" target="_blank">Companhia de Desenvolvimento do Estado de SC</a></dd>
-								<dd><a href="#" target="_blank">Cadê</a></dd>
-								<dt>E</dt>
-								<dd><a href="#" target="_blank">Empresa Brasileira de Pesquisa Agropecuária</a></dd>
-								<dd><a href="#" target="_blank">Empresa de Pesquisa Agropecuária e Extensão Rural de SC</a></dd>
-								<dt>F</dt>
-								<dd><a href="#" target="_blank">Federação das Indústrias do Estado de Santa Catarina - FIESC</a></dd>
-								<dt>G</dt>
-								<dd><a href="#" target="_blank">Governo do Estado de SC</a></dd>
-								<dd><a href="#" target="_blank">Governo Federal</a></dd>
-								<dd><a href="#" target="_blank">Guia de Produtos, Serviços e Fornecedores</a></dd>
-								<dd><a href="#" target="_blank">Google</a></dd>
-								<dd><a href="#" target="_blank">Guia Santa Catarina</a></dd>
-								<dt>H</dt>
-								<dd><a href="#" target="_blank">Hotéis e Pousadas em SC</a></dd>
-								<dt>I</dt>
-								<dd><a href="#" target="_blank">IBGE (Instituto Brasileiro de Geografia e Estatística)</a></dd>
-								<dt>J</dt>
-								<dd><a href="#" target="_blank">Junta Comercial do Estado de SC -JUCESC</a></dd>
-								<dt>L</dt>
-								<dd><a href="#" target="_blank">Lista de empresas produtos e serviços</a></dd>
-								<dd><a href="#" target="_blank">Listel</a></dd>
-								<dt>M</dt>
-								<dd><a href="#" target="_blank">Ministério do Desenvolvimento, Indústria e Comércio Exterior</a></dd>
-								<dd><a href="#" target="_blank">Ministério da Ciência e Tecnologia</a></dd>
-								<dd><a href="#" target="_blank">Ministério do Trabalho e Emprego</a></dd>
-								<dd><a href="#" target="_blank">Ministério da Educação</a></dd>
-								<dd><a href="#" target="_blank">Ministério da Agricultura, Pecuária e Abastecimento</a></dd>
-								<dd><a href="#" target="_blank">Ministério das Relações Exteriores</a></dd>
-								<dd><a href="#" target="_blank">Ministério da Justiça do Brasil</a></dd>
-								<dd><a href="#" target="_blank">Ministério da Fazenda</a></dd>
-								<dd><a href="#" target="_blank">Ministério dos Transportes</a></dd>
-								<dd><a href="#" target="_blank">Ministério da Saúde</a></dd>
-								<dd><a href="#" target="_blank">Ministério da Cultura</a></dd>
-								<dd><a href="#" target="_blank">Ministério do Esporte</a></dd>
-								<dd><a href="#" target="_blank">Ministério Público de SC</a></dd>
-								<dt>P</dt>
-								<dd><a href="#" target="_blank">Planalto do Governo</a></dd>
-								<dd><a href="#" target="_blank">Presidência da República</a></dd>
-								<dd><a href="#" target="_blank">Previdência Social</a></dd>
-								<dd><a href="#" target="_blank">Produtos e serviços para compradores profissionais - Guiiasoesp</a></dd>
-								<dt>R</dt>
-								<dd><a href="#" target="_blank">Receita Federal</a></dd>
-								<dd><a href="#" target="_blank">República Federativa do BR</a></dd>
-								<dd><a href="#" target="_blank">Representante Brasil</a></dd>
-								<dt>S</dt>
-								<dd><a href="#" target="_blank">Sindicato das Empresas de Contabilidade da Grande Florianópolis - SESCON FLORIPA</a></dd>
-								<dd><a href="#" target="_blank">Senado Federal</a></dd>
-								<dd><a href="#" target="_blank">Supremo Tribunal Federal</a></dd>
-								<dt>T</dt>
-								<dd><a href="#" target="_blank">Terra</dd>
-								<dt>U</dt>
-								<dd><a href="#" target="_blank">Universidade do Estado de SC</a></dd>
-								<dd><a href="#" target="_blank">Universidade Federal de SC</a></dd>
-								<dd><a href="#" target="_blank">União Brasileira dos Promotores de Feiras</a></dd>
-								<dd><a href="#" target="_blank">Uol</a></dd>
-								<dd><a href="#" target="_blank">Usui</a></dd>
-								<dt>Y</dt>
-								<dd><a href="#" target="_blank">Yahoo</a></dd>
-							</dl>
+					<div class="tab-pane no-padding" id="tab2">
+						<div class="links_list" >
+							<div class="spy-nav">
+								<ul id="botoes" class="nav">
+									<li><a href="#letra-A">A</a></li>
+									<li><a href="#letra-B">B</a></li>
+									<li><a href="#letra-C">C</a></li>
+									<li><a href="#letra-E">E</a></li>
+									<li><a href="#letra-F">F</a></li>
+									<li><a href="#letra-G">G</a></li>
+									<li><a href="#letra-H">H</a></li>
+									<li><a href="#letra-I">I</a></li>
+									<li><a href="#letra-J">J</a></li>
+									<li><a href="#letra-L">L</a></li>
+									<li><a href="#letra-M">M</a></li>
+									<li><a href="#letra-P">P</a></li>
+									<li><a href="#letra-R">R</a></li>
+									<li><a href="#letra-S">S</a></li>
+									<li><a href="#letra-T">T</a></li>
+									<li><a href="#letra-U">U</a></li>
+									<li><a href="#letra-Y">Y</a></li>
+								</ul>
+							</div>
+							<div class="lista_links">
+								<table class="table table-hover table-striped">
+									<tbody>
+										<tr id="letra-A">
+											<td>A</td>
+											<td><a href="#" target="_blank">Assembléia Legislativa de SC</a><br/>
+												<a href="#" target="_blank">Alltheweb</a><br/>
+												<a href="#" target="_blank">Alta vista</a><br/>
+												<a href="#" target="_blank">Abimaq</a></td>
+										</tr>
+										<tr id="letra-B">
+											<td>B</td>
+											<td><a href="#" target="_blank">Bela Santa Catarina</a></td>
+										</tr>
+										<tr id="letra-C">
+											<td>C</td>
+											<td><a href="#" target="_blank">Conselho Regional de Engenheiros, Arquitetos e Agrônomos CREA-SC</a><br/>
+												<a href="#" target="_blank">Conselho Regional dos Representantes Comerciais do Estado de SC - CORE-SC</a><br/>
+												<a href="#" target="_blank">Centro de Informática do Estado de SC</a><br/>
+												<a href="#" target="_blank">Companhia de Desenvolvimento do Estado de SC</a><br/>
+												<a href="#" target="_blank">Cadê</a></td>
+										</tr>
+										<tr id="letra-E">
+											<td>E</td>
+											<td><a href="#" target="_blank">Empresa Brasileira de Pesquisa Agropecuária</a><br/>
+												<a href="#" target="_blank">Empresa de Pesquisa Agropecuária e Extensão Rural de SC</a></td>
+										</tr>
+										<tr id="letra-F">
+											<td>F</td>
+											<td><a href="#" target="_blank">Federação das Indústrias do Estado de Santa Catarina - FIESC</a></td>
+										</tr>
+										<tr id="letra-G">
+											<td>G</td>
+											<td><a href="#" target="_blank">Governo do Estado de SC</a><br/>
+												<a href="#" target="_blank">Governo Federal</a><br/>
+												<a href="#" target="_blank">Guia de Produtos, Serviços e Fornecedores</a><br/>
+												<a href="#" target="_blank">Google</a><br/>
+												<a href="#" target="_blank">Guia Santa Catarina</a></td>
+										</tr>
+										<tr id="letra-H">
+											<td>H</td>
+											<td><a href="#" target="_blank">Hotéis e Pousadas em SC</a></td>
+										</tr>
+										<tr id="letra-I">
+											<td>I</td>
+											<td><a href="#" target="_blank">IBGE (Instituto Brasileiro de Geografia e Estatística)</a></td>
+										</tr>
+										<tr id="letra-J">
+											<td>J</td>
+											<td><a href="#" target="_blank">Junta Comercial do Estado de SC -JUCESC</a></td>
+										</tr>
+										<tr id="letra-L">
+											<td>L</td>
+											<td><a href="#" target="_blank">Lista de empresas produtos e serviços</a><br/>
+												<a href="#" target="_blank">Listel</a></td>
+										</tr>
+										<tr id="letra-M">
+											<td>M</td>
+											<td><a href="#" target="_blank">Ministério do Desenvolvimento, Indústria e Comércio Exterior</a><br/>
+												<a href="#" target="_blank">Ministério da Ciência e Tecnologia</a><br/>
+												<a href="#" target="_blank">Ministério do Trabalho e Emprego</a><br/>
+												<a href="#" target="_blank">Ministério da Educação</a><br/>
+												<a href="#" target="_blank">Ministério da Agricultura, Pecuária e Abastecimento</a><br/>
+												<a href="#" target="_blank">Ministério das Relações Exteriores</a><br/>
+												<a href="#" target="_blank">Ministério da Justiça do Brasil</a><br/>
+												<a href="#" target="_blank">Ministério da Fazenda</a><br/>
+												<a href="#" target="_blank">Ministério dos Transportes</a><br/>
+												<a href="#" target="_blank">Ministério da Saúde</a><br/>
+												<a href="#" target="_blank">Ministério da Cultura</a><br/>
+												<a href="#" target="_blank">Ministério do Esporte</a><br/>
+												<a href="#" target="_blank">Ministério Público de SC</a></td>
+										</tr>
+										<tr id="letra-P">
+											<td>P</td>
+											<td><a href="#" target="_blank">Planalto do Governo</a><br/>
+												<a href="#" target="_blank">Presidência da República</a><br/>
+												<a href="#" target="_blank">Previdência Social</a><br/>
+												<a href="#" target="_blank">Produtos e serviços para compradores profissionais - Guiiasoesp</a></td>
+										</tr>
+										<tr id="letra-R">
+											<td>R</td>
+											<td><a href="#" target="_blank">Receita Federal</a><br/>
+												<a href="#" target="_blank">República Federativa do BR</a><br/>
+												<a href="#" target="_blank">Representante Brasil</a></td>
+										</tr>
+										<tr id="letra-S">
+											<td>S</td>
+											<td><a href="#" target="_blank">Sindicato das Empresas de Contabilidade da Grande Florianópolis - SESCON FLORIPA</a><br/>
+												<a href="#" target="_blank">Senado Federal</a><br/>
+												<a href="#" target="_blank">Supremo Tribunal Federal</a></td>
+										</tr>
+										<tr id="letra-T">
+											<td>T</td>
+											<td><a href="#" target="_blank">Terra</a></td>
+										</tr>
+										<tr id="letra-U">
+											<td>U</td>
+											<td><a href="#" target="_blank">Universidade do Estado de SC</a><br/>
+												<a href="#" target="_blank">Universidade Federal de SC</a><br/>
+												<a href="#" target="_blank">União Brasileira dos Promotores de Feiras</a><br/>
+												<a href="#" target="_blank">Uol</a><br/>
+												<a href="#" target="_blank">Usui</a></td>
+										</tr>
+										<tr id="letra-Y">
+											<td>Y</td>
+											<td><a href="#" target="_blank">Yahoo</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
