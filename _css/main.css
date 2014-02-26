@@ -667,8 +667,8 @@ position: absolute;
 }
 .heading-primary{
 color: #fff;
-padding: 5px 40px 5px;
-font-size: 18px; 
+padding: 5px 40px 5px 35px;
+font-size: 14px; 
 margin-bottom: 20px;
 position: relative;
 border: 1px solid #406fb5;
@@ -678,7 +678,7 @@ background-color: #406fb5;
 width: 0px;
 height: 0px;
 border-style: solid;
-border-width: 35px 35px 0 0;
+border-width: 30px 30px 0 0;
 border-color: #003259 transparent transparent transparent;
 _border-color: #003259 #000000 #000000 #000000;
 line-height: 0px;
@@ -726,7 +726,6 @@ border-top: 1px solid #406fb5;
 	color:#fff;
 	margin-right: -30px;
 	font-size: 14px;
-	margin-top: 3px;
 }
 .heading-link:hover{
 	color:#fff;
