@@ -663,14 +663,12 @@ jQuery(document).ready(function(){
 	$("a.nav-next").click(function(e){
 		e.preventDefault();
       	app.initAvancar();
-		doContinue();
         
     });
 
 	$("a.nav-prev").click(function(e){
 		e.preventDefault();
 	    app.initVoltar();
-		doBack();
 	});
 	
 	//LMS - SETA MODULO/TOPICOS/AULAS
