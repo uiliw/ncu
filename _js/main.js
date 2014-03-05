@@ -62,6 +62,10 @@ $(function() {
 			
 			//INICIALIZA O ACORDIOM
 			app.initAcordeom();
+			
+			app.initFracoes();
+			
+			app.initCaption();
 		},
 		
 			
@@ -116,6 +120,21 @@ $(function() {
 			$(".ajaxy").loadingbar();
 		},
 		
+		//GERA OS CAPTIONS
+		initCaption: function(){
+			$("img.caption").each(function() {
+			  $(this).wrap('<div class="figure"></div>')
+			  .after('<p class="caption-sub">'+$(this).attr("title")+'</p>')
+			  .removeAttr('title');
+		   });
+		   $(".figure").width($(this).find('img').width());
+			  
+		   $(".figure").mouseenter(function(){
+			  $(this).find('.caption-sub').slideToggle();
+		   }).mouseleave(function(){
+			  $(this).find('.caption-sub').slideToggle();
+		   });
+		},
 		
 		//INICIALIZA DATAPICKER
 		//http://eternicode.github.io/bootstrap-datepicker/
@@ -172,6 +191,17 @@ $(function() {
 		//http://silviomoreto.github.io/bootstrap-select/
 		initSelect: function(){
 			$('.selectpicker').selectpicker();
+		},
+		
+		//GERA FÓRMULAS DE FRAÇÕES
+		initFracoes: function(){
+			$('.fracao').each(function(key, value) {
+				$this = $(this)
+				var split = $this.html().split("/")
+				if( split.length == 2 ){
+					$this.html('<span class="fracao-top">'+split[0]+'</span><span class="fracao-bottom">'+split[1]+'</span>')
+				}    
+			});
 		},
 	
 		
@@ -364,10 +394,10 @@ $(function() {
 		//http://fancyapps.com/fancybox/
 		initModal: function() {
 			$(".popup").fancybox({
-				maxWidth	: 800,
+				maxWidth	: 1200,
 				maxHeight	: 600,
 				padding		:0,
-				//fitToView	: false,
+				fitToView	: true,
 				//width		: '70%',
 				//height	: '70%',
 				autoSize	: true,
@@ -633,12 +663,14 @@ jQuery(document).ready(function(){
 	$("a.nav-next").click(function(e){
 		e.preventDefault();
       	app.initAvancar();
+		doContinue();
         
     });
 
 	$("a.nav-prev").click(function(e){
 		e.preventDefault();
 	    app.initVoltar();
+		doBack();
 	});
 	
 	//LMS - SETA MODULO/TOPICOS/AULAS

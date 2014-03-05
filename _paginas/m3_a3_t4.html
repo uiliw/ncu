@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Controle de contas a receber e a pagar</title>
+</head>
+<body>
+<script language="javascript">
+	loadPage();
+</script>
+<h1>Controle de contas a receber e a pagar</h1>
+<p>Enquanto os dois controles anteriores registram as transações financeiras ocorridas de fato, o controle de contas e receber e a pagar apontam principalmente as entradas de caixa que ainda devem acontecer.</p>
+<p>Isso significa que os apontamentos das contas a receber e a pagar integram os controles de caixa e de banco no futuro.</p>
+<center>
+	<p>Exemplo simplificado de controle de contas a receber</p>
+</center>
+<div class="table-responsive">
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Data</th>
+			<th>Controle interno</th>
+			<th>Valor do recebimento</th>
+			<th>Pago na data?</th>
+			<th>Acumulado do mês (previsto)</th>
+			<th>Acumulado do mês< (efetivo)</th>
+			<th>Inadimplência acumulada</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>01/11/2013</td>
+			<td>1498</td>
+			<td>R$ 5.684,00</td>
+			<td>Não</td>
+			<td>R$ 5.684,00</td>
+			<td>0</td>
+			<td>R$ 5.684,00</td>
+		</tr>
+		<tr>
+			<td>01/11/2013</td>
+			<td>1499</td>
+			<td>R$ 235,00</td>
+			<td>Sim</td>
+			<td>R$ 5.919,00</td>
+			<td>R$ 235,00</td>
+			<td>R$ 5.684,00</td>
+		</tr>
+		<tr>
+			<td>02/11/2013</td>
+			<td>1500</td>
+			<td>R$ 11.459,00</td>
+			<td>Sim</td>
+			<td>R$ 17.378,00</td>
+			<td>R$ 11.694,00</td>
+			<td>R$ 5.684,00</td>
+		</tr>
+		<tr>
+			<td>03/11/2013</td>
+			<td>1501</td>
+			<td>R$ 98,56</td>
+			<td>Não</td>
+			<td>R$ 17.476,56</td>
+			<td>R$ 11.694,00</td>
+			<td>R$ 5.782,56</td>
+		</tr>
+		<tr>
+			<td>03/11/2013</td>
+			<td>1502</td>
+			<td>R$ 798,00</td>
+			<td>Sim</td>
+			<td>R$ 18.274,56</td>
+			<td>R$ 12.492,00</td>
+			<td>R$ 5.782,56</td>
+		</tr>
+		<tr>
+			<td>03/11/2013</td>
+			<td>1503</td>
+			<td>R$ 2.551,55</td>
+			<td>Sim</td>
+			<td>R$ 20.826,11</td>
+			<td>R$ 15.043,55</td>
+			<td>R$ 5.782,56</td>
+		</tr>
+		<tr>
+			<td>04/11/2013</td>
+			<td>1504</td>
+			<td>R$ 9.856,00</td>
+			<td>Sim</td>
+			<td>R$ 30.682,11</td>
+			<td>R$ 24.899,55</td>
+			<td>R$ 5.782,56</td>
+		</tr>
+		<tr>
+			<td>04/11/2013</td>
+			<td>1505</td>
+			<td>R$ 66,40</td>
+			<td>Sim</td>
+			<td>R$ 30.748,51</td>
+			<td>R$ 24.965,95</td>
+			<td>R$ 5.782,56</td>
+		</tr>
+		<tr>
+			<td colspan="7">...</td>
+		</tr>
+		<tr>
+			<td colspan="4"><strong>Saldos finais</strong></td>
+			<td><strong> R$ 30.748,51 </strong></td>
+			<td><strong> R$ 24.965,95 </strong></td>
+			<td><strong> R$ 5.782,56 </strong></td>
+		</tr>
+	</tbody>
+</table>
+<p class="legenda">Fonte: ELABORADO POR MARCONATTO E RUBIN, 2013</p>
+<p>Abaixo exemplo simplificado do controle de contas a pagar, verifique os itens recomendados que você descreva mensalmente:</p>
+<center>
+	<p>Exemplo simplificado de controle de contas a pagar</p>
+</center>
+<div class="table-responsive">
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Data do pagam.</th>
+			<th>Ordem de compra ou despesa (ou outro controle interno) </th>
+			<th>O.P.</th>
+			<th>Fornec.</th>
+			<th>Banco</th>
+			<th>Valor</th>
+			<th>Núm. NF</th>
+			<th>Pagamento acumulados no mês</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>01/12/2013</td>
+			<td>9745</td>
+			<td>756</td>
+			<td>688</td>
+			<td>ABC</td>
+			<td>R$ 652,00</td>
+			<td>6.548</td>
+			<td>R$ 652,00</td>
+		</tr>
+		<tr>
+			<td>01/12/2013</td>
+			<td>9746</td>
+			<td>895</td>
+			<td>642</td>
+			<td>ABC</td>
+			<td>R$ 1.286,00</td>
+			<td>420.132</td>
+			<td>R$ 1.938,00</td>
+		</tr>
+		<tr>
+			<td>04/12/2013</td>
+			<td>9747</td>
+			<td>756</td>
+			<td>666</td>
+			<td>XYZ</td>
+			<td>R$ 25.486,00</td>
+			<td>215</td>
+			<td>R$ 27.424,00</td>
+		</tr>
+		<tr>
+			<td>08/12/2013</td>
+			<td>9748</td>
+			<td>698</td>
+			<td>601</td>
+			<td>ABC</td>
+			<td>R$ 69,00</td>
+			<td>21</td>
+			<td>R$ 27.493,00</td>
+		</tr>
+		<tr>
+			<td>12/12/2013</td>
+			<td>9749</td>
+			<td>325</td>
+			<td>608</td>
+			<td>XYZ</td>
+			<td>R$ 5.488,00</td>
+			<td>41.554</td>
+			<td>R$ 32.981,00</td>
+		</tr>
+		<tr>
+			<td>12/12/2013</td>
+			<td>9750</td>
+			<td>122</td>
+			<td>697</td>
+			<td>XYZ</td>
+			<td>R$ 1.119,50</td>
+			<td>20.125</td>
+			<td>R$ 34.100,50</td>
+		</tr>
+		<tr>
+			<td>20/12/2013</td>
+			<td>9751</td>
+			<td>998</td>
+			<td>644</td>
+			<td>XYZ</td>
+			<td>R$ 6.891,00</td>
+			<td>85.487</td>
+			<td>R$ 40.991,50</td>
+		</tr>
+		<tr>
+			<td>21/12/2013</td>
+			<td>9752</td>
+			<td>844</td>
+			<td>663</td>
+			<td>ABC</td>
+			<td>R$ 533,00</td>
+			<td>859</td>
+			<td>R$ 41.524,50</td>
+		</tr>
+		<tr>
+			<td colspan="8">...</td>
+		</tr>
+		<tr>
+			<td colspan="7"><strong>Total de pagamentos do mês</strong></td>
+			<td><strong> R$ 41.524,50 </strong></td>
+		</tr>
+	</tbody>
+</table>
+<p class="legenda">Fonte: ELABORADO POR MARCONATTO E RUBIN, 2013</p>
+</body>
+</html>

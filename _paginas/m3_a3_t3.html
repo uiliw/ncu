@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>O controle de bancos</title>
+</head>
+<body>
+<script language="javascript">
+	loadPage();
+</script>
+<h1>O controle de bancos</h1>
+<p>O controle de bancos obedece à mesma lógica e é estruturado de modo muito semelhante ao controle de caixa, como podemos observar abaixo. Assim como ocorre com o controle de caixa, o controle de bancos também <strong>não</strong> considera entradas e saída previstas, mas apenas aquelas <strong>já ocorridas</strong>. A diferença entre ambos diz mais respeito ao local onde as transações ocorrem do que ao método de registro.</p>
+<center>
+	<p>Exemplo simplificado de controle de bancos</p>
+</center>
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Data</th>
+				<th>N. do doc.</th>
+				<th>Banco</th>
+				<th>Recebimentos</th>
+				<th>Pagamentos</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>01/10/2013</td>
+				<td>6598</td>
+				<td>ABC</td>
+				<td></td>
+				<td>R$ 32.559,00</td>
+			</tr>
+			<tr>
+				<td>01/10/2013</td>
+				<td>6599</td>
+				<td>XYZ</td>
+				<td>R$ 235,00</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>02/10/2013</td>
+				<td>6600</td>
+				<td>XYZ</td>
+				<td></td>
+				<td>R$ 6.987,00</td>
+			</tr>
+			<tr>
+				<td>03/10/2013</td>
+				<td>6601</td>
+				<td>XYZ</td>
+				<td></td>
+				<td>R$ 98.752,00</td>
+			</tr>
+			<tr>
+				<td>03/10/2013</td>
+				<td>6602</td>
+				<td>ABC</td>
+				<td>R$ 41.236,00</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>03/10/2013</td>
+				<td>6603</td>
+				<td>XYZ</td>
+				<td>R$ 23.547,00</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>04/10/2013</td>
+				<td>6604</td>
+				<td>ABC</td>
+				<td></td>
+				<td>R$ 74,00</td>
+			</tr>
+			<tr>
+				<td>04/10/2013</td>
+				<td>6605</td>
+				<td>ABC</td>
+				<td>R$ 387,00</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>...</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><strong>Banco ABC</strong></td>
+				<td></td>
+				<td><strong>Banco XYZ</strong></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Saldo anterior</td>
+				<td>R$ 56.559,00</td>
+				<td>Saldo anterior</td>
+				<td>R$ 155.776,98</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Recebimentos</td>
+				<td>R$ 41.623,00</td>
+				<td>Recebimentos</td>
+				<td>R$ 23.782,00</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><strong>Total</strong></td>
+				<td><strong> R$ 98.182,00 </strong></td>
+				<td><strong>Total</strong></td>
+				<td><strong> R$ 179.558,98 </strong></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Pagamentos</td>
+				<td>R$ 32.633,00</td>
+				<td>Pagamentos</td>
+				<td>R$ 105.739,00</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><strong>Saldo a transportar para próximo mês</strong></td>
+				<td><strong>R$ 65.549,00</strong></td>
+				<td><strong>Saldo a transportar para próximo mês</strong></td>
+				<td><strong>R$ 73.819,98</strong></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="3"><strong>Saldo integrado a transportar para o próximo mês (Banco ABC + Banco XYZ)</strong></td>
+				<td><strong style="color:#F00">R$ 139.368,98</strong></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p class="legenda">Fonte: ELABORADO POR MARCONATTO E RUBIN, 2013</p>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<?xml version="1.0" standalone="yes"?>
+<manifest identifier="" version="1.1" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2">
+  <organizations default="Curso">
+    <organization identifier="Curso">
+      <title>PROGRAMA NEGÓCIO CERTO UNIVERSITÁRIO – NCU</title>
+      <item identifier="NCU_APRESENTACAO" identifierref="apresentacao" isvisible="true">
+        <title>Apresentação</title>
+        <adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+      </item>
+      <item identifier="NCU_INTRODUCAO" identifierref="introducao_empreendedorismo">
+        <title>Módulo 01 - Introdução ao Empreendedorismo</title>
+        <adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+		<item identifier="NCU_M1_A1" identifierref="a_empresa">
+			<title>Aula 01 - A empresa</title>
+			<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />		
+			<item identifier="NCU_M1_A1_T1" identifierref="definicao_empresa_negocio">
+				<title>Definição de uma empresa ou negócio</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>
+			<item identifier="NCU_M1_A1_T2" identifierref="panorama_micro">
+				<title>Panorama das micro e pequenas empresas e do empreendedorismo no Brasil</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>
+			<item identifier="NCU_M1_A1_T3" identifierref="tipos_gerais_empresas">
+				<title>Tipos gerais de empresas e desdobramentos para o empreendedorismo</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>		
+		  </item>
+		  <item identifier="NCU_M1_A2" identifierref="modelo_negocio">
+			<title>Aula 02 - O modelo de negócio e a estratégia da empresa</title>
+			<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />		
+			<item identifier="NCU_M1_A2_T1" identifierref="definicao_modelo_negocio">
+				<title>Definição de modelo de negócio e estratégia</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>
+			<item identifier="NCU_M1_A2_T2" identifierref="questoes_fundamentais">
+				<title>Questões fundamentais de negócios</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>
+			<item identifier="NCU_M1_A2_T3" identifierref="referencias_bibliograficas">
+				<title>Referências Bibliográficas</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>		
+		  </item>
+		  <item identifier="NCU_M1_A3" identifierref="o_empreendedorismo">
+			<title>Aula 03 - O empreendedorismo</title>
+			<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />		
+			<item identifier="NCU_M1_A3_T1" identifierref="definicao_empreendedorismo">
+				<title>Definições de empreendedorismo</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>
+			<item identifier="NCU_M1_A3_T2" identifierref="tipos_empreendedor">
+				<title>Tipos de empreendedor: por que você quer empreender?</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>
+			<item identifier="NCU_M1_A3_T3" identifierref="fatores_primordiais">
+				<title>Fatores primordiais de sucesso e fracasso dos empreendedores</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>	
+			<item identifier="NCU_M1_A3_T4" identifierref="internet_empreendedorismo">
+				<title>A internet e o empreendedorismo</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>	
+			<item identifier="NCU_M1_A3_T5" identifierref="empreendedor_principais_caracteristicas">
+				<title>O Empreendedor e suas principais características</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>
+			<item identifier="NCU_M1_A3_T6" identifierref="perfil_psicologico">
+				<title>Perfil psicológico e questionário de âncoras de carreira</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>	
+			<item identifier="NCU_M1_A3_T7" identifierref="referencias_bibliograficas_7">
+				<title>Referências Bibliográficas</title>
+				<adlcp:prerequisites xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" />
+			</item>		
+		  </item>
+      </item>
+      
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="apresentacao" type="webcontent" adlcp:scormtype="sco" href="_paginas/apresentacao.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/apresentacao.html" />
+    </resource>
+    <resource identifier="introducao_empreendedorismo" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1.html" />
+    </resource>
+    <resource identifier="a_empresa" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a1.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a1.html" />
+    </resource>
+    <resource identifier="definicao_empresa_negocio" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a1_t1.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a1_t1.html" />
+    </resource>
+    <resource identifier="panorama_micro" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a1_t2.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a1_t2.html" />
+    </resource>
+    <resource identifier="tipos_gerais_empresas" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a1_t3.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a1_t3.html" />
+    </resource>
+    <resource identifier="modelo_negocio" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a2.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a2.html" />
+    </resource>
+    <resource identifier="definicao_modelo_negocio" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a2_t1.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a2_t1.html" />
+    </resource>
+    <resource identifier="questoes_fundamentais" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a2_t2.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a2_t2.html" />
+    </resource>
+    <resource identifier="referencias_bibliograficas" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a2_t3.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a2_t3.html" />
+    </resource>
+    <resource identifier="o_empreendedorismo" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a3.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a3.html" />
+    </resource>
+    <resource identifier="definicao_empreendedorismo" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a3_t1.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a3_t1.html" />
+    </resource>
+    <resource identifier="tipos_empreendedor" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a3_t2.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a3_t2.html" />
+    </resource>
+    <resource identifier="fatores_primordiais" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a3_t3.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a3_t3.html" />
+    </resource>
+    <resource identifier="internet_empreendedorismo" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a3_t4.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a3_t4.html" />
+    </resource>
+    <resource identifier="empreendedor_principais_caracteristicas" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a3_t5.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a3_t5.html" />
+    </resource>
+    <resource identifier="perfil_psicologico" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a3_t6.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a3_t6.html" />
+    </resource>
+    <resource identifier="referencias_bibliograficas_7" type="webcontent" adlcp:scormtype="sco" href="_paginas/m1_a3_t7.html" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+      <file href="_paginas/m1_a3_t7.html" />
+    </resource>
+  </resources>
+</manifest>

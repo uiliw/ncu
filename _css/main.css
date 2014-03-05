@@ -578,6 +578,45 @@ footer{
 /*------------------------------------*\
     CONTEUDO
 \*------------------------------------*/
+
+.figure {
+      position: relative; }
+   .figure p.caption-sub {
+      display: none;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      margin: 0;
+      padding: 5px 3%;
+      background-color: #555;
+      color: #fff;
+	  font-style:italic;
+	  font-size:10px }
+	  
+	  
+
+.fracao, .fracao-top, .fracao-bottom {
+    padding: 0 5px;    
+}
+.fracao-centro{
+    margin-top:9px;
+    float:left;
+}
+.fracao {
+    display: inline-block;
+    text-align: center;   
+    float:left;
+}
+.formula{
+    position:relative;
+    float:left;
+}
+.fracao-bottom{
+    border-top: 1px solid #333;
+    display: block;
+}
+
+
 .sinal-collapse{margin:4px -25px 0 0}
 .passos{
 	background-color: #fff;
@@ -1265,3 +1304,24 @@ transform: scale(1);
 	animation-delay: linear;
 }
 */
+
+.deg90{
+	
+     -moz-transform:    rotate(-90deg);
+     -o-transform:      rotate(-90deg);
+     -webkit-transform: rotate(-90deg);
+     transform:         rotate(-90deg);
+	 /* IE8+ - must be on one line, unfortunately */ 
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=3.061616999114022e-16, M12=1, M21=-1, M22=3.061616999114022e-16, SizingMethod='auto expand')";
+   
+   /* IE6 and 7 */ 
+   filter: progid:DXImageTransform.Microsoft.Matrix(
+            M11=3.061616999114022e-16,
+            M12=1,
+            M21=-1,
+            M22=3.061616999114022e-16,
+            SizingMethod='auto expand');
+
+     margin-top: 20px;
+     float: left;
+}

@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Controle de estoques</title>
+</head>
+<body>
+<script language="javascript">
+	loadPage();
+</script>
+<h1>Controle de estoques</h1>
+<p>O estoque é um elemento importante para indústrias e empresas varejistas/atacadistas. Enquanto as indústrias normalmente lidam com, no mínimo, dois tipos de estoque – matérias-primas e insumos, e produtos acabados – os negócios puramente comerciais costumam trabalhar apenas com estoques de produtos de revenda. Nesse momento é importante compreender que ambos os tipos de estoque podem ser acompanhados com controles muito semelhantes.</p>
+<p>Um <abbr 
+data-toggle="popover"
+data-placement="top"
+data-original-title=""
+data-content="(Slack et al., 2009; Dias, 2009). 
+<button type='button' class='close' onclick='$(&quot;.popovers_01&quot;).popover(&quot;toggle&quot;);'>&times;</button>"
+class="popovers_01">bom controle de estoque</abbr> deve garantir que a empresa:</p>
+<ul class="seta">
+	<li>Não irá parar sua operação por falta de matérias-primas e insumos;</li>
+	<li>Terá a disposição os itens ofertados e vendidos aos seus clientes;</li>
+	<li>Não arcará com custos proibitivos de capital – gerado por estoques excessivamente altos – nem com perdas por <abbr 
+data-toggle="popover"
+data-placement="top"
+data-original-title=""
+data-content="Nesse contexto, perdas por obsolescência são as perdas financeiras geradas por itens que, por terem ficado muito tempo em estoque, perderam seu valor de venda. Exemplos comuns são prazo de validade vencido e roupas da estação não vendidas no período da moda.
+<button type='button' class='close' onclick='$(&quot;.popovers_02&quot;).popover(&quot;toggle&quot;);'>&times;</button>"
+class="popovers_02">obsolescência</abbr>.</li>
+</ul>
+<p>Para tanto, recomenda-se que o controle de estoque <strong>diário</strong> conste os seguintes campos mínimos:</p>
+<center>
+	<p>Modelo simples de controle de estoque</p>
+</center>
+<center>
+	<p><a class="popup btn btn-success" href="#tabela">Clique para ver</a></p>
+</center>
+<div class="hide">
+	<div class="panel no-margin" id="tabela">
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th><em>a.</em>Data</th>
+						<th><em>b.</em>Item</th>
+						<th><em>c.</em>Posição (Quant.)</th>
+						<th><em>d.</em>Unid.</th>
+						<th><em>e.</em>Custo unit.</th>
+						<th><em>f.</em>Custo total</th>
+						<th><em>g.</em>Demanda média diária*</th>
+						<th><em>h.</em>Dias de estoque</th>
+						<th><em>i.</em>Estoque previsto acabar em</th>
+						<th><em>j.</em>Giro de estoque previsto (mês)</th>
+						<th><em>k.</em>Vencimento do lote mais antigo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>23/09/2013</td>
+						<td>Banana caturra</td>
+						<td>129</td>
+						<td>Kg.</td>
+						<td>R$3,90</td>
+						<td style="background-color:#eee">R$503,10</td>
+						<td style="background-color:#eee">9</td>
+						<td style="background-color:#eee">14,3</td>
+						<td style="background-color:#eee">07/10/2013</td>
+						<td style="background-color:#eee">2,1</td>
+						<td>20/10/2013</td>
+					</tr>
+					<tr>
+						<td>23/09/2013</td>
+						<td>Maçã argentina</td>
+						<td>222</td>
+						<td>Kg.</td>
+						<td>R$5,60</td>
+						<td style="background-color:#eee">R$1.243,20</td>
+						<td style="background-color:#eee">20</td>
+						<td style="background-color:#eee">11,1</td>
+						<td style="background-color:#eee">04/10/2013</td>
+						<td style="background-color:#eee">2,7</td>
+						<td>15/11/2013</td>
+					</tr>
+					<tr>
+						<td>23/09/2013</td>
+						<td>Mamão papaia</td>
+						<td>098</td>
+						<td>Kg.</td>
+						<td>R$7,00</td>
+						<td style="background-color:#eee">R$686,00</td>
+						<td style="background-color:#eee">6</td>
+						<td style="background-color:#eee">16,3</td>
+						<td style="background-color:#eee">09/10/2013</td>
+						<td style="background-color:#eee">1,8</td>
+						<td><strong>06/10/2013</strong></td>
+					</tr>
+					<tr>
+						<td><strong>Posição do dia</strong></td>
+						<td></td>
+						<td><strong>449</strong></td>
+						<td></td>
+						<td></td>
+						<td><strong>R$2.432,00</strong></td>
+						<td><strong>35</strong></td>
+						<td></td>
+						<td></td>
+						<td><strong>2,3</strong></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p class="legenda">(*) Últimos 30 dias.<br>
+			Fonte: ELABORADO POR MARCONATTO E RUBIN, 2013</p>
+	</div>
+</div>
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th><em>a.</em>Data</th>
+				<th><em>b.</em>Item</th>
+				<th><em>c.</em>Posição (Quant.)</th>
+				<th><em>d.</em>Unid.</th>
+				<th><em>e.</em>Custo unit.</th>
+				<th><em>f.</em>Custo total</th>
+				<th><em>g.</em>Demanda média diária*</th>
+				<th><em>h.</em>Dias de estoque</th>
+				<th><em>i.</em>Estoque previsto acabar em</th>
+				<th><em>j.</em>Giro de estoque previsto (mês)</th>
+				<th><em>k.</em>Vencimento do lote mais antigo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>23/09/2013</td>
+				<td>Banana caturra</td>
+				<td>129</td>
+				<td>Kg.</td>
+				<td>R$3,90</td>
+				<td style="background-color:#eee">R$503,10</td>
+				<td style="background-color:#eee">9</td>
+				<td style="background-color:#eee">14,3</td>
+				<td style="background-color:#eee">07/10/2013</td>
+				<td style="background-color:#eee">2,1</td>
+				<td>20/10/2013</td>
+			</tr>
+			<tr>
+				<td>23/09/2013</td>
+				<td>Maçã argentina</td>
+				<td>222</td>
+				<td>Kg.</td>
+				<td>R$5,60</td>
+				<td style="background-color:#eee">R$1.243,20</td>
+				<td style="background-color:#eee">20</td>
+				<td style="background-color:#eee">11,1</td>
+				<td style="background-color:#eee">04/10/2013</td>
+				<td style="background-color:#eee">2,7</td>
+				<td>15/11/2013</td>
+			</tr>
+			<tr>
+				<td>23/09/2013</td>
+				<td>Mamão papaia</td>
+				<td>098</td>
+				<td>Kg.</td>
+				<td>R$7,00</td>
+				<td style="background-color:#eee">R$686,00</td>
+				<td style="background-color:#eee">6</td>
+				<td style="background-color:#eee">16,3</td>
+				<td style="background-color:#eee">09/10/2013</td>
+				<td style="background-color:#eee">1,8</td>
+				<td><strong>06/10/2013</strong></td>
+			</tr>
+			<tr>
+				<td><strong>Posição do dia</strong></td>
+				<td></td>
+				<td><strong>449</strong></td>
+				<td></td>
+				<td></td>
+				<td><strong>R$2.432,00</strong></td>
+				<td><strong>35</strong></td>
+				<td></td>
+				<td></td>
+				<td><strong>2,3</strong></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p class="legenda">(*) Últimos 30 dias.<br>
+	Fonte: ELABORADO POR MARCONATTO E RUBIN, 2013</p>
+<p>Os campos marcados em cinza são preenchidos automaticamente via fórmula. Seus resultados foram obtidos das seguintes <abbr 
+data-toggle="popover"
+data-placement="top"
+data-original-title=""
+data-content="Observe que alguns dados podem ser obtidos em outros controles. Exemplo: o volume total vendido nos últimos 30 dias de um determinado produto é informado no controle de vendas
+<button type='button' class='close' onclick='$(&quot;.popovers_03&quot;).popover(&quot;toggle&quot;);'>&times;</button>"
+class="popovers_03">formas</abbr>, como se pode ver a partir do exemplo do item <em>Banana caturra</em>:</p>
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<tbody>
+			<tr>
+				<td style="width:20%"><em>f.</em> Custo total</td>
+				<td><em>c x e</em></td>
+				<td>129 x R$3,90 = R$503,10</td>
+			</tr>
+			<tr>
+				<td><em>g.</em> Demanda média diária</td>
+				<td><span class="formula"><span class="fracao">Volume total vendido nos últimos 30 dias/30</span></span></td>
+				<td><span class="formula"><span class="fracao">270kg/(30 dias)</span><span class="fracao-centro"> = 9kg</span></span></td>
+			</tr>
+			<tr>
+				<td><em>h.</em> Dias de estoque</td>
+				<td><em><span class="formula"><span class="fracao">c/g</span></span></em></td>
+				<td><span class="formula"><span class="fracao">129kg/9kg</span><span class="fracao-centro"> = 14,3 dias</span></span></td>
+			</tr>
+			<tr>
+				<td><em>i.</em> Estoque previsto acabar em	</td>
+				<td>a + h</td>
+				<td>29/set + 14,3 dias = 07/out</td>
+			</tr>
+			<tr>
+				<td><em>j.</em> Giro de estoque previsto (mês)</td>
+				<td><span class="formula"><span class="fracao">gx30 dias/30</span></span></td>
+				<td><span class="formula"><span class="fracao">9kgx30 dias/30</span><span class="fracao-centro"> = 2,1 giros</span></span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p class="destaque text-success fade">É importante perceber que o custo dos itens em estoque <strong>não</strong> é sinônimo do seu preço de venda. </p>
+<p>Esse valor representa o <strong>custo médio de fabricação</strong> de um item ou o custo médio de compra<strong></strong> do item. O custo médio de um item em estoque pode ser calculado de modo bastante simplificado, <abbr 
+data-toggle="popover"
+data-placement="top"
+data-original-title=""
+data-content="(Martins, 2010). O cálculo contábil do custo dos itens em estoque é bem mais complexo e acurado que esse exemplo, assim apontado para fins didáticos. Essa planilha utiliza informações do controle de vendas e do controle de compras vistos anteriormente.
+<button type='button' class='close' onclick='$(&quot;.popovers_04&quot;).popover(&quot;toggle&quot;);'>&times;</button>"
+class="popovers_04">através da ponderação do custo de compra</abbr>.</p>
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Data</th>
+				<th>Item: MAÇÃ ARGENTINA</th>
+				<th>Kg.</th>
+				<th>Unid.</th>
+				<th>Custo</th>
+				<th>% Kg.</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>01/mai</td>
+				<td>Saldo em estoque do mês anterior</td>
+				<td>56</td>
+				<td>Kg.</td>
+				<td>R$ 5,00</td>
+				<td>44,4%</td>
+			</tr>
+			<tr>
+				<td>01/mai</td>
+				<td>1a Compra do mês</td>
+				<td>70</td>
+				<td>Kg.</td>
+				<td>R$ 5,50</td>
+				<td>55,6%</td>
+			</tr>
+			<tr>
+				<td style="background-color:#eee"></td>
+				<td style="background-color:#eee"><strong>Novo custo médio</strong></td>
+				<td style="background-color:#eee"></td>
+				<td style="background-color:#eee"></td>
+				<td style="background-color:#eee"></td>
+				<td style="background-color:#eee"><strong>R$ 5,28</strong></td>
+			</tr>
+			<tr>
+				<td>01/mai</td>
+				<td>Saldo em estoque</td>
+				<td>126</td>
+				<td>Kg.</td>
+				<td>R$ 5,28</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>De 01/mai até 10/mai</td>
+				<td>Vendas</td>
+				<td>80</td>
+				<td>Kg.</td>
+				<td>R$ 5,28</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>10/mai</td>
+				<td>Saldo em estoque</td>
+				<td>46</td>
+				<td>Kg.</td>
+				<td>R$ 5,28</td>
+				<td>32,6%</td>
+			</tr>
+			<tr>
+				<td>10/mai</td>
+				<td>2a Compra do mês</td>
+				<td>95</td>
+				<td>Kg.</td>
+				<td>R$ 5,75</td>
+				<td>67,4%</td>
+			</tr>
+			<tr>
+				<td style="background-color:#eee"></td>
+				<td style="background-color:#eee"><strong>Novo custo médio</strong></td>
+				<td style="background-color:#eee"></td>
+				<td style="background-color:#eee"></td>
+				<td style="background-color:#eee"></td>
+				<td style="background-color:#eee"><strong>R$ 5,60</strong></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p>Além desse controle, é importante também monitorar a movimentação física do estoque e seus prazos de validade.</p>
+<h2>A questão do cadastro de itens</h2>
+<p>Tão comumente negligenciado, o cadastro de itens e de outros elementos da organização, é <strong>crítico</strong> para todos os controles administrativos-financeiros. </p>
+<p>Um item no sistema de gestão da empresa funciona como um ponto nevrálgico: se ele não estiver ajustado, toda a gama de processos e informações ligada a ele podem ser comprometidos.</p>
+<img title="Fonte: Shutterstock" alt="Fonte: Shutterstock" class="img-responsive pull-left caption" src="_paginas/_img/NCU_FOTO_M3_A2_T5_01.jpg" />
+<p>Exemplos não faltam: produtos errados são comprados por que o item solicitado não foi cadastrado com precisão suficiente; produtos diferentes são comprados – ou vendidos – com o mesmo código de item mal cadastrado, distorcendo completamente seu histórico de preços e seus parâmetros tributários; seguidamente, o almoxarifado baixa itens trocados no sistema de produção – um erro potencialmente causado por cadastro defeituoso – o que gera diferenças importantes entre os estoques físicos e aquele registrado no software de controle da empresa, e assim por diante. Imagine agora esses problemas ocorrendo em empresas que trabalham com dezenas de milhares de itens. Os prejuízos e contratempos causados podem ser enormes. Não por acaso que algumas grandes empresas chegam a ter departamentos dedicados apenas ao cadastro de seus itens.</p>
+<p>Para minimizar o risco destes e outros problemas semelhantes ocorrerem, existem <abbr 
+data-toggle="popover"
+data-placement="top"
+data-original-title=""
+data-content="(Dias, 2009).
+<button type='button' class='close' onclick='$(&quot;.popovers_05&quot;).popover(&quot;toggle&quot;);'>&times;</button>"
+class="popovers_05">três regras</abbr><abbr 
+data-toggle="popover"
+data-placement="top"
+data-original-title=""
+data-content="(Dias, 2009).
+<button type='button' class='close' onclick='$(&quot;.popovers_05a&quot;).popover(&quot;toggle&quot;);'>&times;</button>"
+class="popovers_05a"> básicas</abbr> a serem obedecidas no cadastramento de novos itens: </p>
+<p>1. <strong>Clareza e exclusividade</strong>: A descrição do item deve ser sempre clara, livre de nuances e não pode permitir a sua substituição por outro item.</p>
+<p>2. <strong>Detalhamento</strong>: O item precisa ser detalhado ao ponto de eliminar as chances de que outro item semelhante seja confundido com ele.</p>
+<p>3. <strong>Uniformização</strong>: Todos os itens cadastrados devem seguir padrões claros em todos os seus atributos (unidade, medida, grandeza etc.).</p>
+<p>Visto os principais controles administrativos de um empresa, assim como os modelos para suas aplicações, vamos partir para os principais controles financeiros, fatores críticos para a gestão que também devem ser observados com muita atenção. Continue seus estudos!</p>
+</body>
+</html>
