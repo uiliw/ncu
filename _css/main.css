@@ -729,7 +729,7 @@ position: absolute;
 }
 .heading-login{
 color: #fff;
-padding: 3px 40px 3px 33px;
+padding: 3px 10px 3px 33px;
 font-size: 14px; 
 margin-bottom: 5px;
 position: relative;
@@ -1041,7 +1041,7 @@ _border-color: #f2dede #000000 #000000 #000000;
 	margin-right: 35px;
 }
 #links{
-	height: 500px;
+	height: 600px;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;

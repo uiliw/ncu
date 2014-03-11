@@ -66,7 +66,7 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 <header>
 	<div class="container"> <a href="home.html" class="logo"><img src="_img/logo-ncu.svg" alt="Negócio Certo Universitário"/></a>
 		<div class="login">
-			<div class="heading-login">AMBIENTE DE ESTUDOS</div>
+			<div class="heading-login">AMBIENTE DE ESTUDOS <a href="#" class="pull-right" data-toggle="tooltip" title="Clique para recuperar a senha" data-placement="left"><i class="fa fa-question-circle"></i></a></div>
 			<form class="form-inline" role="form">
 				<div class="form-group" style="width:130px">
 					<label class="sr-only" for="form_login">Login</label>
@@ -126,80 +126,147 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 								</ul>
 								<h4>ÓRGÃOS GOVERNAMENTAIS</h4>
 								<ul class="list-unstyled">
-									<li><a href="#" target="_blank">Fazenda do Estado de SC</a></li>
-									<li><a href="#" target="_blank">Governo do Estado de SC</a></li>
-									<li><a href="#" target="_blank">Governo Federal</a></li>
-									<li><a href="#" target="_blank">Junta Comercial do Estado de SC -JUCESC</a></li>
-									<li><a href="#" target="_blank">Ministério do Desenvolvimento, Indústria e Comércio Exterior</a></li>
-									<li><a href="#" target="_blank">Ministério da Ciência e Tecnologia</a></li>
-									<li><a href="#" target="_blank">Ministério do Trabalho e Emprego</a></li>
-									<li><a href="#" target="_blank">Ministério da Educação</a></li>
-									<li><a href="#" target="_blank">Ministério da Agricultura, Pecuária e Abastecimento</a></li>
-									<li><a href="#" target="_blank">Ministério das Relações Exteriores</a></li>
-									<li><a href="#" target="_blank">Ministério da Justiça do Brasil</a></li>
-									<li><a href="#" target="_blank">Ministério da Fazenda</a></li>
-									<li><a href="#" target="_blank">Ministério dos Transportes</a></li>
-									<li><a href="#" target="_blank">Ministério da Saúde</a></li>
-									<li><a href="#" target="_blank">Ministério da Cultura</a></li>
-									<li><a href="#" target="_blank">Ministério do Esporte</a></li>
-									<li><a href="#" target="_blank">Ministério Público de SC</a></li>
-									<li><a href="#" target="_blank">Planalto do Governo</a></li>
-									<li><a href="#" target="_blank">Presidência da República</a></li>
-									<li><a href="#" target="_blank">Previdência Social</a></li>
-									<li><a href="#" target="_blank">Receita Federal</a></li>
-									<li><a href="#" target="_blank">República Federativa do BR</a></li>
-									<li><a href="#" target="_blank">Senado Federal</a></li>
-									<li><a href="#" target="_blank">Supremo Tribunal Federal</a></li>
-									<li><a href="#" target="_blank">Assembléia Legislativa de SC</a></li>
-									<li><a href="#" target="_blank">Centro de Informática do Estado de SC</a></li>
-									<li><a href="#" target="_blank">Companhia de Desenvolvimento do Estado deSC</a></li>
+									<li><a href="http://www.fazenda.gov.br" target="_blank">Fazenda do Estado de SC</a></li>
+									<li><a href="http://www.fazenda.gov.br" target="_blank">Governo do Estado de SC</a></li>
+									<li><a href="http://www.administracao.go.gov.br/" target="_blank">Governo Federal</a></li>
+									<li><a href="http://www.jucesc.sc.gov.br/" target="_blank">Junta Comercial do Estado de SC -JUCESC</a></li>
+									<li><a href="hhttp://www.mdic.gov.br" target="_blank">Ministério do Desenvolvimento, Indústria e Comércio Exterior</a></li>
+									<li><a href="http://www.mct.gov.br/" target="_blank">Ministério da Ciência e Tecnologia</a></li>
+									<li><a href="http://www.mte.gov.br/" target="_blank">Ministério do Trabalho e Emprego</a></li>
+									<li><a href="http://www.mec.gov.br/" target="_blank">Ministério da Educação</a></li>
+									<li><a href="http://www.agricultura.gov.br/" target="_blank">Ministério da Agricultura, Pecuária e Abastecimento</a></li>
+									<li><a href="http://www.mre.gov.br/" target="_blank">Ministério das Relações Exteriores</a></li>
+									<li><a href="http://www.mj.gov.br/" target="_blank">Ministério da Justiça do Brasil</a></li>
+									<li><a href="http://www.fazenda.gov.br/" target="_blank">Ministério da Fazenda</a></li>
+									<li><a href="http://www.transportes.gov.br" target="_blank">Ministério dos Transportes</a></li>
+									<li><a href="http://www.min-saude.pt/" target="_blank">Ministério da Saúde</a></li>
+									<li><a href="http://www.cultura.gov.br" target="_blank">Ministério da Cultura</a></li>
+									<li><a href="http://www.esporte.gov.br/" target="_blank">Ministério do Esporte</a></li>
+									<li><a href="http://www.mp.sc.gov.br" target="_blank">Ministério Público de SC</a></li>
+									<li><a href="http://www.planalto.gov.br" target="_blank">Planalto do Governo</a></li>
+									<li><a href="http://www.planalto.gov.br/" target="_blank">Presidência da República</a></li>
+									<li><a href="http://www.previdenciasocial.gov.br/" target="_blank">Previdência Social</a></li>
+									<li><a href="http://www.receita.fazenda.gov.br" target="_blank">Receita Federal</a></li>
+									<li><a href="http://www.brazil.gov.br/" target="_blank">República Federativa do BR</a></li>
+									<li><a href="http://www.senado.gov.br" target="_blank">Senado Federal</a></li>
+									<li><a href="http://www.stf.gov.br" target="_blank">Supremo Tribunal Federal</a></li>
+									<li><a href="http://www.alesc.sc.gov.br" target="_blank">Assembléia Legislativa de SC</a></li>
+									<li><a href="http://www.ciasc.gov.br" target="_blank">Centro de Informática do Estado de SC</a></li>
+									<li><a href="http://www.codesc.sc.gov.br/" target="_blank">Companhia de Desenvolvimento do Estado deSC</a></li>
+								</ul>
+								<h4>LEGISLAÇÃO</h4>
+								<ul class="list-unstyled">
+									<li><a href="http://www.cjf.gov.br/" target="_blank">Conselho da Justiça Federal</a></li>
+									<li><a href="http://www.informanet.com.br" target="_blank">Informare On-line</a></li>
+									<li><a href="http://www.legiscenter.com.br/" target="_blank">LegisCenter</a></li>
+									<li><a href="http://www.oab-sc.com.br" target="_blank">OAB/SC</a></li>
+									<li><a href="http://www.tj.sc.gov.br/" target="_blank">Poder Judiciário de SC</a></li>
+								</ul>
+								<h4>LISTA TELEFÔNICA</h4>
+								<ul class="list-unstyled">
+									<li><a href="http://www.auxilioalista.com.br" target="_blank">Auxílio a Lista</a></li>
+									<li><a href="http://www.telefonica.net.br/online/guias" target="_blank">Guia de Assinantes On-Line Telefônica</a></li>
+									<li><a href="http://www.telemar.com.br" target="_blank">Lista On-Line</a></li>
+									<li><a href="http://www.telelistas.net" target="_blank">Lista Telefônica On-line</a></li>
+									<li><a href="http://www.listasoesp.com.br" target="_blank">Lista Oesp</a></li>
+									<li><a href="http://www.brasiltelecom.com.br" target="_blank">102 On Line</a></li>
+								</ul>
+								<h4>MARCAS E PATENTES</h4>
+								<ul class="list-unstyled">
+									<li><a href="http://www.inpi.gov.br" target="_blank">Instituto Nacional da Propriedade Industrial</a></li>
+								</ul>
+								<h4>MEIO AMBIENTE</h4>
+								<ul class="list-unstyled">
+									<li><a href="http://www.ambientebrasil.com.br/" target="_blank">Ambientebrasil</a></li>
+									<li><a href="http://www.fatma.sc.gov.br/" target="_blank">Fundação do Meio Ambiente</a></li>
+									<li><a href="http://www.ibama.gov.br" target="_blank">Ibama</a></li>
+									<li><a href="http://www.meioambiente.org.br" target="_blank">Meio Ambiente para todos</a></li>
+									<li><a href="http://www.mma.gov.br/" target="_blank">Ministério do Meio Ambiente</a></li>
+									<li><a href="http://www.mp.sc.gov.br/" target="_blank">Ministério Público de SC</a></li>
+								</ul>
+								<h4>METROLOGIA</h4>
+								<ul class="list-unstyled">
+									<li><a href="http://www.inmetro.gov.br" target="_blank">INMETRO</a></li>
+									<li><a href="http://www.metrologia.org.br" target="_blank">SBM (Sociedade Brasileira de Metrologia)</a></li>
 								</ul>
 							</div>
 							<div class="col-sm-6">
 								<h4>ÓRGÃOS DE PESQUISA</h4>
 								<ul class="list-unstyled">
-									<li><a href="#" target="_blank">Empresa Brasileira de Pesquisa Agropecuária</a></li>
-									<li><a href="#" target="_blank">Empresa de Pesquisa Agropecuária e Extensão Rural de SC</a></li>
-									<li><a href="#" target="_blank">Federação das Indústrias do Estado de Santa Catarina - FIESC</a></li>
-									<li><a href="#" target="_blank">IBGE (Instituto Brasileiro de Geografia e Estatística)</a></li>
+									<li><a href="http://www.embrapa.br " target="_blank">Empresa Brasileira de Pesquisa Agropecuária</a></li>
+									<li><a href="http://www.epagri.rct-sc.br" target="_blank">Empresa de Pesquisa Agropecuária e Extensão Rural de SC</a></li>
+									<li><a href="http://www.fiescnet.com.br" target="_blank">Federação das Indústrias do Estado de Santa Catarina - FIESC</a></li>
+									<li><a href=" http://www.ibge.gov.br/" target="_blank">IBGE (Instituto Brasileiro de Geografia e Estatística)</a></li>
 								</ul>
 								<h4>UNIVERSIDADES</h4>
 								<ul class="list-unstyled">
-									<li><a href="#" target="_blank">Universidade do Estado de SC</a></li>
-									<li><a href="#" target="_blank">Universidade Federal de SC</a></li>
+									<li><a href="http://www.udesc.br" target="_blank">Universidade do Estado de SC</a></li>
+									<li><a href="http://www.ufsc.br" target="_blank">Universidade Federal de SC</a></li>
 								</ul>
 								<h4>BUSCA POR SETORES</h4>
 								<ul class="list-unstyled">
-									<li><a href="#" target="_blank">Produtos e serviços para compradores profissionais - Guiiasoesp</a></li>
+									<li><a href="http://www.guiasoesp.com.br/" target="_blank">Produtos e serviços para compradores profissionais - Guiiasoesp</a></li>
 								</ul>
 								<h4>EMPRESAS, PRODUTOS E SERVIÇOS</h4>
 								<ul class="list-unstyled">
-									<li><a href="#" target="_blank">Bela Santa Catarina</a></li>
+									<li><a href="http://www.belasantacatarina.com.br/scatarina.asp" target="_blank">Bela Santa Catarina</a></li>
 								</ul>
 								<h4>ENDEREÇOS COMERCIAIS DE TODO O PAÍS</h4>
 								<ul class="list-unstyled">
-									<li><a href="#" target="_blank">Hotéis e Pousadas em SC</a></li>
-									<li><a href="#" target="_blank">Guia de Produtos, Serviços e Fornecedores</a></li>
-									<li><a href="#" target="_blank">Lista de empresas produtos e serviços</a></li>
-									<li><a href="#" target="_blank">Listel</a></li>
-									<li><a href="#" target="_blank">Representante Brasil</a></li>
-									<li><a href="#" target="_blank">União Brasileira dos Promotores de Feiras</a></li>
+									<li><a href="http://www.ondehospedar.com.br/sc/index.php" target="_blank">Hotéis e Pousadas em SC</a></li>
+									<li><a href="http://www.psconsulta.com.br/" target="_blank">Guia de Produtos, Serviços e Fornecedores</a></li>
+									<li><a href="http://www.listas-amarelas.com.br" target="_blank">Lista de empresas produtos e serviços</a></li>
+									<li><a href="http://www.listaonline.com.br/" target="_blank">Listel</a></li>
+									<li><a href="http://www.representantes.org.br/" target="_blank">Representante Brasil</a></li>
+									<li><a href="http://www.ubrafe.com.br" target="_blank">União Brasileira dos Promotores de Feiras</a></li>
 								</ul>
 								<h4>SITES DE BUSCA</h4>
 								<ul class="list-unstyled">
-									<li><a href="#" target="_blank">Alltheweb</a></li>
-									<li><a href="#" target="_blank">Alta vista</a></li>
-									<li><a href="#" target="_blank">Cadê</a></li>
-									<li><a href="#" target="_blank">Google</a></li>
-									<li><a href="#" target="_blank">Guia Santa Catarina</a></li>
-									<li><a href="#" target="_blank">Terra</a></li>
-									<li><a href="#" target="_blank">Uol</a></li>
-									<li><a href="#" target="_blank">Yahoo</a></li>
+									<li><a href="http://www.alltheweb.com" target="_blank">Alltheweb</a></li>
+									<li><a href="http://www.altavista.com.br" target="_blank">Alta vista</a></li>
+									<li><a href="http://www.cade.com.br" target="_blank">Cadê</a></li>
+									<li><a href="http://www.cade.com.br" target="_blank">Google</a></li>
+									<li><a href="http://www.guiasantacatarina.com.br/" target="_blank">Guia Santa Catarina</a></li>
+									<li><a href="http://www.terra.com.br/busca" target="_blank">Terra</a></li>
+									<li><a href="http://www.radaruol.com.br " target="_blank">Uol</a></li>
+									<li><a href="http://www.yahoo.com" target="_blank">Yahoo</a></li>
 								</ul>
 								<h4>MÁQUINAS E EQUIPAMENTOS</h4>
 								<ul class="list-unstyled">
-									<li><a href="#" target="_blank">Abimaq</a></li>
-									<li><a href="#" target="_blank">Usui</a></li>
+									<li><a href="http://www.abimaq.com.br" target="_blank">Abimaq</a></li>
+									<li><a href="http://www.usui.com.br" target="_blank">Usui</a></li>
+								</ul>
+								<h4>FRANQUIAS</h4>
+								<ul class="list-unstyled">
+									<li><a href="http://www.abf.com.br/" target="_blank">Assoc. Brasileira de Franchising</a></li>
+									<li><a href="http://www.franquia.com.br/index.asp" target="_blank">Guia de Oportunidades em Franchising</a></li>
+									<li><a href="http://www.guiadofranchising.com.br" target="_blank">Guia do Franchising</a></li>
+									<li><a href="http://www.franquianaweb.com.br/" target="_blank">Netplan Consultoria</a></li>
+									<li><a href="http://www.prisma.com.br" target="_blank">Prisma</a></li>
+									<li><a href="http://www.sofranquias.com.br" target="_blank">Só Fraquias</a></li>
+								</ul>
+								<h4>EMPREENDEDORISMO</h4>
+								<ul class="list-unstyled">
+									<li><a href="http://www.conteto.com.br" target="_blank">Conteto</a></li>
+									<li><a href="http://www.endeavor.org.br" target="_blank">Endeavor</a></li>
+									<li><a href="http://www.iea.com.br" target="_blank">Instituto de Estudos Organizacionais</a></li>
+								</ul>
+								<h4>IDÉIAS DE NEGÓCIOS</h4>
+								<ul class="list-unstyled">
+									<li><a href="http://www.sebrae-sc.com.br" target="_blank">SEBRAE Santa Catarina</a></li>
+									<li><a href="http://www.sebraees.com.br" target="_blank">SEBRAE Espírito Santo</a></li>
+									<li><a href="http://www.sebrae-mg.com.br" target="_blank">SEBRAE Minas Gerais</a></li>
+									<li><a href="http://www.sebraerj.com.br" target="_blank">SEBRAE Rio de Janeiro</a></li>
+									<li><a href="http://www.sebraesp.com.br" target="_blank">SEBRAE São Paulo</a></li>
+									<li><a href="http://www.pegn-online.com.br" target="_blank">Pequenas Empresas Grandes Negócios</a></li>
+								</ul>
+								<h4>JORNAIS</h4>
+								<ul class="list-unstyled">
+									<li><a href="http://www.clicrbs.com.br" target="_blank">Clic RRS</a></li>
+									<li><a href="http://www.guianet.com.br/jornais.htm" target="_blank">GuiaNet</a></li>
+									<li><a href="http://www.netpapers.com.br/index.cfm" target="_blank">NetPapers</a></li>
+									<li><a href="http://www.redebrasil.inf.br/" target="_blank">Rede Brasil</a></li>
+									<li><a href="http://noticias.uol.com.br/jornais/" target="_blank">UOL Jornais</a></li>
 								</ul>
 							</div>
 						</div>
@@ -219,6 +286,8 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 									<li><a href="#letra-J">J</a></li>
 									<li><a href="#letra-L">L</a></li>
 									<li><a href="#letra-M">M</a></li>
+									<li><a href="#letra-N">N</a></li>
+									<li><a href="#letra-O">O</a></li>
 									<li><a href="#letra-P">P</a></li>
 									<li><a href="#letra-R">R</a></li>
 									<li><a href="#letra-S">S</a></li>
@@ -232,107 +301,154 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 									<tbody>
 										<tr id="letra-A">
 											<td>A</td>
-											<td><a href="#" target="_blank">Assembléia Legislativa de SC</a><br/>
-												<a href="#" target="_blank">Alltheweb</a><br/>
-												<a href="#" target="_blank">Alta vista</a><br/>
-												<a href="#" target="_blank">Abimaq</a></td>
+											<td><a href="http://www.brasiltelecom.com.br" target="_blank">102 On Line</a><br>
+												<a href="http://www.abf.com.br/" target="_blank">Assoc. Brasileira de Franchising</a><br>
+												<a href="http://www.abimaq.com.br" target="_blank">Abimaq</a><br>
+												<a href="http://www.alesc.sc.gov.br" target="_blank">Assembléia Legislativa de SC</a><br>
+												<a href="http://www.alltheweb.com" target="_blank">Alltheweb</a><br>
+												<a href="http://www.altavista.com.br" target="_blank">Alta vista</a><br>
+												<a href="http://www.ambientebrasil.com.br/" target="_blank">Ambientebrasil</a><br>
+												<a href="http://www.auxilioalista.com.br" target="_blank">Auxílio a Lista</a></td>
 										</tr>
 										<tr id="letra-B">
 											<td>B</td>
-											<td><a href="#" target="_blank">Bela Santa Catarina</a></td>
+											<td><a href="http://www.belasantacatarina.com.br/scatarina.asp" target="_blank">Bela Santa Catarina</a><br></td>
 										</tr>
 										<tr id="letra-C">
 											<td>C</td>
-											<td><a href="#" target="_blank">Conselho Regional de Engenheiros, Arquitetos e Agrônomos CREA-SC</a><br/>
-												<a href="#" target="_blank">Conselho Regional dos Representantes Comerciais do Estado de SC - CORE-SC</a><br/>
-												<a href="#" target="_blank">Centro de Informática do Estado de SC</a><br/>
-												<a href="#" target="_blank">Companhia de Desenvolvimento do Estado de SC</a><br/>
-												<a href="#" target="_blank">Cadê</a></td>
+											<td><a href="http://www.cade.com.br" target="_blank">Cadê</a><br>
+												<a href="http://www.ciasc.gov.br" target="_blank">Centro de Informática do Estado de SC</a><br>
+												<a href="http://www.cjf.gov.br/" target="_blank">Conselho da Justiça Federal</a><br>
+												<a href="http://www.clicrbs.com.br" target="_blank">Clic RRS</a><br>
+												<a href="http://www.codesc.sc.gov.br/" target="_blank">Companhia de Desenvolvimento do Estado deSC</a><br>
+												<a href="http://www.conteto.com.br" target="_blank">Conteto</a><br>
+												<a href="http://www.coresc.org.br" target="_blank">Conselho Regional dos Representantes Comerciais do Estado de SC - CORE-SC</a><br>
+												<a href="http://www.crea-sc.org.br" target="_blank">Conselho Regional de Engenheiros, Arquitetos e Agrônomos CREA-SC</a></td>
 										</tr>
 										<tr id="letra-E">
 											<td>E</td>
-											<td><a href="#" target="_blank">Empresa Brasileira de Pesquisa Agropecuária</a><br/>
-												<a href="#" target="_blank">Empresa de Pesquisa Agropecuária e Extensão Rural de SC</a></td>
+											<td><a href="http://www.embrapa.br " target="_blank">Empresa Brasileira de Pesquisa Agropecuária</a><br>
+												<a href="http://www.endeavor.org.br" target="_blank">Endeavor</a><br>
+												<a href="http://www.epagri.rct-sc.br" target="_blank">Empresa de Pesquisa Agropecuária e Extensão Rural de SC</a>/td> 
 										</tr>
 										<tr id="letra-F">
 											<td>F</td>
-											<td><a href="#" target="_blank">Federação das Indústrias do Estado de Santa Catarina - FIESC</a></td>
+											<td><a href="http://www.fatma.sc.gov.br/" target="_blank">Fundação do Meio Ambiente</a><br>
+												<a href="http://www.fazenda.gov.br" target="_blank">Fazenda do Estado de SC</a><br>
+												<a href="http://www.fiescnet.com.br" target="_blank">Federação das Indústrias do Estado de Santa Catarina - FIESC</a></td>
 										</tr>
 										<tr id="letra-G">
 											<td>G</td>
-											<td><a href="#" target="_blank">Governo do Estado de SC</a><br/>
-												<a href="#" target="_blank">Governo Federal</a><br/>
-												<a href="#" target="_blank">Guia de Produtos, Serviços e Fornecedores</a><br/>
-												<a href="#" target="_blank">Google</a><br/>
-												<a href="#" target="_blank">Guia Santa Catarina</a></td>
+											<td><a href="http://www.google.com.br" target="_blank">Google</a><br>
+												<a href="http://www.fazenda.gov.br" target="_blank">Governo do Estado de SC</a><br>
+												<a href="http://www.administracao.go.gov.br/" target="_blank">Governo Federal</a><br>
+												<a href="http://www.franquia.com.br/index.asp" target="_blank">Guia de Oportunidades em Franchising</a><br>
+												<a href="http://www.guiadofranchising.com.br" target="_blank">Guia do Franchising</a><br>
+												<a href="http://www.guianet.com.br/jornais.htm" target="_blank">GuiaNet</a><br>
+												<a href="http://www.guiasantacatarina.com.br/" target="_blank">Guia Santa Catarina</a><br>
+												<a href="http://www.psconsulta.com.br/" target="_blank">Guia de Produtos, Serviços e Fornecedores</a><br>
+												<a href="http://www.telefonica.net.br/online/guias" target="_blank">Guia de Assinantes On-Line Telefônica</a></td>
 										</tr>
 										<tr id="letra-H">
 											<td>H</td>
-											<td><a href="#" target="_blank">Hotéis e Pousadas em SC</a></td>
+											<td><a href="http://www.ondehospedar.com.br/sc/index.php" target="_blank">Hotéis e Pousadas em SC</a></td>
 										</tr>
 										<tr id="letra-I">
 											<td>I</td>
-											<td><a href="#" target="_blank">IBGE (Instituto Brasileiro de Geografia e Estatística)</a></td>
+											<td><a href="http://www.ibama.gov.br" target="_blank">Ibama</a><br>
+												<a href="http://www.ibge.gov.br/" target="_blank">IBGE (Instituto Brasileiro de Geografia e Estatística)</a><br>
+												<a href="http://www.iea.com.br" target="_blank">Instituto de Estudos Organizacionais</a><br>
+												<a href="http://www.informanet.com.br" target="_blank">Informare On-line</a><br>
+												<a href="http://www.inmetro.gov.br" target="_blank">INMETRO</a><br>
+												<a href="http://www.inpi.gov.br" target="_blank">Instituto Nacional da Propriedade Industrial</a></td>
 										</tr>
 										<tr id="letra-J">
 											<td>J</td>
-											<td><a href="#" target="_blank">Junta Comercial do Estado de SC -JUCESC</a></td>
+											<td><a href="http://www.jucesc.sc.gov.br/" target="_blank">Junta Comercial do Estado de SC -JUCESC</a></td>
 										</tr>
 										<tr id="letra-L">
 											<td>L</td>
-											<td><a href="#" target="_blank">Lista de empresas produtos e serviços</a><br/>
-												<a href="#" target="_blank">Listel</a></td>
+											<td><a href="http://www.legiscenter.com.br/" target="_blank">LegisCenter</a><br>
+												<a href="http://www.listaonline.com.br/" target="_blank">Listel</a><br>
+												<a href="http://www.listas-amarelas.com.br" target="_blank">Lista de empresas produtos e serviços</a><br>
+												<a href="http://www.listasoesp.com.br" target="_blank">Lista Oesp</a><br>
+												<a href="http://www.telelistas.net" target="_blank">Lista Telefônica On-line</a><br>
+												<a href="http://www.telemar.com.br" target="_blank">Lista On-Line</a></td>
 										</tr>
 										<tr id="letra-M">
 											<td>M</td>
-											<td><a href="#" target="_blank">Ministério do Desenvolvimento, Indústria e Comércio Exterior</a><br/>
-												<a href="#" target="_blank">Ministério da Ciência e Tecnologia</a><br/>
-												<a href="#" target="_blank">Ministério do Trabalho e Emprego</a><br/>
-												<a href="#" target="_blank">Ministério da Educação</a><br/>
-												<a href="#" target="_blank">Ministério da Agricultura, Pecuária e Abastecimento</a><br/>
-												<a href="#" target="_blank">Ministério das Relações Exteriores</a><br/>
-												<a href="#" target="_blank">Ministério da Justiça do Brasil</a><br/>
-												<a href="#" target="_blank">Ministério da Fazenda</a><br/>
-												<a href="#" target="_blank">Ministério dos Transportes</a><br/>
-												<a href="#" target="_blank">Ministério da Saúde</a><br/>
-												<a href="#" target="_blank">Ministério da Cultura</a><br/>
-												<a href="#" target="_blank">Ministério do Esporte</a><br/>
-												<a href="#" target="_blank">Ministério Público de SC</a></td>
+											<td><a href="http://www.esporte.gov.br/" target="_blank">Ministério do Esporte</a><br>
+												<a href="http://www.agricultura.gov.br/" target="_blank">Ministério da Agricultura, Pecuária e Abastecimento</a><br>
+												<a href="http://www.cultura.gov.br" target="_blank">Ministério da Cultura</a><br>
+												<a href="http://www.fazenda.gov.br/" target="_blank">Ministério da Fazenda</a><br>
+												<a href="http://www.mct.gov.br/" target="_blank">Ministério da Ciência e Tecnologia</a><br>
+												<a href="http://www.mdic.gov.br" target="_blank">Ministério do Desenvolvimento, Indústria e Comércio Exterior</a><br>
+												<a href="http://www.mec.gov.br/" target="_blank">Ministério da Educação</a><br>
+												<a href="http://www.meioambiente.org.br" target="_blank">Meio Ambiente para todos</a><br>
+												<a href="http://www.min-saude.pt/" target="_blank">Ministério da Saúde</a><br>
+												<a href="http://www.mj.gov.br/" target="_blank">Ministério da Justiça do Brasil</a><br>
+												<a href="http://www.mma.gov.br/" target="_blank">Ministério do Meio Ambiente</a><br>
+												<a href="http://www.mp.sc.gov.br" target="_blank">Ministério Público de SC</a><br>
+												<a href="http://www.mp.sc.gov.br/" target="_blank">Ministério Público de SC</a><br>
+												<a href="http://www.mre.gov.br/" target="_blank">Ministério das Relações Exteriores</a><br>
+												<a href="http://www.mte.gov.br/" target="_blank">Ministério do Trabalho e Emprego</a><br>
+												<a href="http://www.transportes.gov.br" target="_blank">Ministério dos Transportes</a></td>
+										</tr>
+										<tr id="letra-N">
+											<td>N</td>
+											<td><a href="http://www.franquianaweb.com.br/" target="_blank">Netplan Consultoria</a><br>
+												<a href="http://www.netpapers.com.br/index.cfm" target="_blank">NetPapers</a></td>
+										</tr>
+										<tr id="letra-O">
+											<td>O</td>
+											<td><a href="http://www.oab-sc.com.br" target="_blank">OAB/SC</a></td>
 										</tr>
 										<tr id="letra-P">
 											<td>P</td>
-											<td><a href="#" target="_blank">Planalto do Governo</a><br/>
-												<a href="#" target="_blank">Presidência da República</a><br/>
-												<a href="#" target="_blank">Previdência Social</a><br/>
-												<a href="#" target="_blank">Produtos e serviços para compradores profissionais - Guiiasoesp</a></td>
+											<td><a href="http://www.pegn-online.com.br" target="_blank">Pequenas Empresas Grandes Negócios</a><br>
+												<a href="http://www.planalto.gov.br" target="_blank">Planalto do Governo</a><br>
+												<a href="http://www.guiasoesp.com.br/" target="_blank">Produtos e serviços para compradores profissionais - Guiiasoesp</a><br>
+												<a href="http://www.planalto.gov.br/" target="_blank">Presidência da República</a><br>
+												<a href="http://www.previdenciasocial.gov.br/" target="_blank">Previdência Social</a><br>
+												<a href="http://www.prisma.com.br" target="_blank">Prisma</a><br>
+												<a href="http://www.tj.sc.gov.br/" target="_blank">Poder Judiciário de SC</a></td>
 										</tr>
 										<tr id="letra-R">
 											<td>R</td>
-											<td><a href="#" target="_blank">Receita Federal</a><br/>
-												<a href="#" target="_blank">República Federativa do BR</a><br/>
-												<a href="#" target="_blank">Representante Brasil</a></td>
+											<td><a href="http://www.receita.fazenda.gov.br" target="_blank">Receita Federal</a><br>
+												<a href="http://www.redebrasil.inf.br/" target="_blank">Rede Brasil</a><br>
+												<a href="http://www.representantes.org.br/" target="_blank">Representante Brasil</a><br>
+												<a href="http://www.brazil.gov.br/" target="_blank">República Federativa do BR</a></td>
 										</tr>
 										<tr id="letra-S">
 											<td>S</td>
-											<td><a href="#" target="_blank">Sindicato das Empresas de Contabilidade da Grande Florianópolis - SESCON FLORIPA</a><br/>
-												<a href="#" target="_blank">Senado Federal</a><br/>
-												<a href="#" target="_blank">Supremo Tribunal Federal</a></td>
+											<td><a href="http://www.metrologia.org.br" target="_blank">SBM (Sociedade Brasileira de Metrologia)</a><br>
+												<a href="http://www.sebrae-mg.com.br" target="_blank">SEBRAE Minas Gerais</a><br>
+												<a href="http://www.sebrae-sc.com.br" target="_blank">SEBRAE Santa Catarina</a><br>
+												<a href="http://www.sebraees.com.br" target="_blank">SEBRAE Espírito Santo</a><br>
+												<a href="http://www.sebraerj.com.br" target="_blank">SEBRAE Rio de Janeiro</a><br>
+												<a href="http://www.sebraesp.com.br" target="_blank">SEBRAE São Paulo</a><br>
+												<a href="http://www.senado.gov.br" target="_blank">Senado Federal</a><br>
+												<a href="http://www.sesconfloripa.org.br" target="_blank">Sindicato das Empresas de Contabilidade da Grande Florianópolis - SESCON FLORIPA</a><br>
+												<a href="http://www.sofranquias.com.br" target="_blank">Só Fraquias</a><br>
+												<a href="http://www.stf.gov.br" target="_blank">Supremo Tribunal Federal</a></td>
 										</tr>
 										<tr id="letra-T">
 											<td>T</td>
-											<td><a href="#" target="_blank">Terra</a></td>
+											<td><a href="http://www.terra.com.br/busca" target="_blank">Terra</a></td>
 										</tr>
 										<tr id="letra-U">
 											<td>U</td>
-											<td><a href="#" target="_blank">Universidade do Estado de SC</a><br/>
-												<a href="#" target="_blank">Universidade Federal de SC</a><br/>
-												<a href="#" target="_blank">União Brasileira dos Promotores de Feiras</a><br/>
-												<a href="#" target="_blank">Uol</a><br/>
-												<a href="#" target="_blank">Usui</a></td>
+											<td><a href="http://www.ubrafe.com.br" target="_blank">União Brasileira dos Promotores de Feiras</a><br>
+												<a href="http://www.udesc.br" target="_blank">Universidade do Estado de SC</a><br>
+												<a href="http://www.ufsc.br" target="_blank">Universidade Federal de SC</a><br>
+												<a href="http://www.radaruol.com.br " target="_blank">Uol</a><br>
+												<a href="http://noticias.uol.com.br/jornais/" target="_blank">UOL Jornais</a><br>
+												<a href="http://www.usui.com.br" target="_blank">Usui</a></td>
 										</tr>
 										<tr id="letra-Y">
 											<td>Y</td>
-											<td><a href="#" target="_blank">Yahoo</a></td>
+											<td><a href="http://www.yahoo.com" target="_blank">Yahoo</a></td>
 										</tr>
 									</tbody>
 								</table>
