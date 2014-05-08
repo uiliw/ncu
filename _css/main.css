@@ -28,6 +28,15 @@ input[placeholder], [placeholder], *[placeholder] {
 :-ms-input-placeholder { /* Internet Explorer 10+ */
     color:    #a6c9e7!important;
 }
+
+input[type="password"]{
+    vertical-align: middle;
+    height: 25px;
+    padding: 0 10px;
+    line-height: 25px;
+}
+
+
 @media (min-width: 768px){
 .container {
 max-width: 750px;
