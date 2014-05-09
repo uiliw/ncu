@@ -225,6 +225,8 @@ border-bottom-color: transparent;
 
 .popover{
 	word-break: break-word;
+	
+z-index: 9999;
 }
 .popover .close{
 	position:absolute;
